@@ -80,46 +80,63 @@ export default function Navbar() {
                   />
                 </svg>
               ) : (
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                <Image
+                  src="/Nav_ham.svg"
+                  alt="Open menu"
+                  width={24}
+                  height={24}
+                  unoptimized
+                  className="h-6 w-6 object-contain"
+                />
               )}
             </button>
           </div>
         </nav>
 
-        {/* Mobile Navigation Dropdown Menu */}
+        {/* Mobile Navigation Modal Overlay */}
         {isOpen && (
-          <div className="md:hidden mt-3 border border-orange-500 bg-black/80 backdrop-blur-lg shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-5">
-            <div className="flex flex-col p-6 gap-6">
-              <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="py-2 text-xs font-bold tracking-widest text-zinc-300 hover:text-white border-b border-zinc-800 hover:border-orange-500 transition-all duration-300"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
+          <div className="fixed inset-x-4 top-6 z-[100] md:hidden bg-[#2D3134]/95 backdrop-blur-md border border-orange-500 p-6 sm:p-8 flex flex-col shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            {/* Top Row: Logo & Close Button */}
+            <div className="flex items-center justify-between mb-8">
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                <Image
+                  src="/PP-Green Logo.svg"
+                  alt="PP Green City 2 Logo"
+                  width={150}
+                  height={25}
+                  className="h-6 w-auto object-contain"
+                  unoptimized
+                />
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center p-1 text-orange-500 hover:text-orange-600 focus:outline-none"
+                aria-label="Close menu"
+              >
+                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Links Stack */}
+            <div className="flex flex-col gap-6 font-sans">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-xl sm:text-2xl font-light tracking-widest text-white hover:text-orange-500 transition-colors duration-300 uppercase"
+                >
+                  {link.label}
+                </Link>
+              ))}
               <Link
                 href="/ContactUs"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center py-3 border border-orange-500 bg-orange-500/10 hover:bg-orange-500/20 active:scale-[0.98] transition-all duration-300 text-white text-xs font-bold tracking-widest"
+                className="text-xl sm:text-2xl font-medium tracking-widest text-orange-500 hover:text-orange-600 transition-colors duration-300 uppercase"
               >
-                BOOK APPOINTMENT
+                {"BOOK APPOINTMENT"}
               </Link>
             </div>
           </div>

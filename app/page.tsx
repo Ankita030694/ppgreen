@@ -103,6 +103,7 @@ function About() {
                 src="/back_Sketch.svg"
                 alt="Architectural Building Sketch"
                 fill
+                unoptimized
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-contain opacity-85 select-none pointer-events-none transition-transform duration-700 hover:scale-105"
                 priority={false}
@@ -290,6 +291,7 @@ function Offers() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  unoptimized
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                   priority={item.id <= 3}
@@ -361,6 +363,7 @@ function Services() {
           src="/above_black_bg.svg"
           alt="Dark Pattern Background"
           fill
+          unoptimized
           className="object-cover"
           priority={false}
         />
@@ -508,6 +511,7 @@ function Expertise() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover transition-transform duration-700 ease-out select-none pointer-events-none"
                   priority={item.id === 1}
@@ -559,6 +563,7 @@ function Expertise() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-cover select-none pointer-events-none"
                 />
@@ -626,6 +631,7 @@ function WhyChoose() {
               src="/Why_choose/1st.svg"
               alt="Value Delivered"
               fill
+              unoptimized
               sizes="(max-width: 1024px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
             />
@@ -649,6 +655,7 @@ function WhyChoose() {
                   src="/Why_choose/2.svg"
                   alt=""
                   fill
+                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain object-right-bottom"
                 />
@@ -670,6 +677,7 @@ function WhyChoose() {
                   src="/Why_choose/3.svg"
                   alt=""
                   fill
+                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain object-right-bottom"
                 />
@@ -691,6 +699,7 @@ function WhyChoose() {
               src="/Why_choose/4th.svg"
               alt="Happy Homeowners"
               fill
+              unoptimized
               sizes="(max-width: 1024px) 100vw, 33vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
             />
@@ -717,6 +726,7 @@ function WhyChoose() {
               src="/Why_choose/1st.svg"
               alt="Value Delivered"
               fill
+              unoptimized
               sizes="(max-width: 640px) 85vw, 50vw"
               className="object-cover select-none pointer-events-none"
             />
@@ -738,6 +748,7 @@ function WhyChoose() {
                 src="/Why_choose/2.svg"
                 alt=""
                 fill
+                unoptimized
                 sizes="(max-width: 640px) 85vw, 50vw"
                 className="object-contain object-right-bottom"
               />
@@ -759,6 +770,7 @@ function WhyChoose() {
                 src="/Why_choose/3.svg"
                 alt=""
                 fill
+                unoptimized
                 sizes="(max-width: 640px) 85vw, 50vw"
                 className="object-contain object-right-bottom"
               />
@@ -779,6 +791,7 @@ function WhyChoose() {
               src="/Why_choose/4th.svg"
               alt="Happy Homeowners"
               fill
+              unoptimized
               sizes="(max-width: 640px) 85vw, 50vw"
               className="object-cover select-none pointer-events-none"
             />
@@ -865,6 +878,7 @@ export default function Home() {
             src="/Hero Image.svg"
             alt="Luxury Villa Background"
             fill
+            unoptimized
             priority
             sizes="100vw"
             className="object-cover"

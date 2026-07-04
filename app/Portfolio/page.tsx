@@ -71,7 +71,7 @@ export default function Portfolio() {
           {/* Tagline */}
           <div className="flex items-center gap-2.5 mb-4">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-semibold tracking-widest text-xs sm:text-sm uppercase">
+            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm">
               {"Featured Projects"}
             </span>
           </div>
@@ -100,6 +100,7 @@ export default function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-102 select-none"
                   />

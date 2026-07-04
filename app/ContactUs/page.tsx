@@ -65,7 +65,7 @@ export default function ContactUs() {
     }
   };
 
-  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-100 rounded-lg py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
+  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-100 rounded-none py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
 
   return (
     <main className="w-full min-h-screen bg-white flex flex-col">
@@ -109,7 +109,7 @@ export default function ContactUs() {
               {/* Tagline */}
               <div className="flex items-center gap-1">
                 <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-                <span className="text-black/60 font-semibold tracking-widest text-xs sm:text-sm uppercase">
+                <span className="text-black/60 font-semibold tracking-widest text-xs sm:text-sm">
                   {"Let's Talk"}
                 </span>
               </div>
@@ -120,7 +120,7 @@ export default function ContactUs() {
               </p>
               
               {/* Sketch Building Image */}
-              <div className="relative hidden lg:block w-full aspect-[4/3] max-w-md mx-auto lg:mx-0 mt-10 md:mt-8">
+              <div className="relative hidden lg:block w-full aspect-[4/3] max-w-md mx-auto lg:mx-0 mt-4 md:mt-8">
                 <Image
                   src="/back_Sketch.svg"
                   alt="Architectural Building Sketch"
@@ -161,9 +161,9 @@ export default function ContactUs() {
                     <button
                       type="button"
                       onClick={() => setIsSubmitted(false)}
-                      className="px-6 py-3 bg-[#FF6A00] text-white font-semibold hover:bg-[#E05B00] transition-colors cursor-pointer shadow-md shadow-orange-500/10"
+                      className="px-6 py-3 bg-[#FF6A00] text-white font-semibold cursor-pointer shadow-md shadow-orange-500/10"
                     >
-                      Send Another Message
+                      Send Another Message 
                     </button>
                   </div>
                 ) : (
@@ -175,7 +175,7 @@ export default function ContactUs() {
                     </h3>
 
                     {errorMsg && (
-                      <div className="bg-red-50 text-red-600 text-sm p-4 rounded-lg mb-6 font-medium">
+                      <div className="bg-red-50 text-red-600 text-sm p-4  mb-6 font-medium">
                         {errorMsg}
                       </div>
                     )}
@@ -309,7 +309,7 @@ export default function ContactUs() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-[#FF6A00] text-white py-4 rounded-lg font-semibold hover:bg-[#E05B00] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
+                        className="w-full bg-[#FF6A00] text-white py-4  font-semibold hover:bg-[#E05B00] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
                       >
                         {isSubmitting ? (
                           <>

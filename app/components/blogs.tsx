@@ -10,13 +10,13 @@ interface BlogItem {
 const blogsList: BlogItem[] = [
   {
     id: 1,
-    image: '/blogs/1.svg',
+    image: '/Blogs/1.svg',
     title: 'MODERN LIVING: THE FUTURE OF URBAN REAL ESTATE',
     description: 'Every great development begins with a vision. Discover how thoughtful planning, sustainable construction, and modern design come together to create communities built for the future.',
   },
   {
     id: 2,
-    image: '/blogs/1.svg',
+    image: '/Blogs/1.svg',
     title: 'SMART INVESTMENT STRATEGIES IN REAL ESTATE',
     description: 'Learn how choosing the right location, understanding market trends, and investing in quality developments can help maximize long term returns and financial growth.',
   },
@@ -56,6 +56,7 @@ export default function Blogs() {
                 src={blog1.image}
                 alt={blog1.title}
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
               />
@@ -78,6 +79,7 @@ export default function Blogs() {
                   src={blog2.image}
                   alt={blog2.title}
                   fill
+                  unoptimized
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                 />

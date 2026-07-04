@@ -59,6 +59,7 @@ export default function ProjectOverview() {
             src="/Portfolio/1.svg"
             alt="Skyline Business Park"
             fill
+            unoptimized
             sizes="100vw"
             className="object-cover select-none pointer-events-none"
             priority
@@ -152,6 +153,7 @@ export default function ProjectOverview() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-102 select-none"
                   />
