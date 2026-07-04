@@ -91,7 +91,7 @@ function About() {
           <div className="lg:col-span-5 flex flex-col gap-2 w-full">
             {/* Category Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
               <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm">
                 About Us
               </span>
@@ -233,7 +233,7 @@ function Offers() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
               <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
                 What We Offer
               </span>
@@ -371,7 +371,7 @@ function Services() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16 sm:mb-20">
           {/* Left Side Tagline */}
           <div className="lg:col-span-4 flex items-center gap-2.5">
-            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-white font-regular tracking-widest text-xs sm:text-sm ">
               Our Services
             </span>
@@ -480,7 +480,7 @@ function Expertise() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
               <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Our Expertise
               </span>
@@ -601,7 +601,7 @@ function WhyChoose() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-16">
           {/* Left Side Tagline */}
           <div className="lg:col-span-4 flex items-center gap-2.5">
-            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
               Why chose us
             </span>
@@ -878,7 +878,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 md:pb-16 flex flex-col justify-end">
           {/* Category Label */}
           <div className="flex items-center gap-2.5 mb-3.5">
-            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-zinc-300 font-medium tracking-widest text-xs sm:text-sm ">
               Trusted Real Estate
             </span>

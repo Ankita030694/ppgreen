@@ -9,9 +9,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'HOME', href: '/' },
-    { label: 'ABOUT US', href: '#about' },
-    { label: 'SERVICES', href: '#services' },
-    { label: 'PORTFOLIO', href: '#portfolio' },
+    { label: 'ABOUT US', href: '/#about' },
+    { label: 'SERVICES', href: '/#services' },
+    { label: 'PORTFOLIO', href: '/Portfolio' },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Navbar() {
           {/* Left Side: Logo and Navigation Links */}
           <div className="flex items-stretch gap-3 md:gap-4 flex-1 md:flex-none">
             {/* Logo Container */}
-            <div className="flex items-center justify-center px-4 py-3 border border-orange-500 bg-black/20 backdrop-blur-md shadow-lg transition-all duration-300">
+            <div className="flex items-center justify-center px-4 py-3 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg transition-all duration-300">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/PP-Green Logo.svg"
@@ -35,7 +35,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation Links Container */}
-            <div className="hidden md:flex items-center gap-8 px-8 border border-orange-500 bg-black/20 backdrop-blur-md shadow-lg">
+            <div className="hidden md:flex items-center gap-8 px-8 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -54,7 +54,7 @@ export default function Navbar() {
             {/* Desktop Book Appointment Button */}
             <Link
               href="/ContactUs"
-              className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/20 hover:text-orange-500 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
+              className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/50 hover:text-orange-500 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
             >
               BOOK APPOINTMENT
             </Link>

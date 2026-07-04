@@ -49,7 +49,7 @@ export default function Testimonials() {
             <div className="flex flex-col gap-4">
               {/* Tagline */}
               <div className="flex items-center gap-2.5">
-                <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+                <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
                 <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
                   Testimonials
                 </span>

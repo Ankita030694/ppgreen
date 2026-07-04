@@ -4,11 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
-  const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="w-full flex flex-col">
       
@@ -35,31 +30,30 @@ export default function Footer() {
             
             {/* Left side links */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-              <a
-                href="#"
-                onClick={handleScrollToTop}
+              <Link
+                href="/"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
                 Home
-              </a>
-              <a
-                href="#about"
+              </Link>
+              <Link
+                href="/#about"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
                 About Us
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                href="/#services"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
                 Services
-              </a>
-              <a
-                href="#portfolio"
+              </Link>
+              <Link
+                href="/Portfolio"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
                 Portfolio
-              </a>
+              </Link>
             </div>
 
             {/* Right side links */}
