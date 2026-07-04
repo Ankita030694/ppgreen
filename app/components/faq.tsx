@@ -39,7 +39,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="faq" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden ">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           
@@ -73,10 +73,10 @@ export default function FAQ() {
                     className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-lg sm:text-xl font-semibold text-zinc-900 group-hover:text-orange-600 transition-colors duration-300 pr-8">
+                    <span className="text-lg sm:text-xl font-semibold text-zinc-900  transition-colors duration-300 pr-8">
                       {item.question}
                     </span>
-                    <span className="text-2xl font-light text-zinc-800 flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
+                    <span className="text-4xl font-light text-zinc-800 flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>

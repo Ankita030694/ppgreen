@@ -53,7 +53,7 @@ export default function Navbar() {
           <div className="flex items-stretch">
             {/* Desktop Book Appointment Button */}
             <Link
-              href="#appointment"
+              href="/ContactUs"
               className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/20 hover:text-orange-500 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
             >
               BOOK APPOINTMENT
@@ -115,7 +115,7 @@ export default function Navbar() {
                 ))}
               </div>
               <Link
-                href="#appointment"
+                href="/ContactUs"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center py-3 border border-orange-500 bg-orange-500/10 hover:bg-orange-500/20 active:scale-[0.98] transition-all duration-300 text-white text-xs font-bold tracking-widest"
               >

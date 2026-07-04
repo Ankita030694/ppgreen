@@ -40,7 +40,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="testimonials" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           
@@ -50,7 +50,7 @@ export default function Testimonials() {
               {/* Tagline */}
               <div className="flex items-center gap-2.5">
                 <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
-                <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+                <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
                   Testimonials
                 </span>
               </div>
@@ -104,7 +104,7 @@ export default function Testimonials() {
                   key={item.id}
                   className="w-full flex-shrink-0 snap-start pr-4"
                 >
-                  <blockquote className="text-2xl sm:text-3xl md:text-4xl font-medium text-zinc-950 leading-relaxed max-w-4xl">
+                  <blockquote className="text-2xl sm:text-3xl md:text-2xl font-medium text-zinc-950 leading-relaxed max-w-4xl">
                     {item.text}
                   </blockquote>
                 </div>

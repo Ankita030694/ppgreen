@@ -26,7 +26,7 @@ export default function Blogs() {
   const [blog1, blog2] = blogsList;
 
   return (
-    <section id="blogs" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="blogs" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}

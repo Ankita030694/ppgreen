@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -63,12 +64,12 @@ export default function Footer() {
 
             {/* Right side links */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-zinc-400 text-sm sm:text-base">
-              <a
-                href="#cta"
+              <Link
+                href="/ContactUs"
                 className="hover:text-orange-500 transition-colors duration-300"
               >
                 Get In Touch
-              </a>
+              </Link>
               <a
                 href="#"
                 className="hover:text-orange-500 transition-colors duration-300"

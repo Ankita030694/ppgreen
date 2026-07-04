@@ -708,7 +708,7 @@ function WhyChoose() {
 
         {/* Mobile View: Horizontal Scroll-Snap Slider (same size cards) */}
         <div
-          className="flex md:hidden gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -ml-4 pl-8 -mr-4 pr-4 mb-16"
+          className="flex md:hidden gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -ml-4 pl-8 -mr-4 pr-4 mb-1"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {/* Card 1 */}
