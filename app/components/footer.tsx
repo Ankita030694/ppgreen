@@ -43,10 +43,10 @@ export default function Footer() {
                 About Us
               </Link>
               <Link
-                href="/#services"
+                href="/Blogs"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
-                Services
+                Blogs
               </Link>
               <Link
                 href="/Portfolio"

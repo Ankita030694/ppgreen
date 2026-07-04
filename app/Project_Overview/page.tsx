@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CTA from '../components/cta';
@@ -45,8 +46,52 @@ const moreProjectsList: ProjectItem[] = [
 ];
 
 export default function ProjectOverview() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const container = sliderRef.current;
+    if (!container) return;
+    isDraggingRef.current = true;
+    startXRef.current = e.pageX - container.offsetLeft;
+    scrollLeftRef.current = container.scrollLeft;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDraggingRef.current) return;
+    const container = sliderRef.current;
+    if (!container) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startXRef.current) * 1.5;
+    container.scrollLeft = scrollLeftRef.current - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    isDraggingRef.current = false;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const container = sliderRef.current;
+    if (!container) return;
+    isDraggingRef.current = true;
+    startXRef.current = e.touches[0].pageX - container.offsetLeft;
+    scrollLeftRef.current = container.scrollLeft;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (!isDraggingRef.current) return;
+    const container = sliderRef.current;
+    if (!container) return;
+    const x = e.touches[0].pageX - container.offsetLeft;
+    const walk = (x - startXRef.current) * 1.5;
+    container.scrollLeft = scrollLeftRef.current - walk;
+  };
+
   return (
-    <main className="w-full min-h-screen bg-white flex flex-col pt-20">
+    <main className="w-full min-h-screen bg-white flex flex-col pt-1">
       {/* 
         Note: Navbar is imported globally inside layout.tsx.
       */}
@@ -87,7 +132,7 @@ export default function ProjectOverview() {
 
       {/* Project Details & Overview Content Section */}
       <section className="relative w-full bg-white py-16 sm:py-20 md:py-24">
-        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-16">
+        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-8">
           
           {/* Details Block */}
           <div className="flex flex-col">
@@ -137,39 +182,54 @@ export default function ProjectOverview() {
       </section>
 
       {/* More Projects Section */}
-      <section className="relative w-full bg-white pb-24 sm:pb-32 border-t border-zinc-100 pt-16 sm:pt-20 md:pt-24">
-        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <section className="relative w-full bg-white pb-24 sm:pb-32 border-t border-zinc-100 pt-16 sm:pt-12 md:pt-12">
+        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* Centered Heading */}
-          <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl text-center mb-16">
+          <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl text-center mb-16 select-none">
             {"More projects"}
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-16">
+          <div
+            ref={sliderRef}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUpOrLeave}
+            onMouseLeave={handleMouseUpOrLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleMouseUpOrLeave}
+            className="flex flex-row gap-6 overflow-x-auto scrollbar-hide select-none cursor-grab active:cursor-grabbing pb-8 snap-x snap-mandatory md:snap-none"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {moreProjectsList.map((project) => (
-              <Link key={project.id} href="/Project_Overview" className="flex flex-col group cursor-pointer">
+              <Link
+                key={project.id}
+                href="/Project_Overview"
+                className="flex flex-col group cursor-pointer flex-shrink-0 w-[82%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] snap-center"
+              >
                 {/* Project Image Container */}
-                <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
+                <div className="relative aspect-[4/3] w-full mb-4 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     unoptimized
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-102 select-none"
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-102 select-none pointer-events-none"
                   />
                 </div>
 
                 {/* Project Details */}
-                <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4 group-hover:text-orange-500 transition-colors duration-300">
+                <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl mb-2 group-hover:text-orange-500 transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 {/* Tags Row */}
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="border border-orange-500/20 text-zinc-700 px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="border border-orange-500/20 text-zinc-700 px-3 py-1 text-xs font-medium tracking-wide uppercase select-none">
                     {project.category}
                   </span>
-                  <span className="border border-orange-500/20 text-zinc-700 px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                  <span className="border border-orange-500/20 text-zinc-700 px-3 py-1 text-xs font-medium tracking-wide uppercase select-none">
                     {project.location}
                   </span>
                 </div>

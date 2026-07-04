@@ -39,7 +39,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden ">
+    <section id="faq" className="relative w-full bg-white text-black pt-[88px] pb-4 sm:pb-6 overflow-hidden ">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           

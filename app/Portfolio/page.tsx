@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CTA from '../components/cta';
@@ -42,9 +43,39 @@ const projectsList: ProjectItem[] = [
     location: 'Gurugram, Haryana',
     image: '/Portfolio/1.svg',
   },
+  {
+    id: 5,
+    title: 'Horizon Corporate Center',
+    category: 'Commercial',
+    location: 'Gurugram, Haryana',
+    image: '/Portfolio/1.svg',
+  },
+  {
+    id: 6,
+    title: 'Green Valley Residences',
+    category: 'Residential',
+    location: 'Gurugram, Haryana',
+    image: '/Portfolio/1.svg',
+  },
+  {
+    id: 7,
+    title: 'Apex Business Heights',
+    category: 'Commercial',
+    location: 'Gurugram, Haryana',
+    image: '/Portfolio/1.svg',
+  },
+  {
+    id: 8,
+    title: 'Serene Luxury Villas',
+    category: 'Residential',
+    location: 'Gurugram, Haryana',
+    image: '/Portfolio/1.svg',
+  },
 ];
 
 export default function Portfolio() {
+  const [visibleCount, setVisibleCount] = useState(4);
+
   return (
     <main className="w-full min-h-screen bg-white flex flex-col pt-20">
       {/* 
@@ -77,7 +108,7 @@ export default function Portfolio() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
+          <h1 className="text-zinc-950 font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
             Showcasing Spaces That Define the Future
           </h1>
 
@@ -92,7 +123,7 @@ export default function Portfolio() {
       <section className="relative w-full bg-white pb-24 sm:pb-32">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-16">
-            {projectsList.map((project) => (
+            {projectsList.slice(0, visibleCount).map((project) => (
               <Link key={project.id} href="/Project_Overview" className="flex flex-col group cursor-pointer">
                 {/* Project Image Container */}
                 <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
@@ -123,6 +154,18 @@ export default function Portfolio() {
               </Link>
             ))}
           </div>
+
+          {/* View More Button */}
+          {projectsList.length > visibleCount && (
+            <div className="flex justify-center mt-16 sm:mt-20">
+              <button
+                onClick={() => setVisibleCount((prev) => prev + 4)}
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm px-8 py-4 uppercase tracking-wider transition-all duration-300 active:scale-95 focus:outline-none cursor-pointer"
+              >
+                View More
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

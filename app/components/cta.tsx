@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function CTA() {
 
   return (
-    <section id="cta" className="relative w-full bg-white text-black pt-16 sm:pt-24 pb-12 md:pb-0 overflow-hidden">
+    <section id="cta" className="relative w-full bg-white text-black pt-2 sm:pt-2 pb-12 md:pb-0 overflow-hidden">
       
       {/* Header Block inside Container */}
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">

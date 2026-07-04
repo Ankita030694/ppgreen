@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface BlogItem {
   id: number;
@@ -26,7 +27,7 @@ export default function Blogs() {
   const [blog1, blog2] = blogsList;
 
   return (
-    <section id="blogs" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden">
+    <section id="blogs" className="relative w-full bg-white text-black pt-4 sm:pt-6 pb-16 sm:pb-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -34,7 +35,7 @@ export default function Blogs() {
           {/* Tagline */}
           <div className="flex items-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
               Blog posts
             </span>
           </div>
@@ -95,9 +96,11 @@ export default function Blogs() {
 
             {/* CTA Button */}
             <div className="flex justify-end mt-8 sm:mt-12 md:mt-16">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm px-8 py-4 uppercase tracking-wider transition-all duration-300 active:scale-95 focus:outline-none cursor-pointer">
-                Explore More
-              </button>
+              <Link href="/Blogs">
+                <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm px-8 py-4 uppercase tracking-wider transition-all duration-300 active:scale-95 focus:outline-none cursor-pointer">
+                  Explore More
+                </button>
+              </Link>
             </div>
           </div>
 

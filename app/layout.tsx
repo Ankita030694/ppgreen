@@ -6,7 +6,6 @@ import Navbar from "./components/navbar";
 const onest = Onest({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-onest",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${onest.variable} h-full antialiased`}>
+    <html lang="en">
       <body className={`${onest.className} min-h-full flex flex-col`}>
         <Navbar />
         {children}
@@ -28,4 +27,3 @@ export default function RootLayout({
     </html>
   );
 }
-
