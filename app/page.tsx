@@ -2,6 +2,11 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import Testimonials from './components/testimonials';
+import FAQ from './components/faq';
+import Blogs from './components/blogs';
+import CTA from './components/cta';
+import Footer from './components/footer';
 
 // ==========================================
 // 1. Animated Counter Component
@@ -382,7 +387,7 @@ function Services() {
 
         {/* Services Scroll Slider */}
         <div
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide -mx-4 px-6 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {servicesList.map((service) => (
@@ -541,7 +546,7 @@ function Expertise() {
 
         {/* Mobile View: Horizontal Scroll-Snap Slider */}
         <div
-          className="flex lg:hidden gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6"
+          className="flex lg:hidden gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {expertiseList.map((item) => (
@@ -584,7 +589,270 @@ function Expertise() {
 }
 
 // ==========================================
-// 6. Main Page Component
+// 6. Why Choose Us Section Component
+// ==========================================
+
+function WhyChoose() {
+  return (
+    <section id="why-choose-us" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Top Header Block */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-16">
+          {/* Left Side Tagline */}
+          <div className="lg:col-span-4 flex items-center gap-2.5">
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">//</span>
+            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              Why chose us
+            </span>
+          </div>
+
+          {/* Right Side Headline & Description */}
+          <div className="lg:col-span-8 flex flex-col gap-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight max-w-3xl">
+              Building Exceptional Spaces Across India
+            </h2>
+            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+              We develop premium residential and commercial properties with quality, innovation, and lasting value.
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop View: Bento Grid */}
+        <div className="hidden md:grid grid-cols-3 gap-6 mb-16 sm:mb-20">
+          {/* Card 1 */}
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
+            <Image
+              src="/Why_choose/1st.svg"
+              alt="Value Delivered"
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
+                ₹500 Cr+
+              </span>
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
+                Value Delivered Across Residential & Commercial Projects
+              </p>
+            </div>
+          </div>
+
+          {/* Column 2: Card 2 & 3 */}
+          <div className="flex flex-col gap-6 h-[480px]">
+            {/* Card 2 */}
+            <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
+              <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-35 select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
+                <Image
+                  src="/Why_choose/2.svg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain object-right-bottom"
+                />
+              </div>
+              <div className="relative z-10">
+                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
+                  150+
+                </span>
+                <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
+                  Successfully Completed Developments Across India
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
+              <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-35 select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
+                <Image
+                  src="/Why_choose/3.svg"
+                  alt=""
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain object-right-bottom"
+                />
+              </div>
+              <div className="relative z-10">
+                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
+                  5M+ sq. ft.
+                </span>
+                <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
+                  Across Residential & Commercial Projects
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
+            <Image
+              src="/Why_choose/4th.svg"
+              alt="Happy Homeowners"
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
+                1,200+
+              </span>
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
+                Happy Homeowners, Investors & Business Partners
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile View: Horizontal Scroll-Snap Slider (same size cards) */}
+        <div
+          className="flex md:hidden gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -ml-4 pl-8 -mr-4 pr-4 mb-16"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {/* Card 1 */}
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
+            <Image
+              src="/Why_choose/1st.svg"
+              alt="Value Delivered"
+              fill
+              sizes="(max-width: 640px) 85vw, 50vw"
+              className="object-cover select-none pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
+              <span className="text-2xl font-bold tracking-tight mb-1.5">
+                ₹500 Cr+
+              </span>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                Value Delivered Across Residential & Commercial Projects
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
+            <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-40 select-none pointer-events-none">
+              <Image
+                src="/Why_choose/2.svg"
+                alt=""
+                fill
+                sizes="(max-width: 640px) 85vw, 50vw"
+                className="object-contain object-right-bottom"
+              />
+            </div>
+            <div className="relative z-10">
+              <span className="text-2xl font-bold tracking-tight mb-1.5 block">
+                150+
+              </span>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Successfully Completed Developments Across India
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
+            <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-40 select-none pointer-events-none">
+              <Image
+                src="/Why_choose/3.svg"
+                alt=""
+                fill
+                sizes="(max-width: 640px) 85vw, 50vw"
+                className="object-contain object-right-bottom"
+              />
+            </div>
+            <div className="relative z-10">
+              <span className="text-2xl font-bold tracking-tight mb-1.5 block">
+                5M+ sq. ft.
+              </span>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Across Residential & Commercial Projects
+              </p>
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
+            <Image
+              src="/Why_choose/4th.svg"
+              alt="Happy Homeowners"
+              fill
+              sizes="(max-width: 640px) 85vw, 50vw"
+              className="object-cover select-none pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
+              <span className="text-2xl font-bold tracking-tight mb-1.5">
+                1,200+
+              </span>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                Happy Homeowners, Investors & Business Partners
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Built on Trust Sub-section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-16 sm:pt-20">
+          {/* Left Column: Heading */}
+          <div className="lg:col-span-4">
+            <h3 className="text-3xl sm:text-4xl font-semibold text-zinc-950 leading-[1.2] tracking-tight">
+              Built on Trust <br />
+              & Excellence
+            </h3>
+          </div>
+
+          {/* Right Column: Two Features */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
+            {/* Feature 1 */}
+            <div className="flex flex-col items-start gap-4 group">
+              <div className="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/Built_Trust/1.svg"
+                  alt="Faster Project Delivery"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+              <h4 className="text-xl font-semibold text-zinc-950">
+                Faster Project Delivery
+              </h4>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                We streamline planning, approvals, and execution to ensure projects are delivered on time without compromising quality.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="flex flex-col items-start gap-4 group">
+              <div className="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/Built_Trust/2.svg"
+                  alt="Quality You Can Trust"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+              <h4 className="text-xl font-semibold text-zinc-950">
+                Quality You Can Trust
+              </h4>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                Every development is built with premium materials, expert craftsmanship, and attention to every detail.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+// ==========================================
+// 7. Main Page Component
 // ==========================================
 export default function Home() {
   return (
@@ -665,6 +933,24 @@ export default function Home() {
 
       {/* Our Expertise Section */}
       <Expertise />
+
+      {/* Why Choose Us Section */}
+      <WhyChoose />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* FAQ Section */}
+      <FAQ />
+
+      {/* Blogs Section */}
+      <Blogs />
+
+      {/* CTA Section */}
+      <CTA />
+
+      {/* Footer Section */}
+      <Footer />
     </main>
   );
 }
