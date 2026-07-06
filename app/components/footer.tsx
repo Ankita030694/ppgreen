@@ -37,7 +37,7 @@ export default function Footer() {
                 Home
               </Link>
               <Link
-                href="/#about"
+                href="/About_us"
                 className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
               >
                 About Us
