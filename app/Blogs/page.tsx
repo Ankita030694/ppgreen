@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Navbar from '../components/navbar'; // Imported to satisfy request details, rendered globally in layout
 import CTA from '../components/cta';
@@ -89,7 +90,7 @@ export default function BlogsPage() {
             </span>
           </div>
 
-          {/* Heading */}
+          {/* Heading */} 
           <h1 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
             {"Expert Perspectives on Real Estate & Property"}
           </h1>
@@ -106,7 +107,7 @@ export default function BlogsPage() {
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-16">
             {blogsList.map((blog) => (
-              <div key={blog.id} className="flex flex-col group cursor-pointer">
+              <Link key={blog.id} href="/Blogs/Slug" className="flex flex-col group cursor-pointer">
                 {/* Image Container */}
                 <div className="relative aspect-square w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
                   <Image
@@ -128,7 +129,7 @@ export default function BlogsPage() {
                 <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl group-hover:text-orange-500 transition-colors duration-300 leading-snug">
                   {blog.title}
                 </h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
