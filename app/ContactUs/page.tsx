@@ -28,18 +28,50 @@ export default function ContactUs() {
     }));
   };
 
+  const handleLeadSourceSelect = (source: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      leadSource: source,
+      otherLeadSource: source === 'Other' ? prev.otherLeadSource : '',
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg('');
 
-    // Basic validation
+    // Validation
     if (!formData.clientName.trim()) {
-      setErrorMsg('Please enter your name.');
+      setErrorMsg('Please enter the Client Name.');
       return;
     }
     if (!formData.contactNumber.trim()) {
-      setErrorMsg('Please enter your contact number.');
+      setErrorMsg('Please enter the Contact Number.');
       return;
+    }
+    if (!formData.clientType) {
+      setErrorMsg('Please select a Client Type.');
+      return;
+    }
+    if (formData.clientType === 'Through Broker') {
+      if (!formData.brokerName.trim()) {
+        setErrorMsg('Please enter the Broker Name.');
+        return;
+      }
+      if (!formData.brokerContactNumber.trim()) {
+        setErrorMsg('Please enter the Broker Contact Number.');
+        return;
+      }
+    }
+    if (formData.clientType === 'Direct Client') {
+      if (!formData.leadSource) {
+        setErrorMsg('Please select a Lead Source.');
+        return;
+      }
+      if (formData.leadSource === 'Other' && !formData.otherLeadSource.trim()) {
+        setErrorMsg('Please specify the other lead source.');
+        return;
+      }
     }
 
     setIsSubmitting(true);
@@ -65,7 +97,18 @@ export default function ContactUs() {
     }
   };
 
-  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-100 rounded-none py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
+  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-200 rounded-none py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
+
+  const leadSources = [
+    'Walk-in',
+    'Social Media',
+    'Google Search',
+    'Website',
+    'Referral',
+    'Hoarding',
+    'Newspaper',
+    'Other'
+  ];
 
   return (
     <main className="w-full min-h-screen bg-white flex flex-col">
@@ -145,7 +188,7 @@ export default function ContactUs() {
               </p>
 
               {/* Form Box */}
-              <div className="bg-[#FFF7F2]  p-6 sm:p-10 shadow-xs">
+              <div className="bg-[#FFF7F2] p-6 sm:p-10 shadow-xs">
                 {isSubmitted ? (
                   /* Success State */
                   <div className="flex flex-col items-center justify-center py-12 text-center">
@@ -175,19 +218,22 @@ export default function ContactUs() {
                     </h3>
 
                     {errorMsg && (
-                      <div className="bg-red-50 text-red-600 text-sm p-4  mb-6 font-medium">
+                      <div className="bg-red-50 text-red-600 text-sm p-4 mb-6 font-medium">
                         {errorMsg}
                       </div>
                     )}
 
                     {/* Form */}
-                    <form className="space-y-4" onSubmit={handleSubmit}>
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                       {/* Client Name */}
-                      <div>
+                      <div className="space-y-1.5">
+                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                          Client Name:
+                        </label>
                         <input
                           type="text"
                           name="clientName"
-                          placeholder="Client Name"
+                          placeholder="Enter Client Name"
                           value={formData.clientName}
                           onChange={handleChange}
                           className={inputClasses}
@@ -196,11 +242,14 @@ export default function ContactUs() {
                       </div>
 
                       {/* Contact Number */}
-                      <div>
+                      <div className="space-y-1.5">
+                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                          Contact Number:
+                        </label>
                         <input
                           type="tel"
                           name="contactNumber"
-                          placeholder="Contact Number"
+                          placeholder="Enter Contact Number"
                           value={formData.contactNumber}
                           onChange={handleChange}
                           className={inputClasses}
@@ -208,108 +257,200 @@ export default function ContactUs() {
                         />
                       </div>
 
-                      {/* Client Type */}
-                      <div className="relative">
-                        <select
-                          name="clientType"
-                          value={formData.clientType}
-                          onChange={handleChange}
-                          className={`${inputClasses} appearance-none cursor-pointer ${
-                            formData.clientType === "" ? "text-zinc-400" : "text-zinc-800"
-                          }`}
-                          required
-                        >
-                          <option value="" disabled hidden>Client Type</option>
-                          <option value="Direct Client">Direct Client</option>
-                          <option value="Broker">Broker</option>
-                          <option value="Investor">Investor</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-zinc-400">
-                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                          </svg>
+                      {/* Client Type Selector */}
+                      <div className="space-y-2">
+                        <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
+                          Lead Type
+                        </h4>
+                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                          3. Client Type:
+                        </label>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setFormData(prev => ({
+                                ...prev,
+                                clientType: 'Direct Client',
+                                brokerName: '',
+                                brokerContactNumber: ''
+                              }));
+                            }}
+                            className={`flex items-center gap-3 bg-white border ${
+                              formData.clientType === 'Direct Client'
+                                ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
+                                : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                            } py-3.5 px-5 transition-all text-left w-full sm:flex-1 cursor-pointer`}
+                          >
+                            <span className={`w-5 h-5 flex items-center justify-center border ${
+                              formData.clientType === 'Direct Client'
+                                ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                : 'border-zinc-300 bg-white'
+                            } transition-colors`}>
+                              {formData.clientType === 'Direct Client' && (
+                                <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                              )}
+                            </span>
+                            <span className="text-zinc-800 text-sm sm:text-base font-medium">Direct Client</span>
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setFormData(prev => ({
+                                ...prev,
+                                clientType: 'Through Broker',
+                                leadSource: '',
+                                otherLeadSource: ''
+                              }));
+                            }}
+                            className={`flex items-center gap-3 bg-white border ${
+                              formData.clientType === 'Through Broker'
+                                ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
+                                : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                            } py-3.5 px-5 transition-all text-left w-full sm:flex-1 cursor-pointer`}
+                          >
+                            <span className={`w-5 h-5 flex items-center justify-center border ${
+                              formData.clientType === 'Through Broker'
+                                ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                : 'border-zinc-300 bg-white'
+                            } transition-colors`}>
+                              {formData.clientType === 'Through Broker' && (
+                                <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                              )}
+                            </span>
+                            <span className="text-zinc-800 text-sm sm:text-base font-medium">Through Broker</span>
+                          </button>
                         </div>
                       </div>
 
-                      {/* Broker Name */}
-                      <div>
-                        <input
-                          type="text"
-                          name="brokerName"
-                          placeholder="Broker Name"
-                          value={formData.brokerName}
-                          onChange={handleChange}
-                          className={inputClasses}
-                        />
-                      </div>
+                      {/* Broker Details */}
+                      {formData.clientType === 'Through Broker' && (
+                        <div className="space-y-4 pt-2 border-t border-[#FFF0E5] transition-all duration-300">
+                          <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
+                            If Through Broker
+                          </h4>
+                          <div className="space-y-4">
+                            <div className="space-y-1.5">
+                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                                4. Broker Name:
+                              </label>
+                              <input
+                                type="text"
+                                name="brokerName"
+                                placeholder="Enter Broker Name"
+                                value={formData.brokerName}
+                                onChange={handleChange}
+                                className={inputClasses}
+                                required
+                              />
+                            </div>
+                            <div className="space-y-1.5">
+                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                                5. Broker Contact Number:
+                              </label>
+                              <input
+                                type="tel"
+                                name="brokerContactNumber"
+                                placeholder="Enter Broker Contact Number"
+                                value={formData.brokerContactNumber}
+                                onChange={handleChange}
+                                className={inputClasses}
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
-                      {/* Broker Contact Number */}
-                      <div>
-                        <input
-                          type="tel"
-                          name="brokerContactNumber"
-                          placeholder="Broker Contact Number"
-                          value={formData.brokerContactNumber}
-                          onChange={handleChange}
-                          className={inputClasses}
-                        />
-                      </div>
-
-                      {/* Salesperson Name */}
-                      <div>
-                        <input
-                          type="text"
-                          name="salespersonName"
-                          placeholder="Salesperson Name"
-                          value={formData.salespersonName}
-                          onChange={handleChange}
-                          className={inputClasses}
-                        />
-                      </div>
-
-                      {/* Lead Source */}
-                      <div className="relative">
-                        <select
-                          name="leadSource"
-                          value={formData.leadSource}
-                          onChange={handleChange}
-                          className={`${inputClasses} appearance-none cursor-pointer ${
-                            formData.leadSource === "" ? "text-zinc-400" : "text-zinc-800"
-                          }`}
-                        >
-                          <option value="" disabled hidden>Lead Source</option>
-                          <option value="Social Media">Social Media</option>
-                          <option value="Google Search">Google Search</option>
-                          <option value="Referral">Referral</option>
-                          <option value="Newspaper/Billboard">Newspaper/Billboard</option>
-                          <option value="Property Portal">Property Portal</option>
-                          <option value="Other">Other</option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-zinc-400">
-                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                          </svg>
+                      {/* Sales Details */}
+                      <div className="space-y-4 pt-2 border-t border-[#FFF0E5]">
+                        <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
+                          Sales Details
+                        </h4>
+                        <div className="space-y-1.5">
+                          <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                            6. Salesperson Name:
+                          </label>
+                          <input
+                            type="text"
+                            name="salespersonName"
+                            placeholder="Enter Salesperson Name"
+                            value={formData.salespersonName}
+                            onChange={handleChange}
+                            className={inputClasses}
+                          />
                         </div>
                       </div>
 
-                      {/* Other Lead Source */}
-                      <div>
-                        <input
-                          type="text"
-                          name="otherLeadSource"
-                          placeholder="Other Lead Source"
-                          value={formData.otherLeadSource}
-                          onChange={handleChange}
-                          className={inputClasses}
-                        />
-                      </div>
+                      {/* Direct Client Lead Source options */}
+                      {formData.clientType === 'Direct Client' && (
+                        <div className="space-y-4 pt-2 border-t border-[#FFF0E5] transition-all duration-300">
+                          <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
+                            If Direct Client
+                          </h4>
+                          <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                            7. Lead Source:
+                          </label>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {leadSources.map((source) => {
+                              const isSelected = formData.leadSource === source;
+                              return (
+                                <button
+                                  key={source}
+                                  type="button"
+                                  onClick={() => handleLeadSourceSelect(source)}
+                                  className={`flex items-center gap-3 bg-white border ${
+                                    isSelected
+                                      ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
+                                      : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                                  } py-3 px-4 transition-all text-left w-full cursor-pointer`}
+                                >
+                                  <span className={`w-5 h-5 flex items-center justify-center border ${
+                                    isSelected
+                                      ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                      : 'border-zinc-300 bg-white'
+                                  } transition-colors`}>
+                                    {isSelected && (
+                                      <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                      </svg>
+                                    )}
+                                  </span>
+                                  <span className="text-zinc-800 text-sm font-medium">{source}</span>
+                                </button>
+                              );
+                            })}
+                          </div>
+
+                          {formData.leadSource === 'Other' && (
+                            <div className="pt-2 transition-all duration-300">
+                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base mb-1.5">
+                                Specify Other Lead Source:
+                              </label>
+                              <input
+                                type="text"
+                                name="otherLeadSource"
+                                placeholder="Enter other lead source"
+                                value={formData.otherLeadSource}
+                                onChange={handleChange}
+                                className={inputClasses}
+                                required
+                              />
+                            </div>
+                          )}
+                        </div>
+                      )}
 
                       {/* Submit Button */}
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-[#FF6A00] text-white py-4  font-semibold hover:bg-[#E05B00] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed"
+                        className="w-full bg-[#FF6A00] text-white py-4 font-semibold hover:bg-[#E05B00] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed mt-6"
                       >
                         {isSubmitting ? (
                           <>
@@ -326,6 +467,7 @@ export default function ContactUs() {
                     </form>
                   </>
                 )}
+
 
                 {/* Footer details */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 mt-8 border-t border-[#FFF0E5]">
