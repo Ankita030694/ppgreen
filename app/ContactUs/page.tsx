@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Footer from '../components/footer';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -77,8 +79,11 @@ export default function ContactUs() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Add data to Firestore collection "contact_inquiries"
+      await addDoc(collection(db, 'contact_inquiries'), {
+        ...formData,
+        createdAt: serverTimestamp(),
+      });
       setIsSubmitted(true);
       setFormData({
         clientName: '',
