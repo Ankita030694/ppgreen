@@ -68,7 +68,14 @@ export default function Footer() {
                 href="#"
                 className="hover:text-orange-500 transition-colors duration-300"
               >
-                Terms & Privacy
+                Terms of Service
+              </a>
+
+              <a
+                href="#"
+                className="hover:text-orange-500 transition-colors duration-300"
+              >
+                Privacy Policies
               </a>
             </div>
 

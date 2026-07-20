@@ -115,10 +115,10 @@ export default function ProjectOverview() {
         <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 lg:pb-10 flex flex-col items-start">
           {/* Tags Row */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="border border-[#FF6A00] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
+            <span className="border border-[#0C433C] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               Commercial
             </span>
-            <span className="border border-[#FF6A00] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
+            <span className="border border-[#0C433C] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               Gurugram, Haryana
             </span>
           </div>

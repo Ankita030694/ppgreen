@@ -73,7 +73,7 @@ function AnimatedCounter({
   return (
     <span ref={elementRef} className="tabular-nums">
       {prefix}
-      {count}
+      {count.toLocaleString()}
       {suffix}
     </span>
   );
@@ -128,17 +128,17 @@ function About() {
               {/* Stat 1 */}
               <div className="flex flex-col">
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={15} suffix="+" />
+                  <AnimatedCounter value={15} suffix="M+" />
                 </span>
                 <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Years Experience
+                  Sq. Ft. of Spaces
                 </span>
               </div>
               
               {/* Stat 2 */}
               <div className="flex flex-col">
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={120} suffix="+" />
+                  <AnimatedCounter value={200} suffix="+" />
                 </span>
                 <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
                   Projects Delivered
@@ -148,10 +148,10 @@ function About() {
               {/* Stat 3 */}
               <div className="flex flex-col">
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={98} suffix="%" />
+                  <AnimatedCounter value={15000} suffix="+" />
                 </span>
                 <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Customer Satisfaction
+                  Happy Customers
                 </span>
               </div>
             </div>
@@ -169,59 +169,114 @@ interface OfferItem {
   image: string;
   category: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 const offersList: OfferItem[] = [
   {
     id: 1,
-    image: '/What_we_offer/1.svg',
-    category: 'Residential',
-    title: 'Luxury Residences',
-    description: 'Bespoke apartments and premium flats designed for modern, high-end living.',
+    image: "/PP-Green-City.jpg",
+    category: 'Commercial',
+    title: 'PP City Centre',
   },
   {
     id: 2,
-    image: '/What_we_offer/2.svg',
+    image: '/west_end_convention_mall.jpg',
     category: 'Commercial',
-    title: 'Modern Retail & Offices',
-    description: 'State-of-the-art commercial hubs and corporate spaces in prime business locations.',
+    title: 'West End Convention Mall',
   },
   {
     id: 3,
-    image: '/What_we_offer/3.svg',
-    category: 'Townships',
-    title: 'Integrated Townships',
-    description: 'Self-sustaining communities with elite infrastructure, schools, and parks.',
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 12_34_21 AM.png',
+    category: 'Commercial',
+    title: 'PP Trade Centre',
   },
   {
     id: 4,
-    image: '/What_we_offer/4.svg',
-    category: 'Villas',
-    title: 'Exclusive Villas',
-    description: 'Private luxury villas offering ultimate exclusivity, private yards, and premium design.',
+    image: '/33-scaled.jpg',
+    category: 'Residential',
+    title: 'Mohali Walk',
   },
   {
     id: 5,
-    image: '/What_we_offer/5.svg',
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    category: 'Residential',
+    title: 'AP Wonder',
+  },
+  {
+    id: 6,
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
     category: 'Plots',
-    title: 'Strategic Plots',
-    description: 'Premium residential and commercial plots situated in rapid growth corridors.',
+    title: 'PP Green City',
   },
 ];
 
 function Offers() {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Duplicated 3x for seamless infinite looping
+  const displayList = [...offersList, ...offersList, ...offersList];
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    // Initialize scroll position to the start of the middle set
+    const setWidth = slider.scrollWidth / 3;
+    if (slider.scrollLeft === 0) {
+      slider.scrollLeft = setWidth;
+    }
+
+    const handleScroll = () => {
+      if (!slider) return;
+      const currentSetWidth = slider.scrollWidth / 3;
+
+      // Silent reset without smooth animation when reaching outer boundaries
+      if (slider.scrollLeft >= currentSetWidth * 2) {
+        slider.style.scrollBehavior = 'auto';
+        slider.scrollLeft -= currentSetWidth;
+      } else if (slider.scrollLeft <= 5) {
+        slider.style.scrollBehavior = 'auto';
+        slider.scrollLeft += currentSetWidth;
+      }
+    };
+
+    slider.addEventListener('scroll', handleScroll, { passive: true });
+
+    const autoSlideTimer = setInterval(() => {
+      if (sliderRef.current && !isHovered) {
+        const s = sliderRef.current;
+        s.style.scrollBehavior = 'smooth';
+        const card = s.firstElementChild as HTMLElement;
+        const cardWidth = card ? card.offsetWidth + 24 : 380;
+        s.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 2500);
+
+    return () => {
+      slider.removeEventListener('scroll', handleScroll);
+      clearInterval(autoSlideTimer);
+    };
+  }, [isHovered]);
 
   const scrollLeft = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+      const s = sliderRef.current;
+      s.style.scrollBehavior = 'smooth';
+      const card = s.firstElementChild as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 24 : 380;
+      s.scrollBy({ left: -cardWidth, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+      const s = sliderRef.current;
+      s.style.scrollBehavior = 'smooth';
+      const card = s.firstElementChild as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 24 : 380;
+      s.scrollBy({ left: cardWidth, behavior: 'smooth' });
     }
   };
 
@@ -277,16 +332,20 @@ function Offers() {
         {/* Scrollable Container */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {offersList.map((item) => (
+          {displayList.map((item, index) => (
             <div
-              key={item.id}
-              className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start group"
+              key={`${item.id}-${index}`}
+              className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group"
             >
               {/* Card Image Container */}
-              <div className="relative aspect-[3/4] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
+              <div className="relative aspect-[711/400] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -294,7 +353,7 @@ function Offers() {
                   unoptimized
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
-                  priority={item.id <= 3}
+                  priority={index < 3}
                 />
                 
                 {/* Gradient & Content Overlay */}
@@ -308,9 +367,11 @@ function Offers() {
                   <h3 className="text-xl font-bold tracking-tight mb-2 group-hover:text-orange-100 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-zinc-300 leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 ease-in-out">
-                    {item.description}
-                  </p>
+                  {item.description && (
+                    <p className="text-xs text-zinc-300 leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 ease-in-out">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -662,10 +723,10 @@ function WhyChoose() {
               </div>
               <div className="relative z-10">
                 <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
-                  150+
+                  200+
                 </span>
                 <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
-                  Successfully Completed Developments Across India
+                  Projects Delivered Across India
                 </p>
               </div>
             </div>
@@ -684,10 +745,10 @@ function WhyChoose() {
               </div>
               <div className="relative z-10">
                 <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
-                  5M+ sq. ft.
+                  15M+ sq. ft.
                 </span>
                 <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
-                  Across Residential & Commercial Projects
+                  Sq. Ft. of Spaces
                 </p>
               </div>
             </div>
@@ -706,10 +767,10 @@ function WhyChoose() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
-                1,200+
+                15,000+
               </span>
               <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
-                Happy Homeowners, Investors & Business Partners
+                Happy Customers
               </p>
             </div>
           </div>
@@ -755,10 +816,10 @@ function WhyChoose() {
             </div>
             <div className="relative z-10">
               <span className="text-2xl font-bold tracking-tight mb-1.5 block">
-                150+
+                200+
               </span>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                Successfully Completed Developments Across India
+                Projects Delivered Across India
               </p>
             </div>
           </div>
@@ -777,10 +838,10 @@ function WhyChoose() {
             </div>
             <div className="relative z-10">
               <span className="text-2xl font-bold tracking-tight mb-1.5 block">
-                5M+ sq. ft.
+                15M+ sq. ft.
               </span>
               <p className="text-xs text-zinc-400 leading-relaxed">
-                Across Residential & Commercial Projects
+                Sq. Ft. of Spaces
               </p>
             </div>
           </div>
@@ -798,10 +859,10 @@ function WhyChoose() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
               <span className="text-2xl font-bold tracking-tight mb-1.5">
-                1,200+
+                15,000+
               </span>
               <p className="text-xs text-zinc-300 leading-relaxed">
-                Happy Homeowners, Investors & Business Partners
+                Happy Customers
               </p>
             </div>
           </div>
@@ -872,17 +933,18 @@ export default function Home() {
     <main className="w-full bg-black">
       {/* Hero Section */}
       <section className="relative min-h-screen w-full flex flex-col justify-end text-white font-sans overflow-x-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <Image
-            src="/Hero Image.svg"
-            alt="Luxury Villa Background"
-            fill
-            unoptimized
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/Copy of PP Green Drone Reel (1).webm" type="video/webm" />
+            <source src="/Copy of PP Green Drone Reel (1).mp4" type="video/mp4" />
+          </video>
           {/* Gradient Overlay for Text Readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent h-48" />

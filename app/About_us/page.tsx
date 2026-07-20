@@ -69,7 +69,7 @@ function AnimatedCounter({
   return (
     <span ref={elementRef}>
       {prefix}
-      {count}
+      {count.toLocaleString()}
       {suffix}
     </span>
   );
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
             {/* Right Column: Mini-description Block */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start max-w-md lg:ml-auto lg:pb-8">
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-3 h-3 rounded-full bg-[#FF6A00] shrink-0" />
+                <span className="w-3 h-3 rounded-full bg-[#0C433C] shrink-0" />
                 <h2 className="text-white font-semibold text-base sm:text-lg tracking-wide">
                   Trusted Real Estate Partner
                 </h2>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
             {/* Tagline */}
             <div className="lg:col-span-3">
               <div className="flex items-center gap-2">
-                <span className="text-[#FF6A00] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
+                <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
                 <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   About Us
                 </span>
@@ -205,7 +205,7 @@ export default function AboutUsPage() {
               {/* Get in Touch Button */}
               <Link
                 href="/ContactUs"
-                className="inline-flex items-center justify-center bg-[#FF6A00] hover:bg-[#e05d00] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
+                className="inline-flex items-center justify-center bg-[#0C433C] hover:bg-[#09332d] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
               >
                 Get in Touch
               </Link>
@@ -231,21 +231,21 @@ export default function AboutUsPage() {
         {/* Counter Content Container */}
         <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 items-end justify-items-center md:justify-items-stretch">
-            {/* Stat 1: Years Experience */}
+            {/* Stat 1: 15 million sq. ft. of spaces */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-start">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={15} suffix="+" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={15} suffix="M+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Years</span>
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Experience</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Sq. Ft.</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Of Spaces</span>
               </div>
             </div>
 
-            {/* Stat 2: Projects Delivered */}
+            {/* Stat 2: 200+ Projects Delivered */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-center">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={120} suffix="+" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={200} suffix="+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
                 <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Projects</span>
@@ -253,14 +253,14 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            {/* Stat 3: Customer Satisfaction */}
+            {/* Stat 3: 15,000+ Happy Customers */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-end">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={98} suffix="%" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={15000} suffix="+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Customer</span>
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Satisfaction</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Happy</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Customers</span>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ export default function AboutUsPage() {
             {/* Tagline */}
             <div className="lg:col-span-4">
               <div className="flex items-center gap-2">
-                <span className="text-[#FF6A00] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
+                <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
                 <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   Our Process
                 </span>
