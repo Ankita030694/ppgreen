@@ -64,19 +64,19 @@ export default function Footer() {
               >
                 Get In Touch
               </Link>
-              <a
-                href="#"
+              <Link
+                href="/Terms"
                 className="hover:text-orange-500 transition-colors duration-300"
               >
                 Terms of Service
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                href="/Privacy"
                 className="hover:text-orange-500 transition-colors duration-300"
               >
                 Privacy Policies
-              </a>
+              </Link>
             </div>
 
           </div>
@@ -94,17 +94,17 @@ export default function Footer() {
 
             {/* Social handles */}
             <div className="flex items-center gap-6">
-              {/* X */}
+              {/* Facebook */}
               <a
-                href="https://x.com"
+                href="https://www.facebook.com/p/PP-Green-City-Sonipat-61580403394406/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-5 h-5 relative transition-transform duration-300 hover:scale-110 active:scale-95"
-                aria-label="X (formerly Twitter)"
+                aria-label="Facebook"
               >
                 <Image
-                  src="/Socials/X.svg"
-                  alt="X"
+                  src="/Socials/Facebook.svg"
+                  alt="Facebook"
                   width={20}
                   height={20}
                   className="object-contain select-none pointer-events-none"
@@ -113,7 +113,7 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/ppgreencity_sonipat/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-5 h-5 relative transition-transform duration-300 hover:scale-110 active:scale-95"
@@ -127,24 +127,7 @@ export default function Footer() {
                   className="object-contain select-none pointer-events-none"
                 />
               </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-5 h-5 relative transition-transform duration-300 hover:scale-110 active:scale-95"
-                aria-label="LinkedIn"
-              >
-                <Image
-                  src="/Socials/Linkedin.svg"
-                  alt="LinkedIn"
-                  width={20}
-                  height={20}
-                  className="object-contain select-none pointer-events-none"
-                />
-              </a>
-            </div>
+              </div>
 
           </div>
 

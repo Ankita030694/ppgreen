@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Testimonials from './components/testimonials';
 import FAQ from './components/faq';
 import Blogs from './components/blogs';
@@ -340,9 +341,10 @@ function Offers() {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {displayList.map((item, index) => (
-            <div
+            <Link
               key={`${item.id}-${index}`}
-              className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group"
+              href={`/Project_Overview?title=${encodeURIComponent(item.title)}`}
+              className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group block cursor-pointer"
             >
               {/* Card Image Container */}
               <div className="relative aspect-[711/400] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
@@ -374,7 +376,7 @@ function Offers() {
                   )}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -384,118 +386,198 @@ function Offers() {
 }
 
 
-// 4. Our Services Section Component
+// ==========================================
+// 4. Reels Carousel Section Component (9:16 Aspect Ratio)
+// ==========================================
 
-interface ServiceItem {
-  number: string;
+interface ReelItem {
+  id: number;
   title: string;
-  description: string;
+  video: string;
 }
 
-const servicesList: ServiceItem[] = [
+const reelsList: ReelItem[] = [
   {
-    number: '01',
-    title: 'Property & Construction',
-    description: 'We manage every phase of development, ensuring quality construction, timely execution, and attention to detail from foundation to completion.',
+    id: 1,
+    title: 'PP Green Living',
+    video: '/Reels/Reel_1.mp4',
   },
   {
-    number: '02',
-    title: 'Architectural Planning & Design',
-    description: 'Our team creates innovative layouts and modern designs that maximize space, functionality, aesthetics, and long term value.',
+    id: 2,
+    title: 'Community & Lifestyle',
+    video: '/Reels/Reel 2_1.mp4',
   },
   {
-    number: '03',
-    title: 'Project Management & Delivery',
-    description: 'We coordinate timelines, resources, and stakeholders to ensure smooth project execution and successful delivery of every development.',
+    id: 3,
+    title: 'Happy Families at PP Green',
+    video: '/Reels/Copy of PP Green Mother & Son Reel_1.mp4',
   },
   {
-    number: '04',
-    title: 'Sales, Leasing & Investment Advisory',
-    description: 'We help buyers and investors identify the right opportunities through expert guidance, market insights, and end to end support.',
+    id: 4,
+    title: 'Client Experience - Gagan',
+    video: '/Reels/PP Green Gagan Reel_1.mp4',
+  },
+  {
+    id: 5,
+    title: 'Client Testimonial - Sarita',
+    video: '/Reels/PP Green Sarita Reel_1.mp4',
+  },
+  {
+    id: 6,
+    title: 'Behind the Scenes - Our Staff',
+    video: '/Reels/PP Green Staff Reel (1)_1.mp4',
   },
 ];
 
-function Services() {
-  return (
-    <section id="services" className="relative w-full bg-zinc-950 text-white py-16 sm:py-24 overflow-hidden border-t border-zinc-900">
-      {/* Background Image Pattern */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-40">
-        <Image
-          src="/above_black_bg.svg"
-          alt="Dark Pattern Background"
-          fill
-          unoptimized
-          className="object-cover"
-          priority={false}
-        />
-      </div>
+function Reels() {
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [playingId, setPlayingId] = useState<number | null>(null);
 
-      <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        {/* Top Header Block */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mb-16 sm:mb-20">
-          {/* Left Side Tagline */}
-          <div className="lg:col-span-4 flex items-center gap-2.5">
-            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-white font-regular tracking-widest text-xs sm:text-sm ">
-              Our Services
-            </span>
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      const card = sliderRef.current.firstElementChild as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 24 : 320;
+      sliderRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      const card = sliderRef.current.firstElementChild as HTMLElement;
+      const cardWidth = card ? card.offsetWidth + 24 : 320;
+      sliderRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
+  };
+
+  const togglePlay = (id: number, videoEl: HTMLVideoElement | null) => {
+    if (!videoEl) return;
+    if (playingId === id) {
+      videoEl.pause();
+      setPlayingId(null);
+    } else {
+      document.querySelectorAll<HTMLVideoElement>('.reel-video').forEach((v) => v.pause());
+      videoEl.play();
+      setPlayingId(id);
+    }
+  };
+
+  return (
+    <section id="reels" className="relative w-full bg-zinc-950 text-white py-16 sm:py-24 overflow-hidden border-t border-zinc-900">
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Block */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="max-w-3xl flex flex-col gap-4">
+            {/* Tagline */}
+            <div className="flex items-center gap-2.5">
+              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-zinc-400 font-regular tracking-widest text-xs sm:text-sm uppercase">
+                Life at PP Green
+              </span>
+            </div>
+            
+            {/* Title */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-[1.15] tracking-tight">
+              Watch Our Stories & Reels
+            </h2>
+            
+            {/* Description */}
+            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+              Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
+            </p>
           </div>
 
-          {/* Right Side Headline */}
-          <div className="lg:col-span-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.25] tracking-tight max-w-4xl">
-              Comprehensive real estate solutions from planning to project delivery.
-            </h2>
+          {/* Slider controls */}
+          <div className="flex items-center gap-3 self-start md:self-auto">
+            <button
+              onClick={scrollLeft}
+              className="flex items-center justify-center w-12 h-12 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              aria-label="Previous reel"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={scrollRight}
+              className="flex items-center justify-center w-12 h-12 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              aria-label="Next reel"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
 
-        {/* Services Scroll Slider */}
+        {/* Scrollable Container (Not Draggable, Manual Control Only, No Auto Animation) */}
         <div
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+          ref={sliderRef}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8 select-none"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {servicesList.map((service) => (
+          {reelsList.map((item) => (
             <div
-              key={service.number}
-              className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start flex flex-col group"
+              key={item.id}
+              className="flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[320px] snap-start group"
             >
-              {/* Number */}
-              <span className="text-sm font-semibold tracking-wider text-zinc-400 group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                {service.number}
-              </span>
-              
-              {/* Horizontal Line */}
-              <div className="w-full border-t border-zinc-800/80 mb-6" />
+              {/* Card Container in 9:16 Aspect Ratio */}
+              <div className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-900 shadow-lg border border-zinc-800/80 rounded-none transition-all duration-300">
+                <video
+                  id={`reel-video-${item.id}`}
+                  src={item.video}
+                  playsInline
+                  loop
+                  muted={playingId !== item.id}
+                  className="reel-video w-full h-full object-cover select-none"
+                />
 
-              {/* Custom Stylized Line Art Building Icon */}
-              <div className="mb-6">
-                <svg
-                  className="w-10 h-10 text-zinc-300 group-hover:text-orange-500 group-hover:scale-105 transition-all duration-300"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.2"
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+
+                {/* Play/Pause Button Overlay */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const videoEl = document.getElementById(`reel-video-${item.id}`) as HTMLVideoElement | null;
+                    togglePlay(item.id, videoEl);
+                  }}
+                  className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-colors duration-300 cursor-pointer group/btn"
+                  aria-label={playingId === item.id ? "Pause Reel" : "Play Reel"}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M6 21V10l4-3v14M10 21V5l4-3v19M14 21v-8l4-3v11" />
-                </svg>
+                  <div className="w-14 h-14 rounded-full bg-[#0C433C]/90 text-white flex items-center justify-center shadow-xl backdrop-blur-xs transition-transform duration-300 group-hover/btn:scale-110">
+                    {playingId === item.id ? (
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    )}
+                  </div>
+                </button>
+
+                {/* Card Title Content */}
+                <div className="absolute bottom-0 inset-x-0 p-5 text-white z-10 pointer-events-none">
+                  <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1 block select-none">
+                    PP Green Reel
+                  </span>
+                  <h3 className="text-base font-semibold tracking-tight text-white leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-
-              {/* Title */}
-              <h3 className="text-md font-medium tracking-tight text-white mb-4 transition-colors duration-300">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors duration-300">
-                {service.description}
-              </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 }
+
+
 
 // ==========================================
 // 5. Our Expertise Section Component (Hover Accordion)
@@ -512,8 +594,8 @@ const expertiseList: ExpertiseItem[] = [
   {
     id: 1,
     image: '/hover_effect/1.svg',
-    category: 'Industrial',
-    title: 'Industrial Developments',
+    category: 'Residential',
+    title: 'Residential Communities',
     description: 'We develop efficient industrial spaces built for productivity, scalability, and long term operational success. Our projects prioritize functionality, strategic locations, and modern infrastructure to support growing businesses.',
   },
   {
@@ -526,8 +608,8 @@ const expertiseList: ExpertiseItem[] = [
   {
     id: 3,
     image: '/hover_effect/3.svg',
-    category: 'Residential',
-    title: 'Residential Communities',
+    category: 'Industrial',
+    title: 'Industrial Developments',
     description: 'We build elegant residential towers, luxury apartments, and master-planned villa communities offering premium lifestyles, rich green spaces, and a strong sense of community.',
   },
 ];
@@ -669,7 +751,7 @@ function WhyChoose() {
           <div className="lg:col-span-4 flex items-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
-              Why chose us
+              Why choose us
             </span>
           </div>
 
@@ -1004,8 +1086,8 @@ export default function Home() {
       {/* What We Offer Section */}
       <Offers />
 
-      {/* Our Services Section */}
-      <Services />
+      {/* Reels Stories Section */}
+      <Reels />
 
       {/* Our Expertise Section */}
       <Expertise />
