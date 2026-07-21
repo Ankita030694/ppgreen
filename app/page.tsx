@@ -347,7 +347,7 @@ function Offers() {
               className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group block cursor-pointer"
             >
               {/* Card Image Container */}
-              <div className="relative aspect-[711/400] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
+              <div className="relative aspect-[711/500] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -431,7 +431,14 @@ const reelsList: ReelItem[] = [
 
 function Reels() {
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [playingId, setPlayingId] = useState<number | null>(null);
+  const [unmutedId, setUnmutedId] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.querySelectorAll<HTMLVideoElement>('.reel-video').forEach((v) => {
+      v.muted = true;
+      v.play().catch(() => {});
+    });
+  }, []);
 
   const scrollLeft = () => {
     if (sliderRef.current) {
@@ -449,16 +456,20 @@ function Reels() {
     }
   };
 
-  const togglePlay = (id: number, videoEl: HTMLVideoElement | null) => {
-    if (!videoEl) return;
-    if (playingId === id) {
-      videoEl.pause();
-      setPlayingId(null);
-    } else {
-      document.querySelectorAll<HTMLVideoElement>('.reel-video').forEach((v) => v.pause());
-      videoEl.play();
-      setPlayingId(id);
-    }
+  const toggleMute = (id: number) => {
+    const nextUnmutedId = unmutedId === id ? null : id;
+    setUnmutedId(nextUnmutedId);
+
+    document.querySelectorAll<HTMLVideoElement>('.reel-video').forEach((v) => {
+      if (v.id === `reel-video-${id}`) {
+        v.muted = nextUnmutedId === null;
+        if (v.paused) {
+          v.play().catch(() => {});
+        }
+      } else {
+        v.muted = true;
+      }
+    });
   };
 
   return (
@@ -526,40 +537,18 @@ function Reels() {
                 <video
                   id={`reel-video-${item.id}`}
                   src={item.video}
+                  autoPlay
                   playsInline
                   loop
-                  muted={playingId !== item.id}
-                  className="reel-video w-full h-full object-cover select-none"
+                  muted={unmutedId !== item.id}
+                  className="reel-video w-full h-full object-cover select-none pointer-events-none"
                 />
 
                 {/* Dark Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
 
-                {/* Play/Pause Button Overlay */}
-                <button
-                  type="button"
-                  onClick={() => {
-                    const videoEl = document.getElementById(`reel-video-${item.id}`) as HTMLVideoElement | null;
-                    togglePlay(item.id, videoEl);
-                  }}
-                  className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-colors duration-300 cursor-pointer group/btn"
-                  aria-label={playingId === item.id ? "Pause Reel" : "Play Reel"}
-                >
-                  <div className="w-14 h-14 rounded-full bg-[#0C433C]/90 text-white flex items-center justify-center shadow-xl backdrop-blur-xs transition-transform duration-300 group-hover/btn:scale-110">
-                    {playingId === item.id ? (
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                      </svg>
-                    ) : (
-                      <svg className="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    )}
-                  </div>
-                </button>
-
                 {/* Card Title Content */}
-                <div className="absolute bottom-0 inset-x-0 p-5 text-white z-10 pointer-events-none">
+                <div className="absolute bottom-0 inset-x-0 p-5 pr-16 text-white z-10 pointer-events-none">
                   <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1 block select-none">
                     PP Green Reel
                   </span>
@@ -567,6 +556,26 @@ function Reels() {
                     {item.title}
                   </h3>
                 </div>
+
+                {/* Volume Mute/Unmute Toggle Button */}
+                <button
+                  type="button"
+                  onClick={() => toggleMute(item.id)}
+                  className="absolute bottom-4 right-4 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 border border-white/20 text-white backdrop-blur-md transition-all duration-300 active:scale-95 cursor-pointer shadow-lg"
+                  aria-label={unmutedId === item.id ? "Mute Reel" : "Unmute Reel"}
+                  title={unmutedId === item.id ? "Mute" : "Unmute"}
+                >
+                  {unmutedId === item.id ? (
+                    <svg className="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5 text-zinc-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                    </svg>
+                  )}
+                </button>
               </div>
             </div>
           ))}
