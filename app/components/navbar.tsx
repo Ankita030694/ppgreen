@@ -40,7 +40,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="relative py-2 text-xs font-light tracking-widest text-zinc-300 hover:text-orange-500 transition-colors duration-300 group"
+                  className="relative py-2 text-xs font-light tracking-widest text-zinc-300 transition-colors duration-300 group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-[2px]  transition-all duration-300 group-hover:w-full" />
@@ -54,7 +54,7 @@ export default function Navbar() {
             {/* Desktop Book Appointment Button */}
             <Link
               href="/ContactUs"
-              className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/50 hover:text-orange-500 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
+              className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
             >
               BOOK APPOINTMENT
             </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex md:hidden items-center justify-center p-3.5 border border-orange-500 bg-black/40 backdrop-blur-md shadow-lg text-white hover:bg-orange-500/10 transition-colors duration-300 focus:outline-none"
+              className="flex md:hidden items-center justify-center p-3.5 border border-orange-500 bg-black/40 backdrop-blur-md shadow-lg text-white transition-colors duration-300 focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -110,7 +110,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center p-1 text-orange-500 hover:text-orange-600 focus:outline-none"
+                className="flex items-center justify-center p-1 text-orange-500 focus:outline-none"
                 aria-label="Close menu"
               >
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -126,7 +126,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-xl sm:text-2xl font-light tracking-widest text-white hover:text-orange-500 transition-colors duration-300 uppercase"
+                  className="text-xl sm:text-2xl font-light tracking-widest text-white transition-colors duration-300 uppercase"
                 >
                   {link.label}
                 </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
               <Link
                 href="/ContactUs"
                 onClick={() => setIsOpen(false)}
-                className="text-xl sm:text-2xl font-medium tracking-widest text-orange-500 hover:text-orange-600 transition-colors duration-300 uppercase"
+                className="text-xl sm:text-2xl font-medium tracking-widest text-orange-500 transition-colors duration-300 uppercase"
               >
                 {"BOOK APPOINTMENT"}
               </Link>
