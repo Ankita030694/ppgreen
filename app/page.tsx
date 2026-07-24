@@ -473,7 +473,7 @@ function Reels() {
   };
 
   return (
-    <section id="reels" className="relative w-full bg-[#F9CC94] text-white py-16 sm:py-24 overflow-hidden">
+    <section id="reels" className="relative w-full bg-[#F9CC94] text-black py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -482,18 +482,18 @@ function Reels() {
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
               <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-zinc-400 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-black font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Life at PP Green
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-[1.15] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black leading-[1.15] tracking-tight">
               Watch Our Stories & Reels
             </h2>
             
             {/* Description */}
-            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-black/60 text-sm sm:text-base leading-relaxed max-w-2xl">
               Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
             </p>
           </div>
