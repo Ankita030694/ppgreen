@@ -15,6 +15,7 @@ interface Lead {
   brokerName?: string;
   brokerContactNumber?: string;
   salespersonName?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createdAt: any;
   status?: string;
 }
@@ -48,6 +49,7 @@ export default function LeadsDashboard() {
     fetchLeads();
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const formatDate = (timestamp: any) => {
     if (!timestamp) return "N/A";
     
