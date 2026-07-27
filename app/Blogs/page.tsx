@@ -1,66 +1,59 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Navbar from '../components/navbar'; // Imported to satisfy request details, rendered globally in layout
 import CTA from '../components/cta';
 import Footer from '../components/footer';
+import { collection, query, where, orderBy, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 interface BlogCardItem {
-  id: number;
+  id: string;
+  slug: string;
   date: string;
   author: string;
   title: string;
   image: string;
 }
 
-const blogsList: BlogCardItem[] = [
-  {
-    id: 1,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-  {
-    id: 2,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-  {
-    id: 3,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-  {
-    id: 4,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-  {
-    id: 5,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-  {
-    id: 6,
-    date: 'Jul 12, 2026',
-    author: 'PP Green',
-    title: '5 Features Every Modern Luxury Home Should Have',
-    image: '/Blogs/1.svg',
-  },
-];
-
 export default function BlogsPage() {
+  const [blogsList, setBlogsList] = useState<BlogCardItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const q = query(
+          collection(db, "blogs"),
+          orderBy("createdAt", "desc")
+        );
+        const snapshot = await getDocs(q);
+        const fetchedBlogs = snapshot.docs
+          .filter(doc => doc.data().published === true)
+          .map(doc => {
+            const data = doc.data();
+            return {
+              id: doc.id,
+              slug: data.slug || doc.id,
+              title: data.title,
+              image: data.image || '/placeholder.svg',
+              author: data.author || 'Admin Team',
+              date: data.date || new Date().toISOString().split('T')[0],
+            };
+          }) as BlogCardItem[];
+        setBlogsList(fetchedBlogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   return (
     <main className="w-full min-h-screen bg-white flex flex-col pt-20">
       {/* 
@@ -106,8 +99,17 @@ export default function BlogsPage() {
       <section className="relative w-full bg-white pb-24 sm:pb-32">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-16">
-            {blogsList.map((blog) => (
-              <Link key={blog.id} href="/Blogs/Slug" className="flex flex-col group cursor-pointer">
+            {loading ? (
+              <div className="col-span-full py-20 flex justify-center">
+                <div className="w-10 h-10 border-4 border-orange-500/20 border-t-orange-500 rounded-full animate-spin"></div>
+              </div>
+            ) : blogsList.length === 0 ? (
+              <div className="col-span-full py-20 text-center text-zinc-500 font-medium">
+                No articles published yet. Check back soon!
+              </div>
+            ) : (
+              blogsList.map((blog) => (
+                <Link key={blog.id} href={`/Blogs/${blog.slug}`} className="flex flex-col group cursor-pointer">
                 {/* Image Container */}
                 <div className="relative aspect-square w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
                   <Image
@@ -130,7 +132,8 @@ export default function BlogsPage() {
                   {blog.title}
                 </h3>
               </Link>
-            ))}
+            ))
+          )}
           </div>
         </div>
       </section>
