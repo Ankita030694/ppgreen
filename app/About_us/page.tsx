@@ -85,16 +85,19 @@ export default function AboutUsPage() {
 
       {/* Hero Section */}
       <section className="relative w-full h-[85vh] md:h-[90vh] lg:h-screen bg-zinc-950 overflow-hidden flex items-end">
-        {/* Background Image & Overlay */}
+        {/* Background Video & Overlay */}
         <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/About_Us/1.svg"
-            alt="About PP Green background"
-            fill
-            unoptimized
-            className="object-cover select-none pointer-events-none opacity-45"
-            priority
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/About_Us/1.svg"
+            className="w-full h-full object-cover select-none pointer-events-none opacity-45"
+          >
+            <source src="/Copy of PP Green Drone Reel (1).mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           {/* Gradients and solid colors for high contrast and moody aesthetic */}
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-zinc-950/10 to-transparent" />
           <div className="absolute inset-0 " />
@@ -199,8 +202,78 @@ export default function AboutUsPage() {
         </div>
       </section>
 
+      {/* Core Values / Philosophy Section */}
+      <section className="w-full bg-white text-zinc-950 py-20 sm:py-28 border-t border-b border-zinc-100 -mt-15">
+        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+          {/* Tagline / Subtitle */}
+          <div className="mb-12 sm:mb-16">
+            <p className="text-[#0C433C] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase mb-4">
+              Continuous Improvement &bull; Uncompromising Quality &bull; Enduring Relationships
+            </p>
+            <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight max-w-4xl">
+              Creating Value. Building Trust. Shaping the Future.
+            </h2>
+          </div>
+
+          {/* Three-Column Values Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 mb-16">
+            {/* Value 1: Commitment to Excellence */}
+            <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
+              <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 01</span>
+              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Commitment to Excellence</h3>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+                We are driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, we develop projects that are thoughtfully planned, meticulously executed and designed to stand the test of time.
+              </p>
+            </div>
+
+            {/* Value 2: Evolving Needs & Diverse Portfolio */}
+            <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
+              <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 02</span>
+              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Diverse Portfolio</h3>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+                Our diverse portfolio spans residential developments, premium villas, retail, commercial and office spaces, reflecting our ability to understand evolving needs and deliver future-ready solutions. Every project combines strategic vision, operational excellence, superior infrastructure, contemporary design and modern amenities.
+              </p>
+            </div>
+
+            {/* Value 3: Personalised Guidance & Seamless Experience */}
+            <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
+              <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 03</span>
+              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Customer Experience</h3>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+                We believe that a seamless customer experience is built on transparency, clear communication and personalised guidance. Our dedicated relationship management team remains committed to supporting clients throughout the project lifecycle.
+              </p>
+            </div>
+          </div>
+
+          {/* Core Belief Callout / Quote Box */}
+          <div className="bg-[#0C433C] text-white p-8 sm:p-12 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 relative overflow-hidden">
+            {/* Background pattern for subtle texture */}
+            <div className="absolute right-[-10%] bottom-[-20%] w-[300px] h-[300px] opacity-[0.04] pointer-events-none select-none">
+              <svg fill="currentColor" viewBox="0 0 100 100" className="w-full h-full text-white">
+                <circle cx="50" cy="50" r="40" stroke="currentColor" strokeWidth="2" fill="none" />
+              </svg>
+            </div>
+            
+            <div className="max-w-3xl z-10">
+              <p className="text-zinc-300 font-sans tracking-widest text-xs sm:text-sm uppercase mb-3">// Our Core Belief</p>
+              <h3 className="text-white font-medium text-2xl sm:text-3xl md:text-4xl leading-tight tracking-tight">
+                &ldquo;At the core of our organisation is a simple belief: true success lies in creating value that endures.&rdquo;
+              </h3>
+            </div>
+            <div className="shrink-0 z-10">
+              <Link
+                href="/Portfolio"
+                className="inline-flex items-center justify-center bg-white hover:bg-zinc-100 text-[#0C433C] font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
+              >
+                Explore Projects
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founder's Note Section */}
-      <section className="w-full bg-white text-zinc-950 py-10 sm:py-24 md:py-28 -mt-16">
+      <section className="w-full bg-white text-zinc-950 py-10 sm:py-24 md:py-28">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Left side Founder Portrait Photo */}

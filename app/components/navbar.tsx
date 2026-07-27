@@ -24,44 +24,41 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-8xl">
-        <nav className="flex items-stretch justify-between gap-4 font-sans text-sm font-semibold tracking-wider">
-          {/* Left Side: Logo and Navigation Links */}
-          <div className="flex items-stretch gap-3 md:gap-4 flex-1 md:flex-none">
-            {/* Logo Container */}
-            <div className="flex items-center justify-center px-4 py-3 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg transition-all duration-300">
-              <Link href="/" className="flex items-center">
-                <Image
-                  src="/PP-Green Logo.svg"
-                  alt="PP Green City 2 Logo"
-                  width={213}
-                  height={35}
-                  className="h-7 w-auto object-contain md:h-8"
-                  priority
-                />
-              </Link>
-            </div>
+        <nav className="w-full grid grid-cols-2 md:grid-cols-3 items-center px-6 py-3 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg transition-all duration-300 font-sans text-sm font-semibold tracking-wider">
+          {/* Left Side: Logo */}
+          <div className="flex items-center justify-start">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/PP-Green Logo.svg"
+                alt="PP Green City 2 Logo"
+                width={213}
+                height={35}
+                className="h-7 w-auto object-contain md:h-8"
+                priority
+              />
+            </Link>
+          </div>
 
-            {/* Desktop Navigation Links Container */}
-            <div className="hidden md:flex items-center gap-8 px-8 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="relative py-2 text-xs font-light tracking-widest text-zinc-300 transition-colors duration-300 group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px]  transition-all duration-300 group-hover:w-full" />
-                </Link>
-              ))}
-            </div>
+          {/* Center: Desktop Navigation Links */}
+          <div className="hidden md:flex items-center justify-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="relative py-2 text-xs font-light tracking-widest text-zinc-300 transition-colors duration-300 group hover:text-white"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ))}
           </div>
 
           {/* Right Side: Desktop Book Appointment Button & Mobile Menu Toggle */}
-          <div className="flex items-stretch">
+          <div className="flex items-center justify-end gap-4">
             {/* Desktop Book Appointment Button */}
             <Link
               href="/ContactUs"
-              className="hidden md:flex items-center justify-center px-6 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg active:scale-[0.98] transition-all duration-300 text-white text-xs font-light tracking-widest"
+              className="hidden md:flex items-center justify-center px-5 py-2.5 bg-orange-500 hover:bg-orange-600 active:scale-[0.98] transition-all duration-300 text-white text-xs font-medium tracking-widest"
             >
               BOOK APPOINTMENT
             </Link>
@@ -69,7 +66,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex md:hidden items-center justify-center p-3.5 border border-orange-500 bg-black/40 backdrop-blur-md shadow-lg text-white transition-colors duration-300 focus:outline-none"
+              className="flex md:hidden items-center justify-center p-1.5 text-white focus:outline-none"
               aria-label="Toggle menu"
             >
               {isOpen ? (
