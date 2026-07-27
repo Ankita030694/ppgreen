@@ -609,7 +609,7 @@ const expertiseList: ExpertiseItem[] = [
   },
   {
     id: 2,
-    image: '/2.jpeg',
+    image: '/33-scaled.jpg',
     category: 'Commercial',
     title: 'Commercial Properties',
     description: 'We design premium commercial centers, retail malls, and corporate offices in high-traffic zones, combining architectural innovation with commercial viability to attract leading brands.',
