@@ -102,8 +102,7 @@ export default function ContactUs() {
     }
   };
 
-
-  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-200 rounded-none py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#FF6A00] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
+  const inputClasses = "w-full bg-white text-zinc-800 placeholder-zinc-400 border border-zinc-200 rounded-none py-4 px-5 focus:outline-none focus:ring-2 focus:ring-[#0C433C] focus:border-transparent transition-all shadow-xs text-sm sm:text-base";
 
   const leadSources = [
     'Walk-in',
@@ -194,12 +193,12 @@ export default function ContactUs() {
               </p>
 
               {/* Form Box */}
-              <div className="bg-[#FFF7F2] p-6 sm:p-10 shadow-xs">
+              <div className="bg-[#F2F7F6] p-6 sm:p-10 shadow-xs">
                 {isSubmitted ? (
                   /* Success State */
                   <div className="flex flex-col items-center justify-center py-12 text-center">
-                    <div className="w-16 h-16 bg-[#FF6A00]/10 flex items-center justify-center mb-6">
-                      <svg className="w-8 h-8 text-[#FF6A00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-16 h-16 bg-[#0C433C]/10 flex items-center justify-center mb-6">
+                      <svg className="w-8 h-8 text-[#0C433C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -210,7 +209,7 @@ export default function ContactUs() {
                     <button
                       type="button"
                       onClick={() => setIsSubmitted(false)}
-                      className="px-6 py-3 bg-[#FF6A00] text-white font-semibold cursor-pointer shadow-md shadow-orange-500/10"
+                      className="px-6 py-3 bg-[#0C433C] text-white font-semibold cursor-pointer shadow-md shadow-orange-500/10"
                     >
                       Send Another Message 
                     </button>
@@ -284,13 +283,13 @@ export default function ContactUs() {
                             }}
                             className={`flex items-center gap-3 bg-white border ${
                               formData.clientType === 'Direct Client'
-                                ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
-                                : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                                ? 'border-[#0C433C] ring-1 ring-[#0C433C]'
+                                : 'border-zinc-200 hover:border-[#0C433C]/50'
                             } py-3.5 px-5 transition-all text-left w-full sm:flex-1 cursor-pointer`}
                           >
                             <span className={`w-5 h-5 flex items-center justify-center border ${
                               formData.clientType === 'Direct Client'
-                                ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                ? 'border-[#0C433C] bg-[#0C433C] text-white'
                                 : 'border-zinc-300 bg-white'
                             } transition-colors`}>
                               {formData.clientType === 'Direct Client' && (
@@ -314,13 +313,13 @@ export default function ContactUs() {
                             }}
                             className={`flex items-center gap-3 bg-white border ${
                               formData.clientType === 'Through Broker'
-                                ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
-                                : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                                ? 'border-[#0C433C] ring-1 ring-[#0C433C]'
+                                : 'border-zinc-200 hover:border-[#0C433C]/50'
                             } py-3.5 px-5 transition-all text-left w-full sm:flex-1 cursor-pointer`}
                           >
                             <span className={`w-5 h-5 flex items-center justify-center border ${
                               formData.clientType === 'Through Broker'
-                                ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                ? 'border-[#0C433C] bg-[#0C433C] text-white'
                                 : 'border-zinc-300 bg-white'
                             } transition-colors`}>
                               {formData.clientType === 'Through Broker' && (
@@ -336,7 +335,7 @@ export default function ContactUs() {
 
                       {/* Broker Details */}
                       {formData.clientType === 'Through Broker' && (
-                        <div className="space-y-4 pt-2 border-t border-[#FFF0E5] transition-all duration-300">
+                        <div className="space-y-4 pt-2 border-t border-[#E5F0EE] transition-all duration-300">
                           <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
                             If Through Broker
                           </h4>
@@ -374,7 +373,7 @@ export default function ContactUs() {
                       )}
 
                       {/* Sales Details */}
-                      <div className="space-y-4 pt-2 border-t border-[#FFF0E5]">
+                      <div className="space-y-4 pt-2 border-t border-[#E5F0EE]">
                         <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
                           Sales Details
                         </h4>
@@ -395,7 +394,7 @@ export default function ContactUs() {
 
                       {/* Direct Client Lead Source options */}
                       {formData.clientType === 'Direct Client' && (
-                        <div className="space-y-4 pt-2 border-t border-[#FFF0E5] transition-all duration-300">
+                        <div className="space-y-4 pt-2 border-t border-[#E5F0EE] transition-all duration-300">
                           <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
                             If Direct Client
                           </h4>
@@ -412,13 +411,13 @@ export default function ContactUs() {
                                   onClick={() => handleLeadSourceSelect(source)}
                                   className={`flex items-center gap-3 bg-white border ${
                                     isSelected
-                                      ? 'border-[#FF6A00] ring-1 ring-[#FF6A00]'
-                                      : 'border-zinc-200 hover:border-[#FF6A00]/50'
+                                      ? 'border-[#0C433C] ring-1 ring-[#0C433C]'
+                                      : 'border-zinc-200 hover:border-[#0C433C]/50'
                                   } py-3 px-4 transition-all text-left w-full cursor-pointer`}
                                 >
                                   <span className={`w-5 h-5 flex items-center justify-center border ${
                                     isSelected
-                                      ? 'border-[#FF6A00] bg-[#FF6A00] text-white'
+                                      ? 'border-[#0C433C] bg-[#0C433C] text-white'
                                       : 'border-zinc-300 bg-white'
                                   } transition-colors`}>
                                     {isSelected && (
@@ -456,7 +455,7 @@ export default function ContactUs() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-[#FF6A00] text-white py-4 font-semibold hover:bg-[#E05B00] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6A00] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed mt-6"
+                        className="w-full bg-[#0C433C] text-white py-4 font-semibold hover:bg-[#09332d] active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0C433C] transition-all text-center cursor-pointer shadow-md shadow-orange-500/10 flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed mt-6"
                       >
                         {isSubmitting ? (
                           <>
@@ -476,15 +475,15 @@ export default function ContactUs() {
 
 
                 {/* Footer details */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 mt-8 border-t border-[#FFF0E5]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 mt-8 border-t border-[#E5F0EE]">
                   {/* Sales */}
                   <div className="flex flex-col">
                     <h4 className="font-bold text-zinc-950 text-base sm:text-lg">Sales</h4>
                     <a
-                      href="mailto:sales@yourrealestate.com"
-                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#FF6A00] transition-colors mt-0.5"
+                      href="mailto:Sales@ppgreencity.com"
+                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#0C433C] transition-colors mt-0.5"
                     >
-                      sales@yourrealestate.com
+                      Sales@ppgreencity.com
                     </a>
                     <p className="text-zinc-500 text-xs sm:text-sm mt-2 leading-relaxed">
                       Looking to buy your dream home or invest in a property? Contact our sales team for expert guidance.
@@ -495,10 +494,10 @@ export default function ContactUs() {
                   <div className="flex flex-col">
                     <h4 className="font-bold text-zinc-950 text-base sm:text-lg">Customer Support</h4>
                     <a
-                      href="mailto:support@yourrealestate.com"
-                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#FF6A00] transition-colors mt-0.5"
+                      href="mailto:Sales@ppgreencity.com"
+                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#0C433C] transition-colors mt-0.5"
                     >
-                      support@yourrealestate.com
+                      Sales@ppgreencity.com
                     </a>
                     <p className="text-zinc-500 text-xs sm:text-sm mt-2 leading-relaxed">
                       Need help with bookings, documentation, site visits, or existing projects? Our support team is here to assist you.

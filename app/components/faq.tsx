@@ -11,24 +11,33 @@ interface FAQItem {
 const faqList: FAQItem[] = [
   {
     id: 1,
-    question: 'What types of properties do you develop?',
-    answer: 'We specialize in premium residential developments (luxury flats, apartments, and exclusive villas) as well as modern commercial properties (strategic retail spaces, office complexes, and corporate hubs) across India.',
+    question: 'What type of properties do you offer?',
+    answer: 'We offer a diverse range of premium real estate opportunities, including residential and commercial plots. Our projects are thoughtfully planned to cater to end-users, investors and those seeking long-term value appreciation.',
   },
   {
     id: 2,
-    question: 'How do you ensure construction quality and safety?',
-    answer: 'Every project undergoes strict quality controls, built with premium grade-A materials and engineered to meet the highest safety standards. We partner with leading architects, structural engineers, and third-party quality auditors to ensure excellence.',
-  },
+    question: 'Are your projects RERA registered?',
+    answer: 'All applicable projects are developed in accordance with the prevailing RERA guidelines and regulatory requirements. Project-specific registration details are available on the respective project pages or can be shared by our team.'  },
   {
     id: 3,
-    question: 'Do you offer project management services?',
-    answer: 'Yes, we manage every phase of development—from architectural planning and securing approvals to construction execution, timelines coordination, and final delivery—ensuring a seamless experience and exceptional value.',
+    question: 'How can I schedule a site visit?',
+    answer: 'You can schedule a site visit by submitting an enquiry through our website or contacting our sales team directly. Our team will coordinate a convenient time and assist you throughout the visit.',
   },
   {
     id: 4,
-    question: 'How can I inquire about strategic investments or leasing?',
-    answer: 'You can reach out directly to our investment advisory team through the contact channels on our website. We provide detailed market analysis, investment feasibility reports, and comprehensive leasing solutions for corporate clients.',
+    question: 'Do you provide financing assistance?',
+    answer: 'Yes. We can assist prospective buyers in exploring financing options through our banking and financial institution partners, subject to the applicable eligibility criteria and approval terms.',
   },
+  {
+    id: 5,
+    question: 'Can I visit the project before making a purchase?',
+    answer: 'Absolutely. We encourage prospective buyers to visit the project site and experience the development firsthand before making an informed investment decision.',
+  },
+  {
+    id: 6,
+    question: 'What payment plans are available?',
+    answer: 'Payment plans vary depending on the specific project and applicable terms. Our sales team will provide complete details and guide you through the available options.',
+  }
 ];
 
 export default function FAQ() {

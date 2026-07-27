@@ -68,8 +68,8 @@ export default function CTA() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Email</span>
-                    <a href="mailto:info@yourrealestate.com" className="text-sm sm:text-base font-medium text-zinc-900 hover:text-orange-500 transition-colors duration-300">
-                      info@yourrealestate.com
+                    <a href="mailto:Sales@ppgreencity.com" className="text-sm sm:text-base font-medium text-zinc-900 hover:text-orange-500 transition-colors duration-300">
+                      Sales@ppgreencity.com
                     </a>
                   </div>
                 </div>
@@ -83,8 +83,8 @@ export default function CTA() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Phone</span>
-                    <a href="tel:+919876543210" className="text-sm sm:text-base font-medium text-zinc-900 hover:text-orange-500 transition-colors duration-300">
-                      +91 98765 43210
+                    <a href="tel:+918222-8333-51" className="text-sm sm:text-base font-medium text-zinc-900 hover:text-orange-500 transition-colors duration-300">
+                      +91 8222-8333-51
                     </a>
                   </div>
                 </div>
@@ -99,8 +99,8 @@ export default function CTA() {
                   <div className="flex flex-col">
                     <span className="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">Office</span>
                     <p className="text-sm sm:text-base font-medium text-zinc-900 leading-relaxed">
-                      Corporate Office, MG Road, <br />
-                      Gurugram, Haryana, India
+                      Sector 83 and 84, Main GT Road, Kumashpur,
+                      Sonipat, Haryana 131001
                     </p>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function CTA() {
           {/* Orange Link Header */}
           <Link
             href="/ContactUs"
-            className="w-full bg-[#FF6A00] hover:bg-[#E05B00] text-white font-semibold text-sm px-4 py-4 flex items-center justify-between transition-colors duration-300 active:scale-[0.99] cursor-pointer border-none focus:outline-none"
+            className="w-full bg-[#0C433C] hover:bg-[#09332d] text-white font-semibold text-sm px-4 py-4 flex items-center justify-between transition-colors duration-300 active:scale-[0.99] cursor-pointer border-none focus:outline-none"
           >
             <span>{"Get in Touch"}</span>
             <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -129,8 +129,8 @@ export default function CTA() {
               <svg className="w-4 h-4 text-zinc-800" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              <a href="mailto:info@yourrealestate.com" className="text-xs font-normal hover:text-orange-500 transition-colors duration-300 break-all leading-normal">
-                {"info@yourrealestate.com"}
+              <a href="mailto:Sales@ppgreencity.com" className="text-xs font-normal hover:text-orange-500 transition-colors duration-300 break-all leading-normal">
+                {"Sales@ppgreencity.com"}
               </a>
             </div>
 

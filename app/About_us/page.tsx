@@ -69,7 +69,7 @@ function AnimatedCounter({
   return (
     <span ref={elementRef}>
       {prefix}
-      {count}
+      {count.toLocaleString()}
       {suffix}
     </span>
   );
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
             {/* Right Column: Mini-description Block */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start max-w-md lg:ml-auto lg:pb-8">
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-3 h-3 rounded-full bg-[#FF6A00] shrink-0" />
+                <span className="w-3 h-3 rounded-full bg-[#0C433C] shrink-0" />
                 <h2 className="text-white font-semibold text-base sm:text-lg tracking-wide">
                   Trusted Real Estate Partner
                 </h2>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
             {/* Tagline */}
             <div className="lg:col-span-3">
               <div className="flex items-center gap-2">
-                <span className="text-[#FF6A00] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
+                <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
                 <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   About Us
                 </span>
@@ -167,48 +167,87 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          {/* Bottom Block: Image on Left, Mission/Vision on Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-start">
-            {/* Left side Image */}
-            <div className="lg:col-span-5 aspect-[4/3] sm:aspect-square lg:aspect-[9/10] relative w-full overflow-hidden bg-zinc-50 ">
-              <Image
-                src="/Blogs/1.svg"
-                alt="Blueprint drawing plans and hands sketching"
-                fill
-                unoptimized
-                className="object-cover select-none pointer-events-none"
-              />
-            </div>
-
-            {/* Right side Mission & Vision content */}
-            <div className="lg:col-span-7 flex flex-col justify-center max-w-2xl lg:pl-4">
-              {/* Mission */}
-              <div className="mb-10 sm:mb-12">
-                <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
-                  Our Mission
-                </h3>
-                <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-                  To provide trusted real estate solutions with transparency, quality, and expert guidance, helping every client find the right property and make confident investment decisions.
-                </p>
-              </div>
-
-              {/* Vision */}
-              <div className="mb-10 sm:mb-12">
-                <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
-                  Our Vision
-                </h3>
-                <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
-                  To redefine modern real estate by creating sustainable communities, delivering exceptional value, and building lasting relationships through innovation and integrity.
-                </p>
-              </div>
-
-              {/* Get in Touch Button */}
+          {/* Bottom Block: Mission/Vision in Single Row (No Image) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
+            {/* Mission Column */}
+            <div className="flex flex-col items-start">
+              <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
+                Our Mission
+              </h3>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light mb-8">
+                 To build upon our legacy of trust and excellence by consistently delivering superior quality, creating enduring value and setting new benchmarks in customer experience.
+              </p>
+              
+              {/* Get in Touch Button below Mission */}
               <Link
                 href="/ContactUs"
-                className="inline-flex items-center justify-center bg-[#FF6A00] hover:bg-[#e05d00] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
+                className="inline-flex items-center justify-center bg-[#0C433C] hover:bg-[#09332d] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
               >
                 Get in Touch
               </Link>
+            </div>
+
+            {/* Vision Column */}
+            <div className="flex flex-col items-start">
+              <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
+                Our Vision
+              </h3>
+              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+                 To emerge as a leading force in the real estate industry, recognised for our commitment to excellence, innovation, integrity and customer satisfaction.              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder's Note Section */}
+      <section className="w-full bg-white text-zinc-950 py-10 sm:py-24 md:py-28 -mt-16">
+        <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Left side Founder Portrait Photo */}
+            <div className="lg:col-span-4 w-full max-w-[320px] mx-auto lg:mx-0">
+              <div className="relative aspect-[4/5] w-full overflow-hidden shadow-xs border border-zinc-100">
+                <Image
+                  src="/founder.jpg"
+                  alt="Avinash Puri - Founder, Puri Group"
+                  fill
+                  unoptimized
+                  className="object-cover select-none"
+                />
+              </div>
+            </div>
+
+            {/* Right side Founder's Note Content */}
+            <div className="lg:col-span-8 flex flex-col gap-6">
+              {/* Heading */}
+              <div className="flex items-center gap-2.5">
+                <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
+                <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl lg:text-4xl tracking-tight">
+                  Founder’s Note
+                </h2>
+              </div>
+
+              {/* Body Text */}
+              <div className="space-y-5 text-zinc-700 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+                <p>
+                  At Puri Group, we believe every great community begins with a vision—one that puts people, trust, and lasting value at its heart.
+                </p>
+                <p>
+                  With PP Green City, our aspiration is to create more than just plotted developments. We aim to build a place where families can grow, dreams can take shape, and future generations can thrive.
+                </p>
+                <p>
+                  Thank you for placing your trust in us. We look forward to being a part of your journey.
+                </p>
+              </div>
+
+              {/* Sign-off */}
+              <div className="mt-2 pt-2">
+                <p className="text-zinc-950 font-semibold text-base sm:text-lg">
+                  – Avinash Puri
+                </p>
+                <p className="text-zinc-500 text-xs sm:text-sm tracking-wide">
+                  Founder, Puri Group
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -225,27 +264,27 @@ export default function AboutUsPage() {
             unoptimized
             className="object-cover select-none pointer-events-none opacity-40"
           />
-          <div className="absolute inset-0 bg-black/60 bg-gradient-to-r from-black/1    0 via-black/10 to-black/10" />
+          <div className="absolute inset-0" />
         </div>
 
         {/* Counter Content Container */}
         <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16 items-end justify-items-center md:justify-items-stretch">
-            {/* Stat 1: Years Experience */}
+            {/* Stat 1: 15 million sq. ft. of spaces */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-start">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={15} suffix="+" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={15} suffix="M+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Years</span>
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Experience</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Sq. Ft.</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Of Spaces</span>
               </div>
             </div>
 
-            {/* Stat 2: Projects Delivered */}
+            {/* Stat 2: 200+ Projects Delivered */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-center">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={120} suffix="+" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={200} suffix="+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
                 <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Projects</span>
@@ -253,14 +292,14 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            {/* Stat 3: Customer Satisfaction */}
+            {/* Stat 3: 15,000+ Happy Customers */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-end">
-              <span className="text-[#FF6A00] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={98} suffix="%" />
+              <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
+                <AnimatedCounter value={15000} suffix="+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Customer</span>
-                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Satisfaction</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Happy</span>
+                <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Customers</span>
               </div>
             </div>
           </div>
@@ -275,7 +314,7 @@ export default function AboutUsPage() {
             {/* Tagline */}
             <div className="lg:col-span-4">
               <div className="flex items-center gap-2">
-                <span className="text-[#FF6A00] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
+                <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
                 <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   Our Process
                 </span>

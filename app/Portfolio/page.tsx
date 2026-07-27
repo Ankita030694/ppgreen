@@ -17,64 +17,50 @@ interface ProjectItem {
 const projectsList: ProjectItem[] = [
   {
     id: 1,
-    title: 'Skyline Business Park',
+    title: 'PP City Centre',
     category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    location: 'Sonipat, Haryana',
+    image: '/PP-Green-City.jpg',
   },
   {
     id: 2,
-    title: 'Skyline Business Park',
+    title: 'West End Convention Mall',
     category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    location: 'Sonipat, Haryana',
+    image: '/west_end_convention_mall.jpg',
   },
   {
     id: 3,
-    title: 'Skyline Business Park',
+    title: 'PP Trade Centre',
     category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    location: 'Sonipat, Haryana',
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 12_34_21 AM.png',
   },
   {
     id: 4,
-    title: 'Skyline Business Park',
-    category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    title: 'Mohali Walk',
+    category: 'Residential',
+    location: 'Mohali, Punjab',
+    image: '/33-scaled.jpg',
   },
   {
     id: 5,
-    title: 'Horizon Corporate Center',
-    category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    title: 'AP Wonder',
+    category: 'Residential',
+    location: 'Sonipat, Haryana',
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
   },
   {
     id: 6,
-    title: 'Green Valley Residences',
-    category: 'Residential',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
-  },
-  {
-    id: 7,
-    title: 'Apex Business Heights',
-    category: 'Commercial',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
-  },
-  {
-    id: 8,
-    title: 'Serene Luxury Villas',
-    category: 'Residential',
-    location: 'Gurugram, Haryana',
-    image: '/Portfolio/1.svg',
+    title: 'PP Green City',
+    category: 'Plots',
+    location: 'Sonipat, Haryana',
+    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
   },
 ];
 
 export default function Portfolio() {
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   return (
     <main className="w-full min-h-screen bg-white flex flex-col pt-20">
@@ -124,7 +110,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-16">
             {projectsList.slice(0, visibleCount).map((project) => (
-              <Link key={project.id} href="/Project_Overview" className="flex flex-col group cursor-pointer">
+              <Link key={project.id} href={`/Project_Overview?title=${encodeURIComponent(project.title)}`} className="flex flex-col group cursor-pointer">
                 {/* Project Image Container */}
                 <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
                   <Image
