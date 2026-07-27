@@ -188,7 +188,7 @@ const offersList: OfferItem[] = [
   },
   {
     id: 3,
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 12_34_21 AM.png',
+    image: '/2.jpeg',
     category: 'Commercial',
     title: 'PP Trade Centre',
   },
@@ -206,7 +206,7 @@ const offersList: OfferItem[] = [
   },
   {
     id: 6,
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
+    image: '/1.jpeg',
     category: 'Plots',
     title: 'PP Green City',
   },
@@ -473,7 +473,7 @@ function Reels() {
   };
 
   return (
-    <section id="reels" className="relative w-full bg-zinc-950 text-white py-16 sm:py-24 overflow-hidden border-t border-zinc-900">
+    <section id="reels" className="relative w-full bg-black text-[#F9CC94] py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -481,19 +481,19 @@ function Reels() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-zinc-400 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-[#F9CC94] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-[#F9CC94] font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Life at PP Green
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-[1.15] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight">
               Watch Our Stories & Reels
             </h2>
             
             {/* Description */}
-            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-[#F9CC94] text-sm sm:text-base leading-relaxed max-w-2xl">
               Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
             </p>
           </div>
@@ -502,7 +502,7 @@ function Reels() {
           <div className="flex items-center gap-3 self-start md:self-auto">
             <button
               onClick={scrollLeft}
-              className="flex items-center justify-center w-12 h-12 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Previous reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -511,7 +511,7 @@ function Reels() {
             </button>
             <button
               onClick={scrollRight}
-              className="flex items-center justify-center w-12 h-12 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Next reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -533,7 +533,7 @@ function Reels() {
               className="flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[320px] snap-start group"
             >
               {/* Card Container in 9:16 Aspect Ratio */}
-              <div className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-900 shadow-lg border border-zinc-800/80 rounded-none transition-all duration-300">
+              <div className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-900 shadow-lg rounded-none transition-all duration-300">
                 <video
                   id={`reel-video-${item.id}`}
                   src={item.video}
@@ -602,14 +602,14 @@ interface ExpertiseItem {
 const expertiseList: ExpertiseItem[] = [
   {
     id: 1,
-    image: '/hover_effect/1.svg',
+    image: '/1.jpeg',
     category: 'Residential',
     title: 'Residential Communities',
-    description: 'We develop efficient industrial spaces built for productivity, scalability, and long term operational success. Our projects prioritize functionality, strategic locations, and modern infrastructure to support growing businesses.',
+    description: 'We build elegant residential towers, luxury apartments, and master-planned villa communities offering premium lifestyles, rich green spaces, and a strong sense of community.',
   },
   {
     id: 2,
-    image: '/hover_effect/2.svg',
+    image: '/2.jpeg',
     category: 'Commercial',
     title: 'Commercial Properties',
     description: 'We design premium commercial centers, retail malls, and corporate offices in high-traffic zones, combining architectural innovation with commercial viability to attract leading brands.',
@@ -619,7 +619,7 @@ const expertiseList: ExpertiseItem[] = [
     image: '/hover_effect/3.svg',
     category: 'Industrial',
     title: 'Industrial Developments',
-    description: 'We build elegant residential towers, luxury apartments, and master-planned villa communities offering premium lifestyles, rich green spaces, and a strong sense of community.',
+    description: 'We develop efficient industrial spaces built for productivity, scalability, and long term operational success. Our projects prioritize functionality, strategic locations, and modern infrastructure to support growing businesses.',
   },
 ];
 
@@ -1057,35 +1057,10 @@ export default function Home() {
             Become Reality
           </h1>
 
-          {/* Sub-info Row */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 w-full max-w-7xl">
-            {/* Video Preview Card */}
-            <div className="group relative flex-shrink-0 w-full sm:w-1/5 h-[100px] border border-white/20 bg-zinc-900 overflow-hidden cursor-pointer shadow-2xl transition-all duration-300">
-              {/* Thumbnail Background */}
-              <Image
-                src="/hero-bg.png"
-                alt="Video Preview Thumbnail"
-                fill
-                sizes="(max-width: 700px) 100vw, 20vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Blurred Play Button Overlay */}
-              <div className="absolute right-0 top-0 bottom-0 w-[35%] bg-black/60 backdrop-blur-[2px] flex items-center justify-center border-l border-white/10 group-hover:bg-black/40 transition-colors duration-300">
-                {/* Play Icon */}
-                <svg
-                  className="w-10 h-10 text-white fill-white transition-transform duration-300 group-hover:scale-110"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-
-            {/* Description Text */}
-            <p className="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-md">
-              Explore premium properties in prime locations with trusted guidance and seamless buying experience.
-            </p>
-          </div>
+          {/* Description Text */}
+          <p className="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-md">
+            Explore premium properties in prime locations with trusted guidance and seamless buying experience.
+          </p>
         </div>
       </section>
 

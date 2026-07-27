@@ -34,7 +34,7 @@ const projectsList: ProjectItem[] = [
     title: 'PP Trade Centre',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 12_34_21 AM.png',
+    image: '/2.jpeg',
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const projectsList: ProjectItem[] = [
     title: 'PP Green City',
     category: 'Plots',
     location: 'Sonipat, Haryana',
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
+    image: '/1.jpeg',
   },
 ];
 
