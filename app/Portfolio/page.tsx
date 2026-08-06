@@ -48,14 +48,14 @@ const projectsList: ProjectItem[] = [
     title: 'AP Wonder',
     category: 'Residential',
     location: 'Sonipat, Haryana',
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
   },
   {
     id: 6,
     title: 'PP Green City',
     category: 'Residential',
     location: 'Sonipat, Haryana',
-    image: '/1.jpeg',
+    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
   },
 ];
 

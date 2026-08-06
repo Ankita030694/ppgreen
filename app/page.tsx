@@ -200,13 +200,13 @@ const offersList: OfferItem[] = [
   },
   {
     id: 5,
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
     category: 'Residential',
     title: 'AP Wonder',
   },
   {
     id: 6,
-    image: '/1.jpeg',
+    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
     category: 'Residential',
     title: 'PP Green City',
   },

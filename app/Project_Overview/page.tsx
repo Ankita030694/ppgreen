@@ -135,7 +135,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'AP Wonder',
     category: 'Residential',
     location: 'Sonipat, Haryana',
-    image: '/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
     client: 'PP Green Group',
     completed: 'November 2025',
     contributors: 'PP Green Development Team',
@@ -160,7 +160,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'PP Green City',
     category: 'Residential',
     location: 'Sonipat, Haryana',
-    image: '/1.jpeg',
+    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
     client: 'PP Green Group',
     completed: 'October 2025',
     contributors: 'PP Green Development Team',
@@ -343,43 +343,77 @@ function ProjectOverviewContent() {
             </div>
           )}
 
-          {/* PP Green City: Flooring, Sitemap & Gallery */}
+          {/* PP Green City: Gallery Carousel */}
           {currentProject.title.toLowerCase() === 'pp green city' && (
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
-              {/* Flooring & Sitemap Grid */}
               <div className="flex flex-col">
-                <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-6">
-                  {"Flooring & Sitemap"}
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="flex flex-col gap-3 group">
-                    <span className="text-zinc-500 text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                      Location Map
-                    </span>
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50 border border-zinc-200 rounded-lg shadow-sm">
-                      <Image
-                        src="/Pp green city/location-big.jpg"
-                        alt="Location Map"
-                        fill
-                        unoptimized
-                        className="object-cover transition-transform duration-500 group-hover:scale-102"
-                      />
-                    </div>
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
                   </div>
-                  <div className="flex flex-col gap-3 group">
-                    <span className="text-zinc-500 text-xs sm:text-sm font-semibold tracking-wider uppercase">
-                      Floor Plan
-                    </span>
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50 border border-zinc-200 rounded-lg shadow-sm">
-                      <Image
-                        src="/Pp green city/floor_big-1.jpg"
-                        alt="Floor Plan"
-                        fill
-                        unoptimized
-                        className="object-cover transition-transform duration-500 group-hover:scale-102"
-                      />
-                    </div>
-                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/PP Green City main/Copy of ChatGPT Image Mar 9, 2026 at 10_58_05 PM.png',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_25_29 AM.png',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_27_13 AM.png',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_42_49 AM.png',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_44_00 AM.png'
+                  ].map((imgSrc, idx) => {
+                    const label = `Project Render ${idx + 1}`;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -686,6 +720,89 @@ function ProjectOverviewContent() {
                     if (filename.includes('location-big')) label = 'Location Map';
                     else if (filename.includes('floor_big')) label = 'Floor Plan';
                     else if (filename.startsWith('pic')) label = `Project Render ${filename.replace('pic-', '').replace('.jpg', '')}`;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* AP Wonder: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'ap wonder' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Plans"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_31_40 AM.png',
+                    '/AP Wonders/Copy of not use ChatGPT Image Mar 10, 2026 at 01_35_33 AM.png',
+                    '/AP Wonders/ap_wonderbig.jpg',
+                    '/AP Wonders/ap_wonderbig1.jpg',
+                    '/AP Wonders/ap_wonderbig4-1.jpg'
+                  ].map((imgSrc, idx) => {
+                    const filename = imgSrc.split('/').pop() || '';
+                    let label = 'Gallery Image';
+                    if (filename.includes('01_33_20')) label = 'Exterior Rendering 1';
+                    else if (filename.includes('01_31_40')) label = 'Exterior Rendering 2';
+                    else if (filename.includes('01_35_33')) label = 'Exterior Rendering 3';
+                    else if (filename.includes('ap_wonderbig.jpg')) label = 'Site Layout Plan';
+                    else if (filename.includes('ap_wonderbig1')) label = 'Unit Layout Plan 1';
+                    else if (filename.includes('ap_wonderbig4-1')) label = 'Unit Layout Plan 2';
 
                     return (
                       <div
