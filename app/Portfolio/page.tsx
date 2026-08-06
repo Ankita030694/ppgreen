@@ -34,12 +34,12 @@ const projectsList: ProjectItem[] = [
     title: 'PP Trade Centre',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/2.jpeg',
+    image: '/PP Trade Centre/pp_trade_centre.jpg',
   },
   {
     id: 4,
     title: 'Mohali Walk',
-    category: 'Residential',
+    category: 'Commercial',
     location: 'Mohali, Punjab',
     image: '/33-scaled.jpg',
   },
@@ -53,7 +53,7 @@ const projectsList: ProjectItem[] = [
   {
     id: 6,
     title: 'PP Green City',
-    category: 'Plots',
+    category: 'Residential',
     location: 'Sonipat, Haryana',
     image: '/1.jpeg',
   },

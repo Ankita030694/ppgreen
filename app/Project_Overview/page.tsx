@@ -81,7 +81,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'PP Trade Centre',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/2.jpeg',
+    image: '/PP Trade Centre/pp_trade_centre.jpg',
     client: 'PP Green Group',
     completed: 'February 2026',
     contributors: 'PP Green Development Team',
@@ -158,7 +158,7 @@ export const projectsList: ProjectDetail[] = [
   {
     id: 6,
     title: 'PP Green City',
-    category: 'Plots',
+    category: 'Residential',
     location: 'Sonipat, Haryana',
     image: '/1.jpeg',
     client: 'PP Green Group',
@@ -442,6 +442,90 @@ function ProjectOverviewContent() {
                       />
                     </div>
                   ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PP Trade Centre: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'pp trade centre' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Plans"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/PP Trade Centre/pp_trade_centre.jpg',
+                    '/PP Trade Centre/pp_trade_centre1.jpg',
+                    '/PP Trade Centre/trade_feature1-1.jpg',
+                    '/PP Trade Centre/trade_groundfloor.jpg',
+                    '/PP Trade Centre/tradefirstfloor_big.jpg',
+                    '/PP Trade Centre/tradeseondthird_big.jpg',
+                    '/PP Trade Centre/tradefourth.jpg'
+                  ].map((imgSrc, idx) => {
+                    const filename = imgSrc.split('/').pop() || '';
+                    let label = 'Gallery Image';
+                    if (filename.includes('groundfloor')) label = 'Ground Floor Plan';
+                    else if (filename.includes('firstfloor')) label = 'First Floor Plan';
+                    else if (filename.includes('seondthird')) label = 'Second & Third Floor Plan';
+                    else if (filename.includes('fourth')) label = 'Fourth Floor Plan';
+                    else if (filename.includes('feature')) label = 'Project Feature';
+                    else if (filename.startsWith('pp_trade_centre')) label = `Exterior View ${filename.includes('1') ? '2' : '1'}`;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

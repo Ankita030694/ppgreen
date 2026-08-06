@@ -32,25 +32,25 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link
                 href="/"
-                className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
               >
                 Home
               </Link>
               <Link
                 href="/About_us"
-                className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
               >
                 About Us
               </Link>
               <Link
                 href="/Blogs"
-                className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
               >
                 Blogs
               </Link>
               <Link
                 href="/Portfolio"
-                className="text-sm sm:text-base font-medium text-zinc-300 hover:text-orange-500 transition-colors duration-300"
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
               >
                 Portfolio
               </Link>
@@ -60,20 +60,20 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-zinc-400 text-sm sm:text-base">
               <Link
                 href="/ContactUs"
-                className="hover:text-orange-500 transition-colors duration-300"
+                className=" transition-colors duration-300"
               >
                 Get In Touch
               </Link>
               <Link
                 href="/Terms"
-                className="hover:text-orange-500 transition-colors duration-300"
+                className=" transition-colors duration-300"
               >
                 Terms of Service
               </Link>
 
               <Link
                 href="/Privacy"
-                className="hover:text-orange-500 transition-colors duration-300"
+                className=" transition-colors duration-300"
               >
                 Privacy Policies
               </Link>

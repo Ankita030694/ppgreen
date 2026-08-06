@@ -188,14 +188,14 @@ const offersList: OfferItem[] = [
   },
   {
     id: 3,
-    image: '/2.jpeg',
+    image: '/PP Trade Centre/pp_trade_centre.jpg',
     category: 'Commercial',
     title: 'PP Trade Centre',
   },
   {
     id: 4,
     image: '/33-scaled.jpg',
-    category: 'Residential',
+    category: 'Commercial',
     title: 'Mohali Walk',
   },
   {
@@ -207,7 +207,7 @@ const offersList: OfferItem[] = [
   {
     id: 6,
     image: '/1.jpeg',
-    category: 'Plots',
+    category: 'Residential',
     title: 'PP Green City',
   },
 ];
@@ -481,19 +481,19 @@ function Reels() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-[#F9CC94] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#F9CC94] font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-[#FFFFFF] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-[#FFFFFF] font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Life at PP Green
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#FFFFFF] leading-[1.15] tracking-tight">
               Watch Our Stories & Reels
             </h2>
             
             {/* Description */}
-            <p className="text-[#F9CC94] text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-[#FFFFFF] text-sm sm:text-base leading-relaxed max-w-2xl">
               Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
             </p>
           </div>
@@ -502,7 +502,7 @@ function Reels() {
           <div className="flex items-center gap-3 self-start md:self-auto">
             <button
               onClick={scrollLeft}
-              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#FFFFFF] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Previous reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -511,7 +511,7 @@ function Reels() {
             </button>
             <button
               onClick={scrollRight}
-              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#FFFFFF] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Next reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
