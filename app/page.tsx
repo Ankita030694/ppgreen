@@ -290,8 +290,8 @@ function Offers() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
+              <span className="text-white font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-black font-regular tracking-widest text-xs sm:text-sm ">
                 What We Offer
               </span>
             </div>
@@ -363,7 +363,7 @@ function Offers() {
                 
                 {/* Card Text Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
-                  <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1 select-none">
+                  <span className="text-[10px] font-bold tracking-widest text-white uppercase mb-1 select-none">
                     {item.category}
                   </span>
                   <h3 className="text-xl font-bold tracking-tight mb-2 group-hover:text-orange-100 transition-colors duration-300">
@@ -549,7 +549,7 @@ function Reels() {
 
                 {/* Card Title Content */}
                 <div className="absolute bottom-0 inset-x-0 p-5 pr-16 text-white z-10 pointer-events-none">
-                  <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1 block select-none">
+                  <span className="text-[10px] font-bold tracking-widest text-white uppercase mb-1 block select-none">
                     PP Green Reel
                   </span>
                   <h3 className="text-base font-semibold tracking-tight text-white leading-snug">
@@ -674,7 +674,7 @@ function Expertise() {
                 
                 {/* Text Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
-                  <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1.5 select-none">
+                  <span className="text-[10px] font-bold tracking-widest text-white uppercase mb-1.5 select-none">
                     {item.category}
                   </span>
                   
@@ -1045,7 +1045,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 md:pb-16 flex flex-col justify-end">
           {/* Category Label */}
           <div className="flex items-center gap-2.5 mb-3.5">
-            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-white font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-zinc-300 font-medium tracking-widest text-xs sm:text-sm ">
               Trusted Real Estate
             </span>

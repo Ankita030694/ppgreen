@@ -194,6 +194,7 @@ function ProjectOverviewContent() {
   const otherProjects = projectsList.filter((p) => p.id !== currentProject.id);
 
   const sliderRef = useRef<HTMLDivElement>(null);
+  const gallerySliderRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
   const startXRef = useRef(0);
   const scrollLeftRef = useRef(0);
@@ -240,7 +241,7 @@ function ProjectOverviewContent() {
   return (
     <main className="w-full min-h-screen bg-white flex flex-col pt-1">
       {/* Hero Section */}
-      <section className="relative w-full h-[65vh] sm:h-[80vh] md:h-[85vh] bg-[#f7f7f7] overflow-hidden flex items-end">
+      <section className="relative w-full h-[65vh] sm:h-[80vh] md:h-[85vh] bg-black overflow-hidden flex items-end">
         {/* Background Project Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
@@ -252,22 +253,24 @@ function ProjectOverviewContent() {
             className="object-cover select-none pointer-events-none"
             priority
           />
+          {/* Dark Overlay Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
         </div>
 
         {/* Content Overlay */}
         <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 lg:pb-10 flex flex-col items-start">
           {/* Tags Row */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="border border-[#0C433C] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
+            <span className="border border-white/40 text-white bg-white/15 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               {currentProject.category}
             </span>
-            <span className="border border-[#0C433C] text-zinc-900 bg-white/40 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
+            <span className="border border-white/40 text-white bg-white/15 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               {currentProject.location}
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="text-zinc-950 font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight">
+          <h1 className="text-white font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight">
             {currentProject.title}
           </h1>
         </div>
@@ -336,6 +339,110 @@ function ProjectOverviewContent() {
                     </span>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* PP Green City: Flooring, Sitemap & Gallery */}
+          {currentProject.title.toLowerCase() === 'pp green city' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              {/* Flooring & Sitemap Grid */}
+              <div className="flex flex-col">
+                <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-6">
+                  {"Flooring & Sitemap"}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-3 group">
+                    <span className="text-zinc-500 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                      Location Map
+                    </span>
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50 border border-zinc-200 rounded-lg shadow-sm">
+                      <Image
+                        src="/Pp green city/location-big.jpg"
+                        alt="Location Map"
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-500 group-hover:scale-102"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3 group">
+                    <span className="text-zinc-500 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                      Floor Plan
+                    </span>
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50 border border-zinc-200 rounded-lg shadow-sm">
+                      <Image
+                        src="/Pp green city/floor_big-1.jpg"
+                        alt="Floor Plan"
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-500 group-hover:scale-102"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Gallery Horizontal Carousel */}
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/Pp green city/pic-3.jpg',
+                    '/Pp green city/pic-9.jpg',
+                    '/Pp green city/pic-13.jpg',
+                    '/Pp green city/pic-14.jpg',
+                    '/Pp green city/pic-16.jpg',
+                    '/Pp green city/pic-17.jpg'
+                  ].map((imgSrc, idx) => (
+                    <div
+                      key={idx}
+                      className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                    >
+                      <Image
+                        src={imgSrc}
+                        alt={`PP Green City gallery image ${idx + 1}`}
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}

@@ -120,7 +120,7 @@ export default function AboutUsPage() {
             {/* Right Column: Mini-description Block */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start max-w-md lg:ml-auto lg:pb-8">
               <div className="flex items-center gap-2 mb-3">
-                <span className="w-3 h-3 rounded-full bg-[#0C433C] shrink-0" />
+                <span className="w-3 h-3 rounded-full bg-[#FFFFFF] shrink-0" />
                 <h2 className="text-white font-semibold text-base sm:text-lg tracking-wide">
                   Trusted Real Estate Partner
                 </h2>

@@ -29,7 +29,7 @@ export default function Navbar() {
           <div className="flex items-center justify-start">
             <Link href="/" className="flex items-center">
               <Image
-                src="/PP-Green Logo.svg"
+                src="/New LOGO.svg"
                 alt="PP Green City 2 Logo"
                 width={213}
                 height={35}
@@ -104,7 +104,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between mb-8">
               <Link href="/" onClick={() => setIsOpen(false)}>
                 <Image
-                  src="/PP-Green Logo.svg"
+                  src="/New LOGO.svg"
                   alt="PP Green City 2 Logo"
                   width={150}
                   height={25}

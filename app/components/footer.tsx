@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="bg-black py-16 sm:py-20 flex items-center justify-center w-full px-4 border-b border-zinc-900">
         <div className="relative w-full max-w-[650px] h-[100px] sm:h-[130px]">
           <Image
-            src="/PP-Green Logo.svg"
+            src="/New LOGO.svg"
             alt="PP Green City 2 Sonipat Logo"
             fill
             sizes="(max-width: 768px) 100vw, 650px"
