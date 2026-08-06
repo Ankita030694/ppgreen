@@ -27,7 +27,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'PP City Centre',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/PP-Green-City.jpg',
+    image: '/PP City Centre/pic-3.jpg',
     client: 'PP Green Group',
     completed: 'March 2026',
     contributors: 'PP Green Development Team',
@@ -51,7 +51,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'West End Convention Mall',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/west_end_convention_mall.jpg',
+    image: '/West End Convention Mall/west3-1.jpg',
     client: 'PP Green Group',
     completed: 'January 2026',
     contributors: 'PP Green Development Team',
@@ -109,7 +109,7 @@ export const projectsList: ProjectDetail[] = [
     title: 'Mohali Walk',
     category: 'Commercial',
     location: 'Mohali, Punjab',
-    image: '/33-scaled.jpg',
+    image: '/mohali Walk/33-scaled.jpg',
     client: 'PP Buildwell Group',
     completed: 'December 2025',
     contributors: 'Bentel Associates & PPZ Management',
@@ -382,8 +382,12 @@ function ProjectOverviewContent() {
                   </div>
                 </div>
               </div>
+            </div>
+          )}
 
-              {/* Gallery Horizontal Carousel */}
+          {/* PP Trade Centre: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'pp trade centre' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
@@ -428,27 +432,37 @@ function ProjectOverviewContent() {
                     '/Pp green city/pic-14.jpg',
                     '/Pp green city/pic-16.jpg',
                     '/Pp green city/pic-17.jpg'
-                  ].map((imgSrc, idx) => (
-                    <div
-                      key={idx}
-                      className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
-                    >
-                      <Image
-                        src={imgSrc}
-                        alt={`PP Green City gallery image ${idx + 1}`}
-                        fill
-                        unoptimized
-                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-                      />
-                    </div>
-                  ))}
+                  ].map((imgSrc, idx) => {
+                    const label = `Gallery Image ${idx + 1}`;
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
           )}
 
-          {/* PP Trade Centre: Gallery Carousel */}
-          {currentProject.title.toLowerCase() === 'pp trade centre' && (
+          {/* West End Convention Mall: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'west end convention mall' && (
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
@@ -488,22 +502,190 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/PP Trade Centre/pp_trade_centre.jpg',
-                    '/PP Trade Centre/pp_trade_centre1.jpg',
-                    '/PP Trade Centre/trade_feature1-1.jpg',
-                    '/PP Trade Centre/trade_groundfloor.jpg',
-                    '/PP Trade Centre/tradefirstfloor_big.jpg',
-                    '/PP Trade Centre/tradeseondthird_big.jpg',
-                    '/PP Trade Centre/tradefourth.jpg'
+                    '/West End Convention Mall/west3-1.jpg',
+                    '/West End Convention Mall/ground_floor.jpg',
+                    '/West End Convention Mall/first_second_floor_plan.jpg',
+                    '/West End Convention Mall/third_floor.jpg',
+                    '/West End Convention Mall/third_floor_plan.jpg'
                   ].map((imgSrc, idx) => {
                     const filename = imgSrc.split('/').pop() || '';
                     let label = 'Gallery Image';
-                    if (filename.includes('groundfloor')) label = 'Ground Floor Plan';
-                    else if (filename.includes('firstfloor')) label = 'First Floor Plan';
-                    else if (filename.includes('seondthird')) label = 'Second & Third Floor Plan';
-                    else if (filename.includes('fourth')) label = 'Fourth Floor Plan';
-                    else if (filename.includes('feature')) label = 'Project Feature';
-                    else if (filename.startsWith('pp_trade_centre')) label = `Exterior View ${filename.includes('1') ? '2' : '1'}`;
+                    if (filename.includes('ground_floor')) label = 'Ground Floor Plan';
+                    else if (filename.includes('first_second')) label = 'First & Second Floor Plan';
+                    else if (filename.includes('third_floor_plan')) label = 'Third Floor Plan';
+                    else if (filename.includes('third_floor')) label = 'Third Floor Plan View';
+                    else if (filename.includes('west3')) label = 'Exterior View';
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Mohali Walk: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'mohali walk' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Plans"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/mohali Walk/33-scaled.jpg',
+                    '/mohali Walk/21.jpg',
+                    '/mohali Walk/22-scaled.jpg',
+                    '/mohali Walk/27-scaled.jpg',
+                    '/mohali Walk/30-scaled.jpg',
+                    '/mohali Walk/32-scaled.jpg',
+                    '/mohali Walk/Food-Court--scaled.jpg',
+                    '/mohali Walk/ground_floor.jpg',
+                    '/mohali Walk/first_second_floor_plan.jpg',
+                    '/mohali Walk/third_floor_plan.jpg'
+                  ].map((imgSrc, idx) => {
+                    const filename = imgSrc.split('/').pop() || '';
+                    let label = 'Gallery Image';
+                    if (filename.includes('ground_floor')) label = 'Ground Floor Plan';
+                    else if (filename.includes('first_second')) label = 'First & Second Floor Plan';
+                    else if (filename.includes('third_floor_plan')) label = 'Third Floor Plan';
+                    else if (filename.includes('Food-Court')) label = 'Food Court Rendering';
+                    else if (filename.includes('33')) label = 'Exterior View';
+                    else if (filename.includes('21') || filename.includes('22') || filename.includes('27') || filename.includes('30') || filename.includes('32')) {
+                      label = `Project Rendering ${filename.split('-')[0].replace('.jpg', '')}`;
+                    }
+
+                    return (
+                      <div
+                        key={idx}
+                        className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={label}
+                          fill
+                          unoptimized
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                          <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                            {label}
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* PP City Centre: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'pp city centre' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Plans"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    '/PP City Centre/pic-3.jpg',
+                    '/PP City Centre/pic-9.jpg',
+                    '/PP City Centre/pic-13.jpg',
+                    '/PP City Centre/pic-14.jpg',
+                    '/PP City Centre/pic-16.jpg',
+                    '/PP City Centre/pic-17.jpg',
+                    '/PP City Centre/location-big.jpg',
+                    '/PP City Centre/floor_big-1.jpg'
+                  ].map((imgSrc, idx) => {
+                    const filename = imgSrc.split('/').pop() || '';
+                    let label = 'Gallery Image';
+                    if (filename.includes('location-big')) label = 'Location Map';
+                    else if (filename.includes('floor_big')) label = 'Floor Plan';
+                    else if (filename.startsWith('pic')) label = `Project Render ${filename.replace('pic-', '').replace('.jpg', '')}`;
 
                     return (
                       <div

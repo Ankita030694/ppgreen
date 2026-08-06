@@ -20,14 +20,14 @@ const projectsList: ProjectItem[] = [
     title: 'PP City Centre',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/PP-Green-City.jpg',
+    image: '/PP City Centre/pic-3.jpg',
   },
   {
     id: 2,
     title: 'West End Convention Mall',
     category: 'Commercial',
     location: 'Sonipat, Haryana',
-    image: '/west_end_convention_mall.jpg',
+    image: '/West End Convention Mall/west3-1.jpg',
   },
   {
     id: 3,

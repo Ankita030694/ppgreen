@@ -176,13 +176,13 @@ interface OfferItem {
 const offersList: OfferItem[] = [
   {
     id: 1,
-    image: "/PP-Green-City.jpg",
+    image: '/PP City Centre/pic-3.jpg',
     category: 'Commercial',
     title: 'PP City Centre',
   },
   {
     id: 2,
-    image: '/west_end_convention_mall.jpg',
+    image: '/West End Convention Mall/west3-1.jpg',
     category: 'Commercial',
     title: 'West End Convention Mall',
   },
