@@ -88,18 +88,18 @@ export default function Portfolio() {
           {/* Tagline */}
           <div className="flex items-center gap-2.5 mb-4">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm">
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm">
               {"Featured Projects"}
             </span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-zinc-950 font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
+          <h1 className="text-[#0C433C] font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
             Showcasing Spaces That Define the Future
           </h1>
 
           {/* Subtitle */}
-          <p className="text-zinc-500 text-sm sm:text-base leading-relaxed max-w-2xl">
+          <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
             We deliver thoughtfully designed developments that combine functionality, modern aesthetics, and exceptional craftsmanship.
           </p>
         </div>
@@ -124,16 +124,16 @@ export default function Portfolio() {
                 </div>
 
                 {/* Project Details */}
-                <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4 group-hover:text-orange-500 transition-colors duration-300">
+                <h3 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-4 group-hover:text-orange-500 transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 {/* Tags Row */}
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="border border-orange-500/20 text-zinc-700 px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
                     {project.category}
                   </span>
-                  <span className="border border-orange-500/20 text-zinc-700 px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
                     {project.location}
                   </span>
                 </div>

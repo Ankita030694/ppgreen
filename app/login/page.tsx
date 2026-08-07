@@ -37,8 +37,8 @@ export default function LoginPage() {
         className="relative z-10 w-full max-w-md bg-white/70 backdrop-blur-xl border border-white/50 p-8 rounded-3xl shadow-xl shadow-green-900/5"
       >
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Login</h1>
-          <p className="text-gray-500">Secure access to PP-Green</p>
+          <h1 className="text-3xl font-bold text-[#0C433C] mb-2">Admin Login</h1>
+          <p className="text-[#0C433C]/80">Secure access to PP-Green</p>
         </div>
 
         {error && (
@@ -49,7 +49,7 @@ export default function LoginPage() {
 
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-[#0C433C] mb-2">
               Email Address
             </label>
             <input
@@ -63,7 +63,7 @@ export default function LoginPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-[#0C433C] mb-2">
               Password
             </label>
             <input

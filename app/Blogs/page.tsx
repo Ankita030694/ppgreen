@@ -78,18 +78,18 @@ export default function BlogsPage() {
           {/* Tagline */}
           <div className="flex items-center gap-2 mb-4">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm ">
               {"Latest Insights"}
             </span>
           </div>
 
           {/* Heading */} 
-          <h1 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
+          <h1 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.15] tracking-tight max-w-4xl mb-6">
             {"Expert Perspectives on Real Estate & Property"}
           </h1>
 
           {/* Description Subtitle */}
-          <p className="text-zinc-500 text-sm sm:text-base leading-relaxed max-w-2xl">
+          <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
             {"Stay informed with industry trends, investment insights, market updates, and practical guides to help you make confident property decisions."}
           </p>
         </div>
@@ -123,12 +123,12 @@ export default function BlogsPage() {
                 </div>
 
                 {/* Date & Author Info */}
-                <span className="text-zinc-500 text-xs sm:text-sm font-medium mb-2 block select-none">
+                <span className="text-[#0C433C]/60 text-xs sm:text-sm font-medium mb-2 block select-none">
                   {`${blog.date} • ${blog.author}`}
                 </span>
 
                 {/* Blog Title */}
-                <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl group-hover:text-orange-500 transition-colors duration-300 leading-snug">
+                <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl group-hover:text-orange-500 transition-colors duration-300 leading-snug">
                   {blog.title}
                 </h3>
               </Link>

@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-white text-black flex flex-col pt-28 sm:pt-36">
+    <main className="w-full min-h-screen bg-white text-[#0C433C] flex flex-col pt-28 sm:pt-36">
       {/* Container */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full pb-24">
         
@@ -84,10 +84,10 @@ export default function PrivacyPolicy() {
           <span className="text-xs font-bold tracking-widest text-[#0C433C] uppercase mb-2 block">
             LEGAL & COMPLIANCE
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-950 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0C433C] tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-zinc-500 text-sm sm:text-base mt-3">
+          <p className="text-[#0C433C]/60 text-sm sm:text-base mt-3">
             Last Updated: March 2026 | Dedicated to protecting your personal information and data privacy.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
           
           {/* Left Column: Sticky Table of Contents */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 bg-zinc-50/80 p-6 border border-zinc-100 rounded-none shadow-xs">
-            <h4 className="text-xs font-bold tracking-widest text-zinc-400 uppercase mb-4 select-none">
+            <h4 className="text-xs font-bold tracking-widest text-[#0C433C]/50 uppercase mb-4 select-none">
               TABLE OF CONTENTS
             </h4>
             <nav className="flex flex-col gap-2 text-sm">
@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
                   className={`text-left py-1.5 px-3 transition-all duration-200 cursor-pointer ${
                     activeSection === sec.id
                       ? 'text-[#0C433C] font-semibold border-l-2 border-[#0C433C] bg-white shadow-2xs'
-                      : 'text-zinc-500 hover:text-zinc-900 border-l-2 border-transparent hover:border-zinc-300'
+                      : 'text-zinc-500 hover:text-[#0C433C] border-l-2 border-transparent hover:border-[#0C433C]/35'
                   }`}
                 >
                   {sec.label}
@@ -118,12 +118,12 @@ export default function PrivacyPolicy() {
           </div>
 
           {/* Right Column: Content */}
-          <div className="lg:col-span-8 flex flex-col gap-14 text-zinc-600 leading-relaxed text-base">
+          <div className="lg:col-span-8 flex flex-col gap-14 text-[#0C433C]/80 leading-relaxed text-base">
             
             {/* Introduction */}
             <section id="intro" className="scroll-mt-28 flex flex-col gap-4">
-              <p className="text-lg text-zinc-700 font-normal leading-relaxed">
-                At <strong className="text-zinc-900 font-semibold">PP Green City</strong>, your privacy is one of our top priorities. This Privacy Policy outlines the types of information we collect, how it is used, and the measures we take to safeguard your data. By using our website, you agree to the terms of this Privacy Policy.
+              <p className="text-lg text-[#0C433C] font-normal leading-relaxed">
+                At <strong className="text-[#0C433C] font-semibold">PP Green City</strong>, your privacy is one of our top priorities. This Privacy Policy outlines the types of information we collect, how it is used, and the measures we take to safeguard your data. By using our website, you agree to the terms of this Privacy Policy.
               </p>
             </section>
 
@@ -131,29 +131,24 @@ export default function PrivacyPolicy() {
             <section id="sec1" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 01"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Information We Collect
                 </h2>
               </div>
               
-              <h3 className="font-semibold text-zinc-900 text-lg mt-2">Personal Information:</h3>
-              <ul className="list-disc pl-6 space-y-1.5 text-zinc-700">
-                <li>Name</li>
-                <li>Email address</li>
-                <li>Phone number</li>
-                <li>Address (if required for service delivery)</li>
+              <h3 className="font-semibold text-[#0C433C] text-lg mt-2">Personal Information:</h3>
+              <ul className="list-disc pl-6 space-y-1.5 text-[#0C433C]/80">
+                <li>Name, email address, phone number and any other details you submit via contact forms.</li>
+                <li>Details of property preferences, budgets or transaction requirements you share with us.</li>
               </ul>
-
-              <h3 className="font-semibold text-zinc-900 text-lg mt-4">Non-Personal Information:</h3>
-              <ul className="list-disc pl-6 space-y-1.5 text-zinc-700">
-                <li>IP address</li>
-                <li>Browser type and version</li>
-                <li>Pages viewed</li>
-                <li>Time spent on the website</li>
-                <li>Referring URLs</li>
+              
+              <h3 className="font-semibold text-[#0C433C] text-lg mt-4">Non-Personal Information:</h3>
+              <ul className="list-disc pl-6 space-y-1.5 text-[#0C433C]/80">
+                <li>Browser type, IP address, operating system, and pages visited on our website.</li>
+                <li>Time spent on site, referring links, and device characteristics.</li>
               </ul>
-
-              <h3 className="font-semibold text-zinc-900 text-lg mt-4">Cookies and Tracking Technologies:</h3>
+              
+              <h3 className="font-semibold text-[#0C433C] text-lg mt-4">Cookies and Tracking Technologies:</h3>
               <p>
                 We use cookies to improve your browsing experience, analyze site traffic, and understand user preferences.
               </p>
@@ -163,14 +158,14 @@ export default function PrivacyPolicy() {
             <section id="sec2" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 02"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   How We Use Your Information
                 </h2>
               </div>
               <p>
                 The information we collect is used for the following purposes:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-zinc-700">
+              <ul className="list-disc pl-6 space-y-2 text-[#0C433C]/80">
                 <li>To provide and maintain our services</li>
                 <li>To respond to inquiries or customer support requests</li>
                 <li>To improve website functionality and user experience</li>
@@ -182,14 +177,14 @@ export default function PrivacyPolicy() {
             <section id="sec3" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 03"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Sharing of Information
                 </h2>
               </div>
               <p>
                 We do not sell, trade, or rent your personal information to third parties. However, we may share your information with:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-zinc-700">
+              <ul className="list-disc pl-6 space-y-2 text-[#0C433C]/80">
                 <li>Trusted service providers who assist in operating our website or delivering services</li>
                 <li>Authorities or legal entities if required by law or to protect our rights</li>
               </ul>
@@ -199,7 +194,7 @@ export default function PrivacyPolicy() {
             <section id="sec4" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 04"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Data Security
                 </h2>
               </div>
@@ -212,7 +207,7 @@ export default function PrivacyPolicy() {
             <section id="sec5" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 05"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Third-Party Links
                 </h2>
               </div>
@@ -225,12 +220,12 @@ export default function PrivacyPolicy() {
             <section id="sec6" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 06"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Your Rights
                 </h2>
               </div>
               <p>You have the right to:</p>
-              <ul className="list-disc pl-6 space-y-2 text-zinc-700">
+              <ul className="list-disc pl-6 space-y-2 text-[#0C433C]/80">
                 <li>Access, update, or delete your personal data</li>
                 <li>Withdraw consent for data processing</li>
                 <li>Opt-out of receiving marketing communications</li>
@@ -244,7 +239,7 @@ export default function PrivacyPolicy() {
             <section id="sec7" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 07"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Children's Privacy
                 </h2>
               </div>
@@ -257,14 +252,14 @@ export default function PrivacyPolicy() {
             <section id="sec8" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 08"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Communication & DND Disclaimer
                 </h2>
               </div>
               <p>
                 When you voluntarily send us electronic mail / fill up the form, we will keep a record of this information so that we can respond to you. We only collect information from you when you register on our site or fill out a form. Also, when filling out a form on our site, you may be asked to enter your: name, e-mail address or phone number. You may, however, visit our site anonymously.
               </p>
-              <p className="font-semibold text-zinc-900 bg-[#F2F7F6] p-4 border-l-4 border-[#0C433C]">
+              <p className="font-semibold text-[#0C433C] bg-[#F2F7F6] p-4 border-l-4 border-[#0C433C]">
                 In case you have submitted your personal information and contact details, we reserve the rights to Call, SMS, Email or WhatsApp about our products and offers, even if your number has DND activated on it.
               </p>
             </section>
@@ -273,7 +268,7 @@ export default function PrivacyPolicy() {
             <section id="sec9" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 09"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Changes to This Privacy Policy
                 </h2>
               </div>
@@ -286,7 +281,7 @@ export default function PrivacyPolicy() {
             <section id="sec10" className="scroll-mt-28 flex flex-col gap-4 pt-4 border-t border-zinc-200">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 10"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Contact Us
                 </h2>
               </div>
@@ -294,10 +289,10 @@ export default function PrivacyPolicy() {
                 If you have any questions or concerns about this Privacy Policy, please contact us:
               </p>
               <div className="bg-[#F2F7F6] p-6 border-l-4 border-[#0C433C] flex flex-col gap-1 text-sm">
-                <span className="font-semibold text-zinc-900">PP Green City Privacy Officer</span>
-                <span className="text-zinc-600">Email: <a href="mailto:Sales@ppgreencity.com" className="hover:underline text-[#0C433C]">Sales@ppgreencity.com</a></span>
-                <span className="text-zinc-600">Phone: <a href="tel:8222833351" className="hover:underline text-[#0C433C]">8222-8333-51</a></span>
-                <span className="text-zinc-600">Address: Sector 83 and 84, Main GT Road, Kumashpur, Sonipat, Haryana 131001</span>
+                <span className="font-semibold text-[#0C433C]">PP Green City Privacy Officer</span>
+                <span className="text-[#0C433C]/80">Email: <a href="mailto:Sales@ppgreencity.com" className="hover:underline text-[#0C433C]">Sales@ppgreencity.com</a></span>
+                <span className="text-[#0C433C]/80">Phone: <a href="tel:8222833351" className="hover:underline text-[#0C433C]">8222-8333-51</a></span>
+                <span className="text-[#0C433C]/80">Address: Sector 83 and 84, Main GT Road, Kumashpur, Sonipat, Haryana 131001</span>
               </div>
             </section>
 

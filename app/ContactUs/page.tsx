@@ -141,7 +141,7 @@ export default function ContactUs() {
 
         {/* Hero Title */}
         <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
-          <h1 className="text-white font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[120px] leading-none tracking-tight">
+          <h1 className="text-[#F9CC94] font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[120px] leading-none tracking-tight">
             Get In Touch
           </h1>
         </div>
@@ -157,13 +157,13 @@ export default function ContactUs() {
               {/* Tagline */}
               <div className="flex items-center gap-1">
                 <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-                <span className="text-black/60 font-semibold tracking-widest text-xs sm:text-sm">
+                <span className="text-[#0C433C]/60 font-semibold tracking-widest text-xs sm:text-sm">
                   {"Let's Talk"}
                 </span>
               </div>
               
               {/* Left Subtitle */}
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed max-w-xs">
+              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xs">
                 Have a property in mind? Let us know how we can help you find the right opportunity.
               </p>
               
@@ -183,12 +183,12 @@ export default function ContactUs() {
             {/* Right Column: Heading & Form Container */}
             <div className="lg:col-span-7 flex flex-col pt-2 lg:pt-0">
               {/* Heading */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-4">
                 Connect with our real estate experts to find your perfect property.
               </h2>
               
               {/* Subtitle */}
-              <p className="text-zinc-500 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
+              <p className="text-[#0C433C]/60 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
                 {"Whether you're buying, selling, investing, or looking for your dream home, our team is here to provide expert guidance and personalized support every step of the way."}
               </p>
 
@@ -202,8 +202,8 @@ export default function ContactUs() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-semibold text-zinc-900 mb-2">Message Sent Successfully!</h3>
-                    <p className="text-zinc-600 max-w-md mb-8">
+                    <h3 className="text-2xl font-semibold text-[#0C433C] mb-2">Message Sent Successfully!</h3>
+                    <p className="text-[#0C433C]/80 max-w-md mb-8">
                       Thank you for reaching out. Our real estate experts will connect with you shortly to provide personalized support.
                     </p>
                     <button
@@ -218,7 +218,7 @@ export default function ContactUs() {
                   /* Form State */
                   <>
                     {/* Form Message */}
-                    <h3 className="text-zinc-900 font-medium text-lg sm:text-xl mb-6">
+                    <h3 className="text-[#0C433C] font-medium text-lg sm:text-xl mb-6">
                       {"Leave us a message here, and we'll reach out with personalized support."}
                     </h3>
 
@@ -232,7 +232,7 @@ export default function ContactUs() {
                     <form className="space-y-6" onSubmit={handleSubmit}>
                       {/* Client Name */}
                       <div className="space-y-1.5">
-                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                        <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                           Client Name:
                         </label>
                         <input
@@ -248,7 +248,7 @@ export default function ContactUs() {
 
                       {/* Contact Number */}
                       <div className="space-y-1.5">
-                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                        <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                           Contact Number:
                         </label>
                         <input
@@ -267,7 +267,7 @@ export default function ContactUs() {
                         <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
                           Lead Type
                         </h4>
-                        <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                        <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                           3. Client Type:
                         </label>
                         <div className="flex flex-col sm:flex-row gap-3">
@@ -298,7 +298,7 @@ export default function ContactUs() {
                                 </svg>
                               )}
                             </span>
-                            <span className="text-zinc-800 text-sm sm:text-base font-medium">Direct Client</span>
+                            <span className="text-[#0C433C] text-sm sm:text-base font-medium">Direct Client</span>
                           </button>
 
                           <button
@@ -328,7 +328,7 @@ export default function ContactUs() {
                                 </svg>
                               )}
                             </span>
-                            <span className="text-zinc-800 text-sm sm:text-base font-medium">Through Broker</span>
+                            <span className="text-[#0C433C] text-sm sm:text-base font-medium">Through Broker</span>
                           </button>
                         </div>
                       </div>
@@ -341,7 +341,7 @@ export default function ContactUs() {
                           </h4>
                           <div className="space-y-4">
                             <div className="space-y-1.5">
-                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                              <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                                 4. Broker Name:
                               </label>
                               <input
@@ -355,7 +355,7 @@ export default function ContactUs() {
                               />
                             </div>
                             <div className="space-y-1.5">
-                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                              <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                                 5. Broker Contact Number:
                               </label>
                               <input
@@ -378,7 +378,7 @@ export default function ContactUs() {
                           Sales Details
                         </h4>
                         <div className="space-y-1.5">
-                          <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                          <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                             6. Salesperson Name:
                           </label>
                           <input
@@ -398,7 +398,7 @@ export default function ContactUs() {
                           <h4 className="text-zinc-400 font-bold uppercase tracking-wider text-xs">
                             If Direct Client
                           </h4>
-                          <label className="block text-zinc-700 font-semibold text-sm sm:text-base">
+                          <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
                             7. Lead Source:
                           </label>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -426,7 +426,7 @@ export default function ContactUs() {
                                       </svg>
                                     )}
                                   </span>
-                                  <span className="text-zinc-800 text-sm font-medium">{source}</span>
+                                  <span className="text-[#0C433C] text-sm font-medium">{source}</span>
                                 </button>
                               );
                             })}
@@ -434,7 +434,7 @@ export default function ContactUs() {
 
                           {formData.leadSource === 'Other' && (
                             <div className="pt-2 transition-all duration-300">
-                              <label className="block text-zinc-700 font-semibold text-sm sm:text-base mb-1.5">
+                              <label className="block text-[#0C433C] font-semibold text-sm sm:text-base mb-1.5">
                                 Specify Other Lead Source:
                               </label>
                               <input
@@ -478,28 +478,28 @@ export default function ContactUs() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 mt-8 border-t border-[#E5F0EE]">
                   {/* Sales */}
                   <div className="flex flex-col">
-                    <h4 className="font-bold text-zinc-950 text-base sm:text-lg">Sales</h4>
+                    <h4 className="font-bold text-[#0C433C] text-base sm:text-lg">Sales</h4>
                     <a
                       href="mailto:Sales@ppgreencity.com"
-                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#0C433C] transition-colors mt-0.5"
+                      className="text-[#0C433C] font-semibold text-xs sm:text-sm hover:text-[#0C433C]/80 transition-colors mt-0.5"
                     >
                       Sales@ppgreencity.com
                     </a>
-                    <p className="text-zinc-500 text-xs sm:text-sm mt-2 leading-relaxed">
+                    <p className="text-[#0C433C]/70 text-xs sm:text-sm mt-2 leading-relaxed">
                       Looking to buy your dream home or invest in a property? Contact our sales team for expert guidance.
                     </p>
                   </div>
 
                   {/* Customer Support */}
                   <div className="flex flex-col">
-                    <h4 className="font-bold text-zinc-950 text-base sm:text-lg">Customer Support</h4>
+                    <h4 className="font-bold text-[#0C433C] text-base sm:text-lg">Customer Support</h4>
                     <a
                       href="mailto:Sales@ppgreencity.com"
-                      className="text-zinc-900 font-semibold text-xs sm:text-sm hover:text-[#0C433C] transition-colors mt-0.5"
+                      className="text-[#0C433C] font-semibold text-xs sm:text-sm hover:text-[#0C433C]/80 transition-colors mt-0.5"
                     >
                       Sales@ppgreencity.com
                     </a>
-                    <p className="text-zinc-500 text-xs sm:text-sm mt-2 leading-relaxed">
+                    <p className="text-[#0C433C]/70 text-xs sm:text-sm mt-2 leading-relaxed">
                       Need help with bookings, documentation, site visits, or existing projects? Our support team is here to assist you.
                     </p>
                   </div>

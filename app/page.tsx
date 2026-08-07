@@ -84,7 +84,7 @@ function AnimatedCounter({
 
 function About() {
   return (
-    <section id="about" className="relative w-full bg-white text-black pt-16 sm:pt-24 overflow-hidden">
+    <section id="about" className="relative w-full bg-white text-[#0C433C] pt-16 sm:pt-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
@@ -93,34 +93,26 @@ function About() {
             {/* Category Tagline */}
             <div className="flex items-center gap-2.5">
               <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm">
+              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm">
                 About Us
               </span>
             </div>
             
-            {/* Sketch Building Image */}
-            <div className="relative hidden lg:flex w-full max-w-xl mx-auto lg:mx-0 aspect-4/3 items-center justify-center lg:mt-2">
-              <Image
-                src="/back_Sketch.svg"
-                alt="Architectural Building Sketch"
-                fill
-                unoptimized
-                sizes="(max-width: 1024px) 100vw, 600px"
-                className="object-contain opacity-85 select-none pointer-events-none transition-transform duration-700 hover:scale-105"
-                priority={false}
-              />
-            </div>
+            {/* Left Subtitle */}
+            <p className="text-[#000000]/80 text-sm sm:text-base leading-relaxed max-w-xs">
+              PP Green City 2 is situated in the prime location of Sonipat, offering a harmonious blend of green surroundings and urban amenities.
+            </p>
           </div>
 
           {/* Right Column: Title, Description, and Stats */}
           <div className="lg:col-span-7 flex flex-col justify-center pt-2 lg:pt-10">
             {/* Section Headline */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-6">
               Building India’s Future Through Thoughtful Real Estate Development
             </h2>
             
             {/* Description Paragraph */}
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed mb-12 max-w-2xl">
+            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed mb-12 max-w-2xl">
               A trusted real estate company creating premium residential and commercial spaces across India. We combine quality construction, prime locations, and modern design to deliver lasting value and exceptional living experiences.
             </p>
             
@@ -131,7 +123,7 @@ function About() {
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
                   <AnimatedCounter value={15} suffix="M+" />
                 </span>
-                <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
+                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
                   Sq. Ft. of Spaces
                 </span>
               </div>
@@ -141,18 +133,18 @@ function About() {
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
                   <AnimatedCounter value={200} suffix="+" />
                 </span>
-                <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Projects Delivered
+                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
+                  Delivered Projects
                 </span>
               </div>
               
               {/* Stat 3 */}
               <div className="flex flex-col">
                 <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={15000} suffix="+" />
+                  <AnimatedCounter value={15} suffix="k+" />
                 </span>
-                <span className="text-zinc-800 font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Happy Customers
+                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
+                  Happy Families
                 </span>
               </div>
             </div>
@@ -282,7 +274,7 @@ function Offers() {
   };
 
   return (
-    <section id="portfolio" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden">
+    <section id="portfolio" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -291,18 +283,18 @@ function Offers() {
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
               <span className="text-[#0C433C] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-black font-regular tracking-widest text-xs sm:text-sm ">
+              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm ">
                 What We Offer
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight">
-              Building Tomorrow’s landmarks
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
+              Building Tomorrow’s landmarks 
             </h2>
             
             {/* Description */}
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
               Creating residential and commercial developments that redefine modern living and investment opportunities.
             </p>
           </div>
@@ -366,11 +358,11 @@ function Offers() {
                   <span className="text-[10px] font-bold tracking-widest text-white uppercase mb-1 select-none">
                     {item.category}
                   </span>
-                  <h3 className="text-xl font-bold tracking-tight mb-2 group-hover:text-orange-100 transition-colors duration-300">
+                  <h3 className="text-xl font-bold tracking-tight mb-2 text-white group-hover:text-orange-100 transition-colors duration-300">
                     {item.title}
                   </h3>
                   {item.description && (
-                    <p className="text-xs text-zinc-300 leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 ease-in-out">
+                    <p className="text-xs text-zinc-300 leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500 ease-in-out text-zinc-300">
                       {item.description}
                     </p>
                   )}
@@ -473,7 +465,7 @@ function Reels() {
   };
 
   return (
-    <section id="reels" className="relative w-full bg-black text-[#F9CC94] py-16 sm:py-24 overflow-hidden">
+    <section id="reels" className="relative w-full bg-[#0C433C] text-[#F9CC94] py-16 sm:py-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -481,19 +473,19 @@ function Reels() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-[#FFFFFF] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#FFFFFF] font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-[#F9CC94] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-[#F9CC94] font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Life at PP Green
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#FFFFFF] leading-[1.15] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight">
               Watch Our Stories & Reels
             </h2>
             
             {/* Description */}
-            <p className="text-[#FFFFFF] text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-[#F9CC94] text-sm sm:text-base leading-relaxed max-w-2xl">
               Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
             </p>
           </div>
@@ -502,7 +494,7 @@ function Reels() {
           <div className="flex items-center gap-3 self-start md:self-auto">
             <button
               onClick={scrollLeft}
-              className="flex items-center justify-center w-12 h-12 bg-[#FFFFFF] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Previous reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -511,7 +503,7 @@ function Reels() {
             </button>
             <button
               onClick={scrollRight}
-              className="flex items-center justify-center w-12 h-12 bg-[#FFFFFF] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
               aria-label="Next reel"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -627,7 +619,7 @@ function Expertise() {
   const [activeId, setActiveId] = useState<number>(1);
 
   return (
-    <section id="expertise" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="expertise" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -636,13 +628,13 @@ function Expertise() {
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
               <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
                 Our Expertise
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
               Building Excellence Across Every Sector
             </h2>
           </div>
@@ -679,13 +671,13 @@ function Expertise() {
                   </span>
                   
                   {/* Title */}
-                  <h3 className="text-xl font-bold tracking-tight mb-2 select-none">
+                  <h3 className="text-xl font-bold tracking-tight mb-2 select-none text-white">
                     {item.title}
                   </h3>
                   
                   {/* Expanded Description */}
                   <p
-                    className="text-sm text-zinc-300 leading-relaxed overflow-hidden transition-all duration-500 ease-in-out"
+                    className="text-sm text-zinc-200 leading-relaxed overflow-hidden transition-all duration-500 ease-in-out text-zinc-200"
                     style={{
                       maxHeight: isActive ? '160px' : '0px',
                       opacity: isActive ? 1 : 0,
@@ -725,13 +717,13 @@ function Expertise() {
                 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
-                  <span className="text-[10px] font-bold tracking-widest text-orange-400 uppercase mb-1 select-none">
+                  <span className="text-[10px] font-bold tracking-widest text-white uppercase mb-1 select-none">
                     {item.category}
                   </span>
-                  <h3 className="text-xl font-bold tracking-tight mb-2">
+                  <h3 className="text-xl font-bold tracking-tight mb-2 text-white">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-zinc-300 leading-relaxed">
+                  <p className="text-xs text-zinc-200 leading-relaxed text-zinc-200">
                     {item.description}
                   </p>
                 </div>
@@ -751,7 +743,7 @@ function Expertise() {
 
 function WhyChoose() {
   return (
-    <section id="why-choose-us" className="relative w-full bg-white text-black py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="why-choose-us" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Top Header Block */}
@@ -759,17 +751,17 @@ function WhyChoose() {
           {/* Left Side Tagline */}
           <div className="lg:col-span-4 flex items-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
               Why choose us
             </span>
           </div>
 
           {/* Right Side Headline & Description */}
           <div className="lg:col-span-8 flex flex-col gap-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight max-w-3xl">
               Building Exceptional Spaces Across India
             </h2>
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
               We develop premium residential and commercial properties with quality, innovation, and lasting value.
             </p>
           </div>
@@ -789,10 +781,10 @@ function WhyChoose() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
-              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 text-white">
                 ₹500 Cr+
               </span>
-              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs text-zinc-300">
                 Value Delivered Across Residential & Commercial Projects
               </p>
             </div>
@@ -813,10 +805,10 @@ function WhyChoose() {
                 />
               </div>
               <div className="relative z-10">
-                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
+                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
                   200+
                 </span>
-                <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
+                <p className="text-sm text-zinc-300 leading-relaxed max-w-[240px] text-zinc-300">
                   Projects Delivered Across India
                 </p>
               </div>
@@ -835,10 +827,10 @@ function WhyChoose() {
                 />
               </div>
               <div className="relative z-10">
-                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block">
+                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
                   15M+ sq. ft.
                 </span>
-                <p className="text-sm text-zinc-400 leading-relaxed max-w-[240px]">
+                <p className="text-sm text-zinc-300 leading-relaxed max-w-[240px] text-zinc-300">
                   Sq. Ft. of Spaces
                 </p>
               </div>
@@ -906,10 +898,10 @@ function WhyChoose() {
               />
             </div>
             <div className="relative z-10">
-              <span className="text-2xl font-bold tracking-tight mb-1.5 block">
+              <span className="text-2xl font-bold tracking-tight mb-1.5 block text-white">
                 200+
               </span>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed text-zinc-300">
                 Projects Delivered Across India
               </p>
             </div>
@@ -928,10 +920,10 @@ function WhyChoose() {
               />
             </div>
             <div className="relative z-10">
-              <span className="text-2xl font-bold tracking-tight mb-1.5 block">
+              <span className="text-2xl font-bold tracking-tight mb-1.5 block text-white">
                 15M+ sq. ft.
               </span>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed text-zinc-300">
                 Sq. Ft. of Spaces
               </p>
             </div>
@@ -949,10 +941,10 @@ function WhyChoose() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
-              <span className="text-2xl font-bold tracking-tight mb-1.5">
+              <span className="text-2xl font-bold tracking-tight mb-1.5 text-white">
                 15,000+
               </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
+              <p className="text-xs text-zinc-300 leading-relaxed text-zinc-300">
                 Happy Customers
               </p>
             </div>
@@ -963,7 +955,7 @@ function WhyChoose() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-16 sm:pt-20">
           {/* Left Column: Heading */}
           <div className="lg:col-span-4">
-            <h3 className="text-3xl sm:text-4xl font-semibold text-zinc-950 leading-[1.2] tracking-tight">
+            <h3 className="text-3xl sm:text-4xl font-semibold text-[#0C433C] leading-[1.2] tracking-tight">
               Built on Trust <br />
               & Excellence
             </h3>
@@ -982,10 +974,10 @@ function WhyChoose() {
                   className="object-contain"
                 />
               </div>
-              <h4 className="text-xl font-semibold text-zinc-950">
+              <h4 className="text-xl font-semibold text-[#0C433C]">
                 Faster Project Delivery
               </h4>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed">
                 We streamline planning, approvals, and execution to ensure projects are delivered on time without compromising quality.
               </p>
             </div>
@@ -1001,10 +993,10 @@ function WhyChoose() {
                   className="object-contain"
                 />
               </div>
-              <h4 className="text-xl font-semibold text-zinc-950">
+              <h4 className="text-xl font-semibold text-[#0C433C]">
                 Quality You Can Trust
               </h4>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed">
                 Every development is built with premium materials, expert craftsmanship, and attention to every detail.
               </p>
             </div>
@@ -1052,7 +1044,7 @@ export default function Home() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-white max-w-4xl leading-[1.1] mb-8 select-none">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.1] mb-8 select-none">
             Where Dream Homes <br />
             Become Reality
           </h1>

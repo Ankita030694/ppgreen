@@ -48,7 +48,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-white text-black pt-[88px] pb-4 sm:pb-6 overflow-hidden ">
+    <section id="faq" className="relative w-full bg-white text-[#0C433C] pt-[88px] pb-4 sm:pb-6 overflow-hidden ">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           
@@ -57,13 +57,13 @@ export default function FAQ() {
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
               <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
                 FAQ
               </span>
             </div>
             
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight max-w-md">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight max-w-md">
               Frequently asked questions
             </h2>
           </div>
@@ -82,10 +82,10 @@ export default function FAQ() {
                     className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-lg sm:text-xl font-semibold text-zinc-900  transition-colors duration-300 pr-8">
+                    <span className="text-lg sm:text-xl font-semibold text-[#0C433C]  transition-colors duration-300 pr-8">
                       {item.question}
                     </span>
-                    <span className="text-4xl font-light text-zinc-800 flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
+                    <span className="text-4xl font-light text-[#0C433C] flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>
@@ -98,7 +98,7 @@ export default function FAQ() {
                       marginTop: isOpen ? '16px' : '0px',
                     }}
                   >
-                    <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+                    <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
                       {item.answer}
                     </p>
                   </div>

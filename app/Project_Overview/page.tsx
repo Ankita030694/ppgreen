@@ -270,7 +270,7 @@ function ProjectOverviewContent() {
           </div>
 
           {/* Title */}
-          <h1 className="text-white font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight">
+          <h1 className="text-[#F9CC94] font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight">
             {currentProject.title}
           </h1>
         </div>
@@ -282,39 +282,39 @@ function ProjectOverviewContent() {
           
           {/* Details Block */}
           <div className="flex flex-col">
-            <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-6">
+            <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-6">
               {"Details"}
             </h2>
             <div className="flex flex-col gap-3 text-sm sm:text-base">
               {/* Client */}
               <div className="flex items-start">
                 <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Client:"}</span>
-                <span className="text-zinc-800 font-normal">{currentProject.client}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.client}</span>
               </div>
               {/* Completed */}
               <div className="flex items-start">
                 <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Completed:"}</span>
-                <span className="text-zinc-800 font-normal">{currentProject.completed}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.completed}</span>
               </div>
               {/* Location */}
               <div className="flex items-start">
                 <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Location:"}</span>
-                <span className="text-zinc-800 font-normal">{currentProject.location}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.location}</span>
               </div>
               {/* Contributors */}
               <div className="flex items-start">
                 <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Contributors:"}</span>
-                <span className="text-zinc-800 font-normal">{currentProject.contributors}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.contributors}</span>
               </div>
             </div>
           </div>
 
           {/* Overview Block */}
           <div className="flex flex-col">
-            <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-6">
+            <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-6">
               {"Overview"}
             </h2>
-            <div className="flex flex-col gap-5 text-zinc-700 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+            <div className="flex flex-col gap-5 text-[#000000]/60 text-sm sm:text-base md:text-lg leading-relaxed font-light">
               {currentProject.overview.map((para, idx) => (
                 <p key={idx}>{para}</p>
               ))}
@@ -324,7 +324,7 @@ function ProjectOverviewContent() {
           {/* Features Block */}
           {currentProject.features && currentProject.features.length > 0 && (
             <div className="flex flex-col pt-4">
-              <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-6">
+              <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-6">
                 {currentProject.featuresTitle || "Key Features"}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -334,7 +334,7 @@ function ProjectOverviewContent() {
                     className="flex items-start gap-3 bg-[#F2F7F6] p-4 border-l-4 border-[#0C433C] transition-all hover:translate-x-1"
                   >
                     <span className="text-[#0C433C] font-bold text-base mt-0.5">•</span>
-                    <span className="text-zinc-800 text-sm sm:text-base font-medium leading-snug">
+                    <span className="text-[#000000] text-sm sm:text-base font-medium leading-snug">
                       {feat}
                     </span>
                   </div>
@@ -348,7 +348,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery"}
                   </h2>
                   {/* Slider Controls */}
@@ -424,7 +424,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery"}
                   </h2>
                   {/* Slider Controls */}
@@ -500,7 +500,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery & Plans"}
                   </h2>
                   {/* Slider Controls */}
@@ -581,7 +581,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery & Plans"}
                   </h2>
                   {/* Slider Controls */}
@@ -670,7 +670,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery & Plans"}
                   </h2>
                   {/* Slider Controls */}
@@ -752,7 +752,7 @@ function ProjectOverviewContent() {
             <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
               <div className="flex flex-col">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
                     {"Project Gallery & Plans"}
                   </h2>
                   {/* Slider Controls */}
@@ -837,7 +837,7 @@ function ProjectOverviewContent() {
       <section className="relative w-full bg-white pb-24 sm:pb-32 border-t border-zinc-100 pt-16 sm:pt-12 md:pt-12">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* Centered Heading */}
-          <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl text-center mb-16 select-none">
+          <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl text-center mb-16 select-none">
             {"More projects"}
           </h2>
 

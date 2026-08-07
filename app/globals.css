@@ -46,3 +46,9 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Ensure text-white utility always forces white color and takes precedence over global CSS overrides */
+.text-white {
+  color: #ffffff !important;
+}
+

@@ -27,7 +27,7 @@ export default function Blogs() {
   const [blog1, blog2] = blogsList;
 
   return (
-    <section id="blogs" className="relative w-full bg-white text-black pt-4 sm:pt-6 pb-16 sm:pb-24 overflow-hidden">
+    <section id="blogs" className="relative w-full bg-white text-[#0C433C] pt-4 sm:pt-6 pb-16 sm:pb-24 overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
@@ -35,13 +35,13 @@ export default function Blogs() {
           {/* Tagline */}
           <div className="flex items-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-black/60 font-regular tracking-widest text-xs sm:text-sm ">
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm ">
               Blog posts
             </span>
           </div>
           
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-zinc-950 leading-[1.15] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
             Blog articles
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function Blogs() {
             <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block">
               {blog1.title}
             </span>
-            <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
               {blog1.description}
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function Blogs() {
               <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block">
                 {blog2.title}
               </span>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
                 {blog2.description}
               </p>
             </div>

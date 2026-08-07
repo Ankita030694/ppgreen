@@ -112,7 +112,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end w-full">
             {/* Left Column: Big Title */}
             <div className="lg:col-span-7 order-2 lg:order-1">
-              <h1 className="text-white font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[8.5rem] leading-[0.9] tracking-tight">
+              <h1 className="text-[#F9CC94] font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[8.5rem] leading-[0.9] tracking-tight">
                 About PP Green
               </h1>
             </div>
@@ -134,7 +134,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Intro & Mission/Vision Section */}
-      <section className="relative w-full bg-white text-zinc-950 py-20 sm:py-28 md:py-32 overflow-hidden">
+      <section className="relative w-full bg-white text-[#0C433C] py-20 sm:py-28 md:py-32 overflow-hidden">
         {/* Background Sketch Image */}
         <div className="absolute left-[-5%] top-[5%] w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] opacity-[0.06] pointer-events-none select-none">
           <Image
@@ -153,7 +153,7 @@ export default function AboutUsPage() {
             <div className="lg:col-span-3">
               <div className="flex items-center gap-2">
                 <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
-                <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
+                <span className="text-[#0C433C]/60 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   About Us
                 </span>
               </div>
@@ -161,10 +161,10 @@ export default function AboutUsPage() {
 
             {/* Main Statement */}
             <div className="lg:col-span-9 max-w-2xl">
-              <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight mb-6">
+              <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight mb-6">
                 Building India’s Future Through Thoughtful Real Estate Development
               </h2>
-              <p className="text-zinc-600 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 A trusted real estate company creating premium residential and commercial spaces across India. We combine quality construction, prime locations, and modern design to deliver lasting value and exceptional living experiences.
               </p>
             </div>
@@ -174,10 +174,10 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Mission Column */}
             <div className="flex flex-col items-start">
-              <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
+              <h3 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-4">
                 Our Mission
               </h3>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light mb-8">
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed font-light mb-8">
                  To build upon our legacy of trust and excellence by consistently delivering superior quality, creating enduring value and setting new benchmarks in customer experience.
               </p>
               
@@ -192,10 +192,10 @@ export default function AboutUsPage() {
 
             {/* Vision Column */}
             <div className="flex flex-col items-start">
-              <h3 className="text-zinc-950 font-semibold text-2xl sm:text-3xl mb-4">
+              <h3 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl mb-4">
                 Our Vision
               </h3>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed font-light">
                  To emerge as a leading force in the real estate industry, recognised for our commitment to excellence, innovation, integrity and customer satisfaction.              </p>
             </div>
           </div>
@@ -203,14 +203,14 @@ export default function AboutUsPage() {
       </section>
 
       {/* Core Values / Philosophy Section */}
-      <section className="w-full bg-white text-zinc-950 py-20 sm:py-28 border-t border-b border-zinc-100 -mt-15">
+      <section className="w-full bg-white text-[#0C433C] py-20 sm:py-28 border-t border-b border-zinc-100 -mt-15">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           {/* Tagline / Subtitle */}
           <div className="mb-12 sm:mb-16">
-            <p className="text-[#0C433C] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase mb-4">
+            <p className="text-[#000000] font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase mb-4">
               Continuous Improvement &bull; Uncompromising Quality &bull; Enduring Relationships
             </p>
-            <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight max-w-4xl">
+            <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight max-w-4xl">
               Creating Value. Building Trust. Shaping the Future.
             </h2>
           </div>
@@ -220,8 +220,8 @@ export default function AboutUsPage() {
             {/* Value 1: Commitment to Excellence */}
             <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
               <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 01</span>
-              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Commitment to Excellence</h3>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+              <h3 className="text-[#0C433C] font-semibold text-xl mb-4">Commitment to Excellence</h3>
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed font-light">
                 We are driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, we develop projects that are thoughtfully planned, meticulously executed and designed to stand the test of time.
               </p>
             </div>
@@ -229,8 +229,8 @@ export default function AboutUsPage() {
             {/* Value 2: Evolving Needs & Diverse Portfolio */}
             <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
               <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 02</span>
-              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Diverse Portfolio</h3>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+              <h3 className="text-[#0C433C] font-semibold text-xl mb-4">Diverse Portfolio</h3>
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed font-light">
                 Our diverse portfolio spans residential developments, premium villas, retail, commercial and office spaces, reflecting our ability to understand evolving needs and deliver future-ready solutions. Every project combines strategic vision, operational excellence, superior infrastructure, contemporary design and modern amenities.
               </p>
             </div>
@@ -238,8 +238,8 @@ export default function AboutUsPage() {
             {/* Value 3: Personalised Guidance & Seamless Experience */}
             <div className="flex flex-col bg-white border border-zinc-100 p-8 sm:p-10 shadow-xs hover:shadow-md transition-all duration-300 group">
               <span className="text-[#0C433C] font-sans font-bold text-2xl mb-6 select-none group-hover:translate-x-1 transition-transform duration-300 block">// 03</span>
-              <h3 className="text-zinc-950 font-semibold text-xl mb-4">Customer Experience</h3>
-              <p className="text-zinc-600 text-sm sm:text-base leading-relaxed font-light">
+              <h3 className="text-[#0C433C] font-semibold text-xl mb-4">Customer Experience</h3>
+              <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed font-light">
                 We believe that a seamless customer experience is built on transparency, clear communication and personalised guidance. Our dedicated relationship management team remains committed to supporting clients throughout the project lifecycle.
               </p>
             </div>
@@ -273,7 +273,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Founder's Note Section */}
-      <section className="w-full bg-white text-zinc-950 py-10 sm:py-24 md:py-28">
+      <section className="w-full bg-white text-[#0C433C] py-10 sm:py-24 md:py-28">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             {/* Left side Founder Portrait Photo */}
@@ -294,13 +294,13 @@ export default function AboutUsPage() {
               {/* Heading */}
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
-                <h2 className="text-zinc-950 font-semibold text-2xl sm:text-3xl lg:text-4xl tracking-tight">
+                <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl lg:text-4xl tracking-tight">
                   Founder’s Note
                 </h2>
               </div>
 
               {/* Body Text */}
-              <div className="space-y-5 text-zinc-700 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              <div className="space-y-5 text-[#000000]/60 text-sm sm:text-base md:text-lg leading-relaxed font-light">
                 <p>
                   At Puri Group, we believe every great community begins with a vision—one that puts people, trust, and lasting value at its heart.
                 </p>
@@ -314,10 +314,10 @@ export default function AboutUsPage() {
 
               {/* Sign-off */}
               <div className="mt-2 pt-2">
-                <p className="text-zinc-950 font-semibold text-base sm:text-lg">
+                <p className="text-[#0C433C] font-semibold text-base sm:text-lg">
                   – Avinash Puri
                 </p>
-                <p className="text-zinc-500 text-xs sm:text-sm tracking-wide">
+                <p className="text-[#0C433C]/60 text-xs sm:text-sm tracking-wide">
                   Founder, Puri Group
                 </p>
               </div>
@@ -380,7 +380,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Our Process Section */}
-      <section className="w-full bg-white text-zinc-950 py-20 sm:py-28 md:py-32">
+      <section className="w-full bg-white text-[#0C433C] py-20 sm:py-28 md:py-32">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           {/* Header Row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mb-16 sm:mb-20">
@@ -388,7 +388,7 @@ export default function AboutUsPage() {
             <div className="lg:col-span-4">
               <div className="flex items-center gap-2">
                 <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
-                <span className="text-zinc-500 font-sans font-regular tracking-widest text-xs sm:text-sm ">
+                <span className="text-[#0C433C]/60 font-sans font-regular tracking-widest text-xs sm:text-sm ">
                   Our Process
                 </span>
               </div>
@@ -396,7 +396,7 @@ export default function AboutUsPage() {
 
             {/* Main Title */}
             <div className="lg:col-span-8 max-w-2xl">
-              <h2 className="text-zinc-950 font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
+              <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
                 A seamless approach to exceptional real estate solutions.
               </h2>
             </div>
@@ -411,10 +411,10 @@ export default function AboutUsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
               </div>
-              <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl mb-3">
+              <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
                 Discovery & Consultation
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
                 We begin by understanding your goals, site conditions, and vision. This sets a clear foundation and direction for the entire project.
               </p>
             </div>
@@ -426,10 +426,10 @@ export default function AboutUsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 3v13a2 2 0 002 2h11M16 21V8a2 2 0 00-2-2H3" />
                 </svg>
               </div>
-              <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl mb-3">
+              <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
                 Concept Development
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
                 We explore design ideas, refine concepts, and create early layouts. Each direction is shaped with clarity, intention, and precision.
               </p>
             </div>
@@ -441,10 +441,10 @@ export default function AboutUsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 10L12 4l9 6M6 10v9M10 10v9M14 10v9M18 10v9M4 19h16M3 21h18" />
                 </svg>
               </div>
-              <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl mb-3">
+              <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
                 Detailed Technical Design
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
                 We transform concepts into detailed architectural plans, ensuring accuracy across structure, materials, and coordination.
               </p>
             </div>
@@ -456,10 +456,10 @@ export default function AboutUsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 01-2 2H6a2 2 0 01-2-2m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m12-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3" />
                 </svg>
               </div>
-              <h3 className="text-zinc-950 font-semibold text-lg sm:text-xl mb-3">
+              <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
                 Project Delivery & Support
               </h3>
-              <p className="text-zinc-500 text-sm leading-relaxed font-light">
+              <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
                 We support contractors and oversee project progress, helping ensure a smooth build and faithful design execution.
               </p>
             </div>

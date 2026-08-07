@@ -83,8 +83,8 @@ export default function BlogSlugPage() {
     return (
       <main className="w-full min-h-screen bg-white flex flex-col pt-20">
         <div className="flex-1 flex flex-col justify-center items-center p-8 text-center">
-          <h1 className="text-3xl font-bold text-zinc-900 mb-4">Blog Not Found</h1>
-          <p className="text-zinc-500 mb-8 max-w-md">The article you are looking for does not exist or has been removed.</p>
+          <h1 className="text-3xl font-bold text-[#0C433C] mb-4">Blog Not Found</h1>
+          <p className="text-[#0C433C]/80 mb-8 max-w-md">The article you are looking for does not exist or has been removed.</p>
           <Link href="/Blogs" className="px-6 py-3 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-colors">
             Return to Insights
           </Link>
@@ -137,7 +137,7 @@ export default function BlogSlugPage() {
 
             {/* Title */}
             <div>
-              <h1 className="text-white font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-4xl">
+              <h1 className="text-[#F9CC94] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-4xl">
                 {blog.title}
               </h1>
             </div>
@@ -147,7 +147,7 @@ export default function BlogSlugPage() {
       </section>
 
       {/* Blog Article Section */}
-      <section className="relative w-full bg-white text-zinc-950 py-16 sm:py-24">
+      <section className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24">
         {/* Back sketch background */}
         <div className="absolute right-[-5%] top-[10%] w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] opacity-[0.04] pointer-events-none select-none">
           <Image
@@ -160,7 +160,7 @@ export default function BlogSlugPage() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <article className="prose prose-zinc prose-lg lg:prose-xl max-w-none prose-headings:font-semibold prose-a:text-orange-500 hover:prose-a:text-orange-600 prose-img:rounded-xl">
+          <article className="prose prose-zinc prose-lg lg:prose-xl max-w-none prose-headings:font-semibold prose-headings:text-[#0C433C] text-[#0C433C] prose-a:text-orange-500 hover:prose-a:text-orange-600 prose-img:rounded-xl">
             {/* We render the HTML description directly */}
             <div dangerouslySetInnerHTML={{ __html: blog.description.replace(/\n/g, '<br/>') }} />
           </article>

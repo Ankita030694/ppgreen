@@ -58,7 +58,7 @@ export default function TermsOfService() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-white text-black flex flex-col pt-28 sm:pt-36">
+    <main className="w-full min-h-screen bg-white text-[#0C433C] flex flex-col pt-28 sm:pt-36">
       {/* Container */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full pb-24">
         
@@ -84,10 +84,10 @@ export default function TermsOfService() {
           <span className="text-xs font-bold tracking-widest text-[#0C433C] uppercase mb-2 block">
             LEGAL & COMPLIANCE
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-950 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0C433C] tracking-tight">
             Terms of Service
           </h1>
-          <p className="text-zinc-500 text-sm sm:text-base mt-3">
+          <p className="text-[#0C433C]/60 text-sm sm:text-base mt-3">
             Last Updated: March 2026 | Effective for all users and visitors of PP Green City.
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function TermsOfService() {
           
           {/* Left Column: Sticky Table of Contents */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 bg-zinc-50/80 p-6 border border-zinc-100 rounded-none shadow-xs">
-            <h4 className="text-xs font-bold tracking-widest text-zinc-400 uppercase mb-4 select-none">
+            <h4 className="text-xs font-bold tracking-widest text-[#0C433C]/50 uppercase mb-4 select-none">
               TABLE OF CONTENTS
             </h4>
             <nav className="flex flex-col gap-2 text-sm">
@@ -108,7 +108,7 @@ export default function TermsOfService() {
                   className={`text-left py-1.5 px-3 transition-all duration-200 cursor-pointer ${
                     activeSection === sec.id
                       ? 'text-[#0C433C] font-semibold border-l-2 border-[#0C433C] bg-white shadow-2xs'
-                      : 'text-zinc-500 hover:text-zinc-900 border-l-2 border-transparent hover:border-zinc-300'
+                      : 'text-zinc-500 hover:text-[#0C433C] border-l-2 border-transparent hover:border-[#0C433C]/35'
                   }`}
                 >
                   {sec.label}
@@ -118,12 +118,12 @@ export default function TermsOfService() {
           </div>
 
           {/* Right Column: Article Content */}
-          <div className="lg:col-span-8 flex flex-col gap-14 text-zinc-600 leading-relaxed text-base">
+          <div className="lg:col-span-8 flex flex-col gap-14 text-[#0C433C]/80 leading-relaxed text-base">
             
             {/* Introduction */}
             <section id="intro" className="scroll-mt-28 flex flex-col gap-4">
-              <p className="text-lg text-zinc-700 font-normal leading-relaxed">
-                Welcome to the official website of <strong className="text-zinc-900 font-semibold">PP Green City</strong> (“we”, “us”, “our” or “the Company”). By accessing or using this website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please refrain from using the website.
+              <p className="text-lg text-[#0C433C] font-normal leading-relaxed">
+                Welcome to the official website of <strong className="text-[#0C433C] font-semibold">PP Green City</strong> (“we”, “us”, “our” or “the Company”). By accessing or using this website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please refrain from using the website.
               </p>
             </section>
 
@@ -131,7 +131,7 @@ export default function TermsOfService() {
             <section id="sec1" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 01"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Use of the Website
                 </h2>
               </div>
@@ -144,7 +144,7 @@ export default function TermsOfService() {
             <section id="sec2" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 02"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Property Information
                 </h2>
               </div>
@@ -160,7 +160,7 @@ export default function TermsOfService() {
             <section id="sec3" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 03"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Enquiries and Communication
                 </h2>
               </div>
@@ -176,7 +176,7 @@ export default function TermsOfService() {
             <section id="sec4" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 04"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Intellectual Property
                 </h2>
               </div>
@@ -192,7 +192,7 @@ export default function TermsOfService() {
             <section id="sec5" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 05"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Third-Party Links
                 </h2>
               </div>
@@ -205,7 +205,7 @@ export default function TermsOfService() {
             <section id="sec6" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 06"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Website Availability
                 </h2>
               </div>
@@ -218,7 +218,7 @@ export default function TermsOfService() {
             <section id="sec7" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 07"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Limitation of Liability
                 </h2>
               </div>
@@ -231,7 +231,7 @@ export default function TermsOfService() {
             <section id="sec8" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 08"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Changes to These Terms
                 </h2>
               </div>
@@ -244,7 +244,7 @@ export default function TermsOfService() {
             <section id="sec9" className="scroll-mt-28 flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 09"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Governing Law
                 </h2>
               </div>
@@ -257,7 +257,7 @@ export default function TermsOfService() {
             <section id="sec10" className="scroll-mt-28 flex flex-col gap-4 pt-4 border-t border-zinc-200">
               <div className="flex items-center gap-2.5">
                 <span className="text-[#0C433C] font-bold text-xl sm:text-2xl select-none">{"// 10"}</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-950 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C433C] tracking-tight">
                   Contact Us
                 </h2>
               </div>
@@ -265,9 +265,9 @@ export default function TermsOfService() {
                 For any questions regarding these Terms of Service, please contact us through the contact details provided on this website:
               </p>
               <div className="bg-[#F2F7F6] p-6 border-l-4 border-[#0C433C] flex flex-col gap-1 text-sm">
-                <span className="font-semibold text-zinc-900">PP Green City Customer Support & Legal</span>
-                <span className="text-zinc-600">Email: Sales@ppgreencity.com</span>
-                <span className="text-zinc-600">Address: Sector 83 and 84, Main GT Road, Kumashpur, Sonipat, Haryana 131001</span>
+                <span className="font-semibold text-[#0C433C]">PP Green City Customer Support & Legal</span>
+                <span className="text-[#0C433C]/80">Email: Sales@ppgreencity.com</span>
+                <span className="text-[#0C433C]/80">Address: Sector 83 and 84, Main GT Road, Kumashpur, Sonipat, Haryana 131001</span>
               </div>
             </section>
 

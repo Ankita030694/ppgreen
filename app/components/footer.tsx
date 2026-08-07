@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full flex flex-col">
       
       {/* Logo Banner (Top Half) */}
-      <div className="bg-black py-16 sm:py-20 flex items-center justify-center w-full px-4 border-b border-zinc-900">
+      <div className="bg-[#0C433C] py-16 sm:py-20 flex items-center justify-center w-full px-4 border-b border-zinc-900">
         <div className="relative w-full max-w-[650px] h-[100px] sm:h-[130px]">
           <Image
             src="/New LOGO.svg"
@@ -22,7 +22,7 @@ export default function Footer() {
       </div>
 
       {/* Details & Navigation Block (Bottom Half) */}
-      <div className="bg-[#0a0a0a] text-white pt-16 pb-12 w-full">
+      <div className="bg-[#0C433C] text-white pt-16 pb-12 w-full">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           
           {/* Top Row: Navigation Links */}
@@ -87,11 +87,6 @@ export default function Footer() {
           {/* Bottom Row: Copyright & Social handles */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             
-            {/* Copyright */}
-            <span className="text-zinc-500 text-xs sm:text-sm text-center sm:text-left select-none">
-              © 2026, All rights reserved by PP Green City
-            </span>
-
             {/* Social handles */}
             <div className="flex items-center gap-6">
               {/* Facebook */}
@@ -107,7 +102,7 @@ export default function Footer() {
                   alt="Facebook"
                   width={20}
                   height={20}
-                  className="object-contain select-none pointer-events-none"
+                  className="object-contain select-none pointer-events-none brightness-0 invert"
                 />
               </a>
 
@@ -124,10 +119,32 @@ export default function Footer() {
                   alt="Instagram"
                   width={20}
                   height={20}
-                  className="object-contain select-none pointer-events-none"
+                  className="object-contain select-none pointer-events-none brightness-0 invert"
                 />
               </a>
-              </div>
+
+              {/* X (formerly Twitter) */}
+              <a
+                href="https://x.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-5 h-5 relative transition-transform duration-300 hover:scale-110 active:scale-95"
+                aria-label="X"
+              >
+                <Image
+                  src="/Socials/X.svg"
+                  alt="X"
+                  width={20}
+                  height={20}
+                  className="object-contain select-none pointer-events-none brightness-0 invert"
+                />
+              </a>
+            </div>
+
+            {/* Copyright */}
+            <span className="text-zinc-400 text-xs sm:text-sm text-center sm:text-left select-none">
+              © 2026, All rights reserved by PP Green City
+            </span>
 
           </div>
 
