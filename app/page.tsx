@@ -290,7 +290,7 @@ function Offers() {
           <div className="max-w-3xl flex flex-col gap-4">
             {/* Tagline */}
             <div className="flex items-center gap-2.5">
-              <span className="text-white font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-[#0C433C] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
               <span className="text-black font-regular tracking-widest text-xs sm:text-sm ">
                 What We Offer
               </span>

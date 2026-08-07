@@ -66,12 +66,12 @@ export default function Navbar() {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex md:hidden items-center justify-center p-1.5 text-white focus:outline-none"
+              className="flex md:hidden items-center justify-center p-1.5 text-white focus:outline-none transition-transform active:scale-95"
               aria-label="Toggle menu"
             >
               {isOpen ? (
                 <svg
-                  className="h-6 w-6"
+                  className="h-6 w-6 text-white hover:text-zinc-300 transition-colors"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -84,14 +84,45 @@ export default function Navbar() {
                   />
                 </svg>
               ) : (
-                <Image
-                  src="/Nav_ham.svg"
-                  alt="Open menu"
-                  width={24}
-                  height={24}
-                  unoptimized
-                  className="h-6 w-6 object-contain"
-                />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 object-contain hover:opacity-80 transition-opacity"
+                >
+                  {/* Top Line: Short, Right-Aligned */}
+                  <line
+                    x1="12"
+                    y1="6"
+                    x2="22"
+                    y2="6"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
+                  {/* Middle Line: Long, Right-Aligned */}
+                  <line
+                    x1="2"
+                    y1="12"
+                    x2="22"
+                    y2="12"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
+                  {/* Bottom Line: Medium, Right-Aligned */}
+                  <line
+                    x1="7"
+                    y1="18"
+                    x2="22"
+                    y2="18"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
               )}
             </button>
           </div>
@@ -114,7 +145,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center p-1 text-orange-500 focus:outline-none"
+                className="flex items-center justify-center p-1 text-white hover:text-zinc-300 transition-colors focus:outline-none"
                 aria-label="Close menu"
               >
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -138,7 +169,7 @@ export default function Navbar() {
               <Link
                 href="/ContactUs"
                 onClick={() => setIsOpen(false)}
-                className="text-xl sm:text-2xl font-medium tracking-widest text-orange-500 transition-colors duration-300 uppercase"
+                className="text-xl sm:text-2xl font-medium tracking-widest text-white transition-colors duration-300 uppercase"
               >
                 {"BOOK APPOINTMENT"}
               </Link>
