@@ -174,6 +174,12 @@ export default function BlogsDashboard() {
                         >
                           View
                         </Link>
+                        <Link
+                          href={`/admin/blogs/edit/${blog.id}`}
+                          className="px-3 py-1.5 text-xs font-medium text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                        >
+                          Edit
+                        </Link>
                         <button
                           onClick={() => handleDeleteBlog(blog.id)}
                           disabled={isDeleting === blog.id}

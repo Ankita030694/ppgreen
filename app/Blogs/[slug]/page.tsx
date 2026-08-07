@@ -58,6 +58,19 @@ export default function BlogSlugPage() {
 
         if (fetchedData && fetchedData.published === true) {
           setBlog({ id: fetchedId, ...fetchedData } as Blog);
+          
+          // Dynamically update SEO tags on the client
+          document.title = fetchedData.metaTitle || fetchedData.title || 'PP Green City Blog';
+          
+          let metaDesc = document.querySelector('meta[name="description"]');
+          if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.setAttribute('name', 'description');
+            document.head.appendChild(metaDesc);
+          }
+          if (fetchedData.metaDescription) {
+            metaDesc.setAttribute('content', fetchedData.metaDescription);
+          }
         } else {
           setBlog(null);
         }
@@ -161,8 +174,8 @@ export default function BlogSlugPage() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <article className="prose prose-zinc prose-lg lg:prose-xl max-w-none prose-headings:font-semibold prose-headings:text-[#0C433C] text-[#0C433C] prose-a:text-orange-500 hover:prose-a:text-orange-600 prose-img:rounded-xl">
-            {/* We render the HTML description directly */}
-            <div dangerouslySetInnerHTML={{ __html: blog.description.replace(/\n/g, '<br/>') }} />
+            {/* We render the Tiptap HTML description directly */}
+            <div dangerouslySetInnerHTML={{ __html: blog.description }} />
           </article>
         </div>
       </section>

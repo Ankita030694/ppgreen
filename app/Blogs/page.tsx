@@ -16,6 +16,7 @@ interface BlogCardItem {
   date: string;
   author: string;
   title: string;
+  subtitle?: string;
   image: string;
 }
 
@@ -39,6 +40,7 @@ export default function BlogsPage() {
               id: doc.id,
               slug: data.slug || doc.id,
               title: data.title,
+              subtitle: data.subtitle,
               image: data.image || '/placeholder.svg',
               author: data.author || 'Admin Team',
               date: data.date || new Date().toISOString().split('T')[0],
@@ -128,9 +130,16 @@ export default function BlogsPage() {
                 </span>
 
                 {/* Blog Title */}
-                <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl group-hover:text-orange-500 transition-colors duration-300 leading-snug">
+                <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl group-hover:text-orange-500 transition-colors duration-300 leading-snug mb-2">
                   {blog.title}
                 </h3>
+                
+                {/* Blog Subtitle */}
+                {blog.subtitle && (
+                  <p className="text-[#000000]/60 text-sm line-clamp-2">
+                    {blog.subtitle}
+                  </p>
+                )}
               </Link>
             ))
           )}

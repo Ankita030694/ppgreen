@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AdminLayout({
   children,
@@ -17,7 +19,7 @@ export default function AdminLayout({
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        router.push("/login");
+        router.push("/adminlogin");
       } else {
         setLoading(false);
       }
@@ -28,7 +30,7 @@ export default function AdminLayout({
 
   const handleLogout = async () => {
     await signOut(auth);
-    router.push("/login");
+    router.push("/adminlogin");
   };
 
   if (loading) {
@@ -46,11 +48,19 @@ export default function AdminLayout({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center gap-8">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">P</span>
-                </div>
-                <span className="font-bold text-xl text-gray-900 tracking-tight mr-4">
+              <div className="flex items-center gap-4 mr-4">
+                <Link href="/admin" className="flex items-center">
+                  <Image
+                    src="/PP-Green Logo.svg"
+                    alt="PP Green City Logo"
+                    width={160}
+                    height={30}
+                    className="h-6 sm:h-7 w-auto object-contain invert"
+                    priority
+                  />
+                </Link>
+                <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
+                <span className="hidden sm:block font-bold text-lg sm:text-xl text-gray-900 tracking-tight">
                   Admin Panel
                 </span>
               </div>
