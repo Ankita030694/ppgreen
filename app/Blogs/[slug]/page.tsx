@@ -58,6 +58,19 @@ export default function BlogSlugPage() {
 
         if (fetchedData && fetchedData.published === true) {
           setBlog({ id: fetchedId, ...fetchedData } as Blog);
+          
+          // Dynamically update SEO tags on the client
+          document.title = fetchedData.metaTitle || fetchedData.title || 'PP Green City Blog';
+          
+          let metaDesc = document.querySelector('meta[name="description"]');
+          if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.setAttribute('name', 'description');
+            document.head.appendChild(metaDesc);
+          }
+          if (fetchedData.metaDescription) {
+            metaDesc.setAttribute('content', fetchedData.metaDescription);
+          }
         } else {
           setBlog(null);
         }

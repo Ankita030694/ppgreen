@@ -265,10 +265,10 @@ export default function LeadsDashboard() {
                         `}
                       >
                         <option value="New" className="bg-white text-gray-900">New</option>
-                        <option value="Hot Lead" className="bg-white text-gray-900">🔥 Hot Lead</option>
-                        <option value="Warm Lead" className="bg-white text-gray-900">☀️ Warm Lead</option>
-                        <option value="Cold Lead" className="bg-white text-gray-900">❄️ Cold Lead</option>
-                        <option value="Converted" className="bg-white text-gray-900">✅ Converted</option>
+                        <option value="Hot Lead" className="bg-white text-gray-900">Hot Lead</option>
+                        <option value="Warm Lead" className="bg-white text-gray-900">Warm Lead</option>
+                        <option value="Cold Lead" className="bg-white text-gray-900">Cold Lead</option>
+                        <option value="Converted" className="bg-white text-gray-900">Converted</option>
                       </select>
                     </td>
                   </motion.tr>

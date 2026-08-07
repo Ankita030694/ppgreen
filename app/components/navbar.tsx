@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   // Hide the global navbar on admin and login routes
-  if (pathname?.startsWith('/admin') || pathname?.startsWith('/login')) {
+  if (pathname?.startsWith('/admin') || pathname?.startsWith('/adminlogin')) {
     return null;
   }
 
