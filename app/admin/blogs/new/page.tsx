@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '@/lib/firebase';
+import RichTextEditor from '@/app/components/RichTextEditor';
 
 export default function BlogGenerationUI() {
   const [newBlog, setNewBlog] = useState({

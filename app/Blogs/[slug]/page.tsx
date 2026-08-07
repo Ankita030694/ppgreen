@@ -174,8 +174,8 @@ export default function BlogSlugPage() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <article className="prose prose-zinc prose-lg lg:prose-xl max-w-none prose-headings:font-semibold prose-a:text-orange-500 hover:prose-a:text-orange-600 prose-img:rounded-xl">
-            {/* We render the HTML description directly */}
-            <div dangerouslySetInnerHTML={{ __html: blog.description.replace(/\n/g, '<br/>') }} />
+            {/* We render the Tiptap HTML description directly */}
+            <div dangerouslySetInnerHTML={{ __html: blog.description }} />
           </article>
         </div>
       </section>

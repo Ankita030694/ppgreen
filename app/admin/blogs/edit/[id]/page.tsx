@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '@/lib/firebase';
+import RichTextEditor from '@/app/components/RichTextEditor';
 import { useRouter } from 'next/navigation';
 
 export default function EditBlogUI({ params }: { params: Promise<{ id: string }> }) {
@@ -262,16 +263,12 @@ export default function EditBlogUI({ params }: { params: Promise<{ id: string }>
           )}
         </div>
 
-        {/* BLOG CONTENT BLOCK */}
+        {/* CONTENT (Rich Text Editor) */}
         <div className="flex flex-col gap-1.5 md:col-span-2">
-          <label className="text-xs font-bold uppercase text-slate-400">Blog Content (Markdown/HTML)</label>
-          <textarea
-            name="description"
-            rows={12}
-            value={blogData.description}
-            onChange={handleInputChange}
-            placeholder="Write your amazing blog post here..."
-            className="p-4 border border-slate-200 rounded-xl focus:border-blue-500 font-sans leading-relaxed resize-y text-slate-900 bg-white"
+          <label className="text-xs font-bold uppercase text-slate-400">Blog Content</label>
+          <RichTextEditor
+            content={blogData.description}
+            onChange={(content) => setBlogData(prev => ({ ...prev, description: content }))}
           />
         </div>
 
