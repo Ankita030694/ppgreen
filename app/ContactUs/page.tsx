@@ -127,7 +127,7 @@ export default function ContactUs() {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/Contact_Us/1.svg"
+            src="/15M +.png"
             alt="Get In Touch"
             fill
             sizes="100vw"

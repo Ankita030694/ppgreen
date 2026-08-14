@@ -108,13 +108,12 @@ function About() {
           <div className="lg:col-span-7 flex flex-col justify-center pt-2 lg:pt-10">
             {/* Section Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-6">
-              Building India’s Future Through Thoughtful Real Estate Development
+              Creating Value. Building Trust. Shaping the Future.
             </h2>
             
             {/* Description Paragraph */}
             <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed mb-12 max-w-2xl">
-              A trusted real estate company creating premium residential and commercial spaces across India. We combine quality construction, prime locations, and modern design to deliver lasting value and exceptional living experiences.
-            </p>
+             Driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, projects are thoughtfully planned, meticulously executed and designed to stand the test of time.            </p>
             
             {/* Stats Row */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-8 border-t border-zinc-200">
@@ -772,7 +771,7 @@ function WhyChoose() {
           {/* Card 1 */}
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
             <Image
-              src="/Why_choose/1st.svg"
+              src="/500 cr +.png"
               alt="Value Delivered"
               fill
               unoptimized
@@ -794,14 +793,14 @@ function WhyChoose() {
           <div className="flex flex-col gap-6 h-[480px]">
             {/* Card 2 */}
             <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
-              <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-35 select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
+              <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/Why_choose/2.svg"
+                  src="/200 +_.png"
                   alt=""
                   fill
                   unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-contain object-right-bottom"
+                  className="object-cover object-right"
                 />
               </div>
               <div className="relative z-10">
@@ -816,14 +815,14 @@ function WhyChoose() {
 
             {/* Card 3 */}
             <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
-              <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-35 select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
+              <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/Why_choose/3.svg"
+                  src="/15M +.png"
                   alt=""
                   fill
                   unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-contain object-right-bottom"
+                  className="object-cover object-right"
                 />
               </div>
               <div className="relative z-10">
@@ -840,7 +839,7 @@ function WhyChoose() {
           {/* Card 4 */}
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
             <Image
-              src="/Why_choose/4th.svg"
+              src="/15000+.jpg"
               alt="Happy Homeowners"
               fill
               unoptimized
@@ -867,7 +866,7 @@ function WhyChoose() {
           {/* Card 1 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
             <Image
-              src="/Why_choose/1st.svg"
+              src="/500 cr +.png"
               alt="Value Delivered"
               fill
               unoptimized
@@ -887,14 +886,14 @@ function WhyChoose() {
 
           {/* Card 2 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
-            <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-40 select-none pointer-events-none">
+            <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
               <Image
-                src="/Why_choose/2.svg"
+                src="/200 +_.png"
                 alt=""
                 fill
                 unoptimized
                 sizes="(max-width: 640px) 85vw, 50vw"
-                className="object-contain object-right-bottom"
+                className="object-cover object-right"
               />
             </div>
             <div className="relative z-10">
@@ -909,14 +908,14 @@ function WhyChoose() {
 
           {/* Card 3 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
-            <div className="absolute right-0 bottom-0 w-2/3 h-full opacity-40 select-none pointer-events-none">
+            <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
               <Image
-                src="/Why_choose/3.svg"
+                src="/15M +.png"
                 alt=""
                 fill
                 unoptimized
                 sizes="(max-width: 640px) 85vw, 50vw"
-                className="object-contain object-right-bottom"
+                className="object-cover object-right"
               />
             </div>
             <div className="relative z-10">
@@ -932,7 +931,7 @@ function WhyChoose() {
           {/* Card 4 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
             <Image
-              src="/Why_choose/4th.svg"
+              src="/15000+.jpg"
               alt="Happy Homeowners"
               fill
               unoptimized
@@ -1035,23 +1034,18 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 md:pb-16 flex flex-col justify-end">
-          {/* Category Label */}
-          <div className="flex items-center gap-2.5 mb-3.5">
-            <span className="text-white font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-zinc-300 font-medium tracking-widest text-xs sm:text-sm ">
-              Trusted Real Estate
-            </span>
-          </div>
+          
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.1] mb-8 select-none">
-            Where Dream Homes <br />
-            Become Reality
+            Where Vision Meets  <br />
+            Reality
           </h1>
 
           {/* Description Text */}
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-md">
-            Explore premium properties in prime locations with trusted guidance and seamless buying experience.
+            Discover thoughtfully planned properties in prime locations, backed by trusted expertise and a seamless buying experience.
+
           </p>
         </div>
       </section>

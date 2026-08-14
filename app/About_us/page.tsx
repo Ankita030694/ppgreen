@@ -87,17 +87,13 @@ export default function AboutUsPage() {
       <section className="relative w-full h-[85vh] md:h-[90vh] lg:h-screen bg-zinc-950 overflow-hidden flex items-end">
         {/* Background Video & Overlay */}
         <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/About_Us/1.svg"
-            className="w-full h-full object-cover select-none pointer-events-none opacity-45"
-          >
-            <source src="/Copy of PP Green Drone Reel (1).mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <Image
+            src="/15M +.png"
+            alt="About us background"
+            fill
+            priority
+            className="object-cover opacity-45 select-none pointer-events-none"
+          />
           {/* Gradients and solid colors for high contrast and moody aesthetic */}
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-zinc-950/10 to-transparent" />
           <div className="absolute inset-0 " />
@@ -389,15 +385,16 @@ export default function AboutUsPage() {
               <div className="flex items-center gap-2">
                 <span className="text-[#0C433C] font-sans font-bold text-xl sm:text-2xl select-none">//</span>
                 <span className="text-[#0C433C]/60 font-sans font-regular tracking-widest text-xs sm:text-sm ">
-                  Our Process
-                </span>
+                 Our Expertise
+               </span>
               </div>
             </div>
 
             {/* Main Title */}
-            <div className="lg:col-span-8 max-w-2xl">
+            <div className="lg:col-span-8 max-w-3xl">
               <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight">
-                A seamless approach to exceptional real estate solutions.
+                A diverse portfolio creating spaces for living, business and investment.
+
               </h2>
             </div>
           </div>
@@ -412,10 +409,10 @@ export default function AboutUsPage() {
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
-                Discovery & Consultation
+                Residential
               </h3>
               <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
-                We begin by understanding your goals, site conditions, and vision. This sets a clear foundation and direction for the entire project.
+                Thoughtfully planned homes designed for contemporary living, comfort and lasting value.
               </p>
             </div>
 
@@ -427,10 +424,10 @@ export default function AboutUsPage() {
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
-                Concept Development
+                Retail
               </h3>
               <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
-                We explore design ideas, refine concepts, and create early layouts. Each direction is shaped with clarity, intention, and precision.
+                 Strategically positioned retail spaces designed to connect businesses with high-potential markets.
               </p>
             </div>
 
@@ -442,10 +439,11 @@ export default function AboutUsPage() {
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
-                Detailed Technical Design
+                Office
               </h3>
               <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
-                We transform concepts into detailed architectural plans, ensuring accuracy across structure, materials, and coordination.
+                 Contemporary workspaces created for businesses seeking connectivity, functionality and growth.
+
               </p>
             </div>
 
@@ -457,10 +455,10 @@ export default function AboutUsPage() {
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
-                Project Delivery & Support
+                Plots
               </h3>
               <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
-                We support contractors and oversee project progress, helping ensure a smooth build and faithful design execution.
+                Well-located plotted developments offering flexibility to build, invest and create spaces your way.
               </p>
             </div>
           </div>

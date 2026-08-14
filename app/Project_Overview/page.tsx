@@ -165,19 +165,19 @@ export const projectsList: ProjectDetail[] = [
     completed: 'October 2025',
     contributors: 'PP Green Development Team',
     overview: [
-      'An inventive design, interactive setting, distinctive interiors, high visibility and flawless construction amalgamate so well that what emerges is an extraordinary example of edificial splendor. The intimate interaction of the inside and the outside spaces has synthesised into a sophisticated stylish setting. Unhindered movement of visitors and effective space management are the unique features of the project.',
+      'PP Green City is a thoughtfully planned residential township in Sector 27, Sonipat, offering residential plots for those looking to create customised homes in a well-planned environment. Strategically connected to NH-44 (GT Road), the development benefits from growing infrastructure and increasing interest in the Sonipat region. With spacious layouts, internal roads, green spaces and a peaceful residential setting, PP Green City presents an attractive opportunity for both end users and long-term investors seeking a well-connected address within the Delhi-NCR region.',
       'The success of PP Green City led to the vision for PP Green City 2, built around a simple yet meaningful idea: giving people the opportunity to own land and create a space that is truly their own. This vision took shape as a premium residential plotted development, offering the freedom to build, personalise and shape a home for the future.'
     ],
     featuresTitle: 'PP Green City Features',
     features: [
-      'ELOQUENT ARCHITECTURAL STATEMENT',
-      'AN INVITING, 5 STAR FEEL TO THE WHOLE PLACE',
-      'GRAND ENTRY PLAZA TO ADD TO THE VERVE AND VIVACITY OF THE PLACE',
-      'ATTRACTIVE FACADE AND CLEAR SIGNAGES',
-      'TACTICAL LOCATION OF SHOPS AND STORES',
-      'AMPLE PARKING SPACE',
-      '24 X 7 SECURITY ARRANGEMENT',
-      'FOUR SIDE CORNER PLOT WITH WIDE FRONTAGE AND HAVING A GRAND PIAZZA'
+      'Close to NH-44 (GT Karnal Road).',
+      'Easy access to Delhi.',
+      'Dedicated amenities and children’s play areas within the township.',
+      'Landscaped green belts and open spaces.',
+      'Gated community with 24×7 security.',
+      'Wide internal roads for smooth connectivity.',
+      'Well-connected to central Sonipat.',
+      'Growing public transport and commercial activity in the vicinity.'
     ]
   }
 ];

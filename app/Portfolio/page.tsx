@@ -100,7 +100,7 @@ export default function Portfolio() {
 
           {/* Subtitle */}
           <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
-            We deliver thoughtfully designed developments that combine functionality, modern aesthetics, and exceptional craftsmanship.
+Creating thoughtfully designed developments that blend functionality, modern aesthetics, and exceptional craftsmanship.
           </p>
         </div>
       </section>
