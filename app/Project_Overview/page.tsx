@@ -11,11 +11,14 @@ export interface ProjectDetail {
   id: number;
   title: string;
   category: string;
+  status: string;
+  type: string;
   location: string;
+  builtUpArea: string;
   image: string;
-  client: string;
-  completed: string;
-  contributors: string;
+  client?: string;
+  completed?: string;
+  contributors?: string;
   overview: string[];
   featuresTitle?: string;
   features?: string[];
@@ -26,11 +29,11 @@ export const projectsList: ProjectDetail[] = [
     id: 1,
     title: 'PP City Centre',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    status: 'Delivered',
+    type: 'Commercial',
+    location: 'Pitampura, Delhi',
+    builtUpArea: '118,854 Sq. Ft.',
     image: '/PP City Centre/pic-3.jpg',
-    client: 'PP Green Group',
-    completed: 'March 2026',
-    contributors: 'PP Green Development Team',
     overview: [
       'An inventive design, interactive setting, distinctive interiors, high visibility and flawless construction amalgamate so well that what emerges is an extraordinary example of edificial splendor. The intimate interaction of the inside and the outside spaces has synthesised into a sophisticated stylish setting. Unhindered movement of visitors and effective space management are the unique features of the project.'
     ],
@@ -50,11 +53,11 @@ export const projectsList: ProjectDetail[] = [
     id: 2,
     title: 'West End Convention Mall',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    status: 'Delivered',
+    type: 'Commercial',
+    location: 'Janakpuri, Delhi',
+    builtUpArea: '197,892 Sq. Ft.',
     image: '/West End Convention Mall/west3-1.jpg',
-    client: 'PP Green Group',
-    completed: 'January 2026',
-    contributors: 'PP Green Development Team',
     overview: [
       'The First and Second Floor provide banquet and conference facilities. There were strong reasons behind opting for banquet services. In the midst of a glowing commercial on all sides, quality banquet services are still too few and far between.',
       'Making sure of the locational advantage, we designed the banquet halls in compassionate, relaxing and soothing style in the back drop of joyous colors. They also provide an array of deluxe facilities and supports, covering virtually any occasion from a marriage Party to a Corporate Meeting.',
@@ -80,11 +83,11 @@ export const projectsList: ProjectDetail[] = [
     id: 3,
     title: 'PP Trade Centre',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    status: 'Delivered',
+    type: 'Commercial',
+    location: 'Netaji Subhash Place',
+    builtUpArea: '241,920 Sq. Ft.',
     image: '/PP Trade Centre/pp_trade_centre.jpg',
-    client: 'PP Green Group',
-    completed: 'February 2026',
-    contributors: 'PP Green Development Team',
     overview: [
       'The ground and First Floors of the PP Trade Centre offer an open and vibrant retail arena with large floor plates for bigger showrooms, connected by wide corridors and elevators. Arranged around a beautifully landscaped courtyard, each showroom has excellent visibility from the courtyard or from exterior. This fully integrated shopping centre will include every modern facility and would make your every trip to it fully enjoyable. Adequate signages, wide corridors, sufficient car parking bays, it is just our way to ensure that shopping spree of customers is truly stress and hassle free.'
     ],
@@ -108,11 +111,11 @@ export const projectsList: ProjectDetail[] = [
     id: 4,
     title: 'Mohali Walk',
     category: 'Commercial',
+    status: 'Delivered',
+    type: 'Commercial',
     location: 'Mohali, Punjab',
+    builtUpArea: '296,991 Sq. Ft.',
     image: '/mohali Walk/33-scaled.jpg',
-    client: 'PP Buildwell Group',
-    completed: 'December 2025',
-    contributors: 'Bentel Associates & PPZ Management',
     overview: [
       'Welcome to Mohali Walk, your destination for the ultimate shopping and entertainment experience in Mohali. We are thrilled to be your #1 Biggest Anchor Mall, proudly presented by PP Buildwell—a name synonymous with excellence in retail and commercial development, and has completed its 15 years of magnificent performance. During these glorious years, the group has been associated with some of the most prestigious residential and commercial real estate development projects in the NCR. The group has pioneered the development of high rise residential projects in Delhi, with Delhi\'s first 20 storeyed group housing in Rohini.',
       'Mohali Walk, designed by the acclaimed Bentel Associates and expertly managed by PPZ, represents a new era in shopping and leisure. Our vision is clear: to redefine shopping as an exciting and immersive experience. At Mohali Walk, we bring brands to life, making every visit memorable.',
@@ -134,11 +137,11 @@ export const projectsList: ProjectDetail[] = [
     id: 5,
     title: 'AP Wonder',
     category: 'Residential',
-    location: 'Sonipat, Haryana',
+    status: 'Delivered',
+    type: 'Residential',
+    location: 'Rithala, Rohini',
+    builtUpArea: '256,905 Sq. Ft.',
     image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
-    client: 'PP Green Group',
-    completed: 'November 2025',
-    contributors: 'PP Green Development Team',
     overview: [
       'For the able, qualified and learned, at the end of hectic day, they would prefer the wonder of sacrosanct and tranquil home. Far from the noise, traffic and swirl of the metropolis. AP-Wonders is like an exotic ecosystem with charmed surroundings and re-assuring tenderness of a sanctuary placed in a scene-stealing backdrop.',
       'AP Wonders is at once a marvel of home along with lush expanse of enchanting green coupled with the presence of all cosmopolitan visages. It is architecturally distinct amidst the spectacular colors of nature’s bounty.'
@@ -159,11 +162,11 @@ export const projectsList: ProjectDetail[] = [
     id: 6,
     title: 'PP Green City',
     category: 'Residential',
+    status: 'Delivered',
+    type: 'Residential',
     location: 'Sonipat, Haryana',
+    builtUpArea: '12 acre',
     image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
-    client: 'PP Green Group',
-    completed: 'October 2025',
-    contributors: 'PP Green Development Team',
     overview: [
       'PP Green City is a thoughtfully planned residential township in Sector 27, Sonipat, offering residential plots for those looking to create customised homes in a well-planned environment. Strategically connected to NH-44 (GT Road), the development benefits from growing infrastructure and increasing interest in the Sonipat region. With spacious layouts, internal roads, green spaces and a peaceful residential setting, PP Green City presents an attractive opportunity for both end users and long-term investors seeking a well-connected address within the Delhi-NCR region.',
       'The success of PP Green City led to the vision for PP Green City 2, built around a simple yet meaningful idea: giving people the opportunity to own land and create a space that is truly their own. This vision took shape as a premium residential plotted development, offering the freedom to build, personalise and shape a home for the future.'
@@ -188,7 +191,11 @@ function ProjectOverviewContent() {
 
   // Match selected project from query param or fallback to first project
   const currentProject = projectsList.find(
-    (p) => p.title.toLowerCase() === titleParam?.toLowerCase()
+    (p) =>
+      p.title.toLowerCase() === titleParam?.toLowerCase() ||
+      (titleParam && p.title.toLowerCase().replace(/\s+/g, '') === titleParam.toLowerCase().replace(/\s+/g, '')) ||
+      (titleParam?.toLowerCase().startsWith('pp green city') && p.title.toLowerCase().startsWith('pp green city')) ||
+      (titleParam?.toLowerCase().startsWith('west end') && p.title.toLowerCase().startsWith('west end'))
   ) || projectsList[0];
 
   const otherProjects = projectsList.filter((p) => p.id !== currentProject.id);
@@ -286,25 +293,30 @@ function ProjectOverviewContent() {
               {"Details"}
             </h2>
             <div className="flex flex-col gap-3 text-sm sm:text-base">
-              {/* Client */}
+              {/* Project */}
               <div className="flex items-start">
-                <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Client:"}</span>
-                <span className="text-[#0C433C] font-normal">{currentProject.client}</span>
+                <span className="text-zinc-400 font-medium w-48 sm:w-56 shrink-0">{"Project:"}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.title}</span>
               </div>
-              {/* Completed */}
+              {/* Status */}
               <div className="flex items-start">
-                <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Completed:"}</span>
-                <span className="text-[#0C433C] font-normal">{currentProject.completed}</span>
+                <span className="text-zinc-400 font-medium w-48 sm:w-56 shrink-0">{"Status:"}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.status}</span>
+              </div>
+              {/* Type */}
+              <div className="flex items-start">
+                <span className="text-zinc-400 font-medium w-48 sm:w-56 shrink-0">{"Type:"}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.type}</span>
               </div>
               {/* Location */}
               <div className="flex items-start">
-                <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Location:"}</span>
+                <span className="text-zinc-400 font-medium w-48 sm:w-56 shrink-0">{"Location:"}</span>
                 <span className="text-[#0C433C] font-normal">{currentProject.location}</span>
               </div>
-              {/* Contributors */}
+              {/* Approx. Built-Up Area */}
               <div className="flex items-start">
-                <span className="text-zinc-400 font-medium w-28 sm:w-36 shrink-0">{"Contributors:"}</span>
-                <span className="text-[#0C433C] font-normal">{currentProject.contributors}</span>
+                <span className="text-zinc-400 font-medium w-48 sm:w-56 shrink-0">{"Approx. Built-Up Area:"}</span>
+                <span className="text-[#0C433C] font-normal">{currentProject.builtUpArea}</span>
               </div>
             </div>
           </div>

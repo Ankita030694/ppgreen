@@ -19,21 +19,21 @@ const projectsList: ProjectItem[] = [
     id: 1,
     title: 'PP City Centre',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    location: 'Pitampura, Delhi',
     image: '/PP City Centre/pic-3.jpg',
   },
   {
     id: 2,
     title: 'West End Convention Mall',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    location: 'Janakpuri, Delhi',
     image: '/West End Convention Mall/west3-1.jpg',
   },
   {
     id: 3,
     title: 'PP Trade Centre',
     category: 'Commercial',
-    location: 'Sonipat, Haryana',
+    location: 'Netaji Subhash Place',
     image: '/PP Trade Centre/pp_trade_centre.jpg',
   },
   {
@@ -47,7 +47,7 @@ const projectsList: ProjectItem[] = [
     id: 5,
     title: 'AP Wonder',
     category: 'Residential',
-    location: 'Sonipat, Haryana',
+    location: 'Rithala, Rohini',
     image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
   },
   {
@@ -100,7 +100,7 @@ export default function Portfolio() {
 
           {/* Subtitle */}
           <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
-Creating thoughtfully designed developments that blend functionality, modern aesthetics, and exceptional craftsmanship.
+             Creating thoughtfully designed developments that blend functionality, modern aesthetics, and exceptional craftsmanship.
           </p>
         </div>
       </section>
