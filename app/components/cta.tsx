@@ -37,7 +37,7 @@ export default function CTA() {
             alt="Ready to build?"
             fill
             sizes="100vw"
-            className="object-cover select-none pointer-events-none"
+            className="object-cover object-top select-none pointer-events-none"
             priority={false}
           />
         </div>

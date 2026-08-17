@@ -131,7 +131,7 @@ export default function ContactUs() {
             alt="Get In Touch"
             fill
             sizes="100vw"
-            className="object-cover select-none pointer-events-none"
+            className="object-cover object-top select-none pointer-events-none"
             priority
           />
         </div>

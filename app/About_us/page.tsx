@@ -92,7 +92,7 @@ export default function AboutUsPage() {
             alt="About us background"
             fill
             priority
-            className="object-cover opacity-45 select-none pointer-events-none"
+            className="object-cover object-top opacity-45 select-none pointer-events-none"
           />
           {/* Gradients and solid colors for high contrast and moody aesthetic */}
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-zinc-950/10 to-transparent" />
@@ -156,12 +156,13 @@ export default function AboutUsPage() {
             </div>
 
             {/* Main Statement */}
-            <div className="lg:col-span-9 max-w-2xl">
+            <div className="lg:col-span-9 max-w-3xl">
               <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.12] tracking-tight mb-6">
-                Building India’s Future Through Thoughtful Real Estate Development
+                Creating Value. Building Trust. Shaping the Future.
               </h2>
               <p className="text-[#000000]/60 text-sm sm:text-base md:text-lg leading-relaxed font-light">
-                A trusted real estate company creating premium residential and commercial spaces across India. We combine quality construction, prime locations, and modern design to deliver lasting value and exceptional living experiences.
+                Driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, projects are thoughtfully planned, meticulously executed and designed to stand the test of time.
+
               </p>
             </div>
           </div>
@@ -401,11 +402,11 @@ export default function AboutUsPage() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {/* Card 1: Discovery */}
-            <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col   transition-all duration-300">
+            {/* Card 1: Residential */}
+            <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col transition-all duration-300">
               <div className="mb-8">
-                <svg className="w-8 h-8 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                <svg className="w-8 h-8 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
@@ -416,11 +417,11 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            {/* Card 2: Concept Development */}  
-            <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col   transition-all duration-300">
+            {/* Card 2: Retail */}  
+            <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col transition-all duration-300">
               <div className="mb-8">
                 <svg className="w-8 h-8 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 3v13a2 2 0 002 2h11M16 21V8a2 2 0 00-2-2H3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.651V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009 9.35c.697 0 1.353-.238 1.875-.638A2.993 2.993 0 0012 9.35c.697 0 1.353-.238 1.875-.638A2.993 2.993 0 0015 9.35c.697 0 1.353-.238 1.875-.638A2.993 2.993 0 0018 9.35a3.001 3.001 0 003.75.614M3.75 9.349L5.25 3h13.5l1.5 6.349" />
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
@@ -431,11 +432,11 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            {/* Card 3: Detailed Technical Design */}
+            {/* Card 3: Office */}
             <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col transition-all duration-300">
               <div className="mb-8">
                 <svg className="w-8 h-8 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 10L12 4l9 6M6 10v9M10 10v9M14 10v9M18 10v9M4 19h16M3 21h18" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">
@@ -443,15 +444,14 @@ export default function AboutUsPage() {
               </h3>
               <p className="text-[#000000]/60 text-sm leading-relaxed font-light">
                  Contemporary workspaces created for businesses seeking connectivity, functionality and growth.
-
               </p>
             </div>
 
-            {/* Card 4: Project Delivery */}
+            {/* Card 4: Plots */}
             <div className="bg-white border border-zinc-100 p-8 sm:p-10 flex flex-col transition-all duration-300">
               <div className="mb-8">
                 <svg className="w-8 h-8 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 01-2 2H6a2 2 0 01-2-2m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m12-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
               </div>
               <h3 className="text-[#0C433C] font-semibold text-lg sm:text-xl mb-3">

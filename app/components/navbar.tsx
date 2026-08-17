@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-8xl">
-        <nav className="w-full grid grid-cols-2 md:grid-cols-3 items-center px-6 py-3 border border-orange-500 bg-black/50 backdrop-blur-md shadow-lg transition-all duration-300 font-sans text-sm font-semibold tracking-wider">
+        <nav className="w-full grid grid-cols-2 md:grid-cols-3 items-center px-6 py-3 border border-orange-500 bg-[#0C433C]/65 backdrop-blur-md shadow-lg transition-all duration-300 font-sans text-sm font-semibold tracking-wider">
           {/* Left Side: Logo */}
           <div className="flex items-center justify-start">
             <Link href="/" className="flex items-center">
@@ -48,7 +48,7 @@ export default function Navbar() {
                 className="relative py-2 text-xs font-light tracking-widest text-zinc-300 transition-colors duration-300 group hover:text-white"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
             {/* Desktop Book Appointment Button */}
             <Link
               href="/ContactUs"
-              className="hidden md:flex items-center justify-center px-5 py-2.5 bg-orange-500 hover:bg-orange-600 active:scale-[0.98] transition-all duration-300 text-white text-xs font-medium tracking-widest"
+              className="hidden md:flex items-center justify-center px-6 py-3 bg-[#FFFFFF]  active:scale-[0.98] transition-all duration-300 text-[#0C433C] text-xs font-medium tracking-widest"
             >
               BOOK APPOINTMENT
             </Link>
@@ -130,7 +130,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Modal Overlay */}
         {isOpen && (
-          <div className="fixed inset-x-4 top-6 z-[100] md:hidden bg-[#2D3134]/95 backdrop-blur-md border border-orange-500 p-6 sm:p-8 flex flex-col shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+          <div className="fixed inset-x-4 top-6 z-[100] md:hidden bg-[#0C433C]/65 backdrop-blur-md border border-orange-500 p-6 sm:p-8 flex flex-col shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             {/* Top Row: Logo & Close Button */}
             <div className="flex items-center justify-between mb-8">
               <Link href="/" onClick={() => setIsOpen(false)}>
