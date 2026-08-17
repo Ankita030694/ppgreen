@@ -164,7 +164,7 @@ export default function BlogSlugPage() {
         {/* Back sketch background */}
         <div className="absolute right-[-5%] top-[10%] w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] opacity-[0.04] pointer-events-none select-none">
           <Image
-            src="/back_sketch.svg"
+            src="/back_Sketch.svg"
             alt="Architectural background element"
             fill
             unoptimized

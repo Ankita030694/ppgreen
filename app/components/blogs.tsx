@@ -1,30 +1,74 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { collection, query, orderBy, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 interface BlogItem {
-  id: number;
+  id: string;
   image: string;
   title: string;
   description: string;
+  href: string;
 }
 
-const blogsList: BlogItem[] = [
+const defaultBlogs: BlogItem[] = [
   {
-    id: 1,
-    image: '/Blogs/1.svg',
+    id: '1',
+    image: '/Blogs/1.jpg',
     title: 'MODERN LIVING: THE FUTURE OF URBAN REAL ESTATE',
     description: 'Every great development begins with a vision. Discover how thoughtful planning, sustainable construction, and modern design come together to create communities built for the future.',
+    href: '/Blogs',
   },
   {
-    id: 2,
-    image: '/Blogs/1.svg',
+    id: '2',
+    image: '/Blogs/2.jpg',
     title: 'SMART INVESTMENT STRATEGIES IN REAL ESTATE',
     description: 'Learn how choosing the right location, understanding market trends, and investing in quality developments can help maximize long term returns and financial growth.',
+    href: '/Blogs',
   },
 ];
 
 export default function Blogs() {
-  const [blog1, blog2] = blogsList;
+  const [blogs, setBlogs] = useState<BlogItem[]>(defaultBlogs);
+
+  useEffect(() => {
+    const fetchLatestBlogs = async () => {
+      try {
+        const q = query(
+          collection(db, "blogs"),
+          orderBy("createdAt", "desc")
+        );
+        const snapshot = await getDocs(q);
+        const published = snapshot.docs
+          .filter(doc => doc.data().published === true)
+          .map(doc => {
+            const data = doc.data();
+            return {
+              id: doc.id,
+              image: data.image || '/Blogs/1.jpg',
+              title: data.title || '',
+              description: data.subtitle || (data.description ? data.description.replace(/<[^>]*>?/gm, '').slice(0, 180) + '...' : ''),
+              href: `/Blogs/${data.slug || doc.id}`,
+            };
+          });
+
+        if (published.length >= 2) {
+          setBlogs(published.slice(0, 2));
+        } else if (published.length === 1) {
+          setBlogs([published[0], defaultBlogs[1]]);
+        }
+      } catch (error) {
+        console.error("Error fetching homepage blogs:", error);
+      }
+    };
+
+    fetchLatestBlogs();
+  }, []);
+
+  const [blog1, blog2] = blogs.length >= 2 ? blogs : defaultBlogs;
 
   return (
     <section id="blogs" className="relative w-full bg-white text-[#0C433C] pt-4 sm:pt-6 pb-16 sm:pb-24 overflow-hidden">
@@ -50,7 +94,7 @@ export default function Blogs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column (Article 1) */}
-          <div className="flex flex-col w-full group">
+          <Link href={blog1.href} className="flex flex-col w-full group cursor-pointer">
             {/* Image Container (Square) */}
             <div className="relative aspect-square w-full overflow-hidden bg-zinc-100 mb-6 shadow-sm border border-zinc-100 transition-all duration-300">
               <Image
@@ -63,17 +107,17 @@ export default function Blogs() {
               />
             </div>
             {/* Text details */}
-            <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block">
+            <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block group-hover:text-orange-600 transition-colors">
               {blog1.title}
             </span>
-            <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
+            <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed line-clamp-3">
               {blog1.description}
             </p>
-          </div>
+          </Link>
 
           {/* Right Column (Article 2 & CTA) */}
-          <div className="flex flex-col w-full h-full justify-between group">
-            <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full h-full justify-between">
+            <Link href={blog2.href} className="flex flex-col w-full group cursor-pointer">
               {/* Image Container (Landscape) */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100 mb-6 shadow-sm border border-zinc-100 transition-all duration-300">
                 <Image
@@ -86,13 +130,13 @@ export default function Blogs() {
                 />
               </div>
               {/* Text details */}
-              <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block">
+              <span className="text-orange-500 font-bold text-base sm:text-lg tracking-wider uppercase mb-3 block group-hover:text-orange-600 transition-colors">
                 {blog2.title}
               </span>
-              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
+              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed line-clamp-3">
                 {blog2.description}
               </p>
-            </div>
+            </Link>
 
             {/* CTA Button */}
             <div className="flex justify-end mt-8 sm:mt-12 md:mt-16">
@@ -110,3 +154,4 @@ export default function Blogs() {
     </section>
   );
 }
+

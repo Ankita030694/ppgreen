@@ -771,7 +771,7 @@ function WhyChoose() {
           {/* Card 1 */}
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
             <Image
-              src="/500 cr +.png"
+              src="/500_cr.png"
               alt="Value Delivered"
               fill
               unoptimized
@@ -795,7 +795,7 @@ function WhyChoose() {
             <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
               <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/200 +_.png"
+                  src="/200_plus.png"
                   alt=""
                   fill
                   unoptimized
@@ -817,7 +817,7 @@ function WhyChoose() {
             <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
               <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
                 <Image
-                  src="/15M +.png"
+                  src="/15M_plus.png"
                   alt=""
                   fill
                   unoptimized
@@ -839,7 +839,7 @@ function WhyChoose() {
           {/* Card 4 */}
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
             <Image
-              src="/15000+.jpg"
+              src="/15000_plus.jpg"
               alt="Happy Homeowners"
               fill
               unoptimized
@@ -866,7 +866,7 @@ function WhyChoose() {
           {/* Card 1 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
             <Image
-              src="/500 cr +.png"
+              src="/500_cr.png"
               alt="Value Delivered"
               fill
               unoptimized
@@ -888,7 +888,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
               <Image
-                src="/200 +_.png"
+                src="/200_plus.png"
                 alt=""
                 fill
                 unoptimized
@@ -910,7 +910,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
               <Image
-                src="/15M +.png"
+                src="/15M_plus.png"
                 alt=""
                 fill
                 unoptimized
@@ -931,7 +931,7 @@ function WhyChoose() {
           {/* Card 4 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
             <Image
-              src="/15000+.jpg"
+              src="/15000_plus.jpg"
               alt="Happy Homeowners"
               fill
               unoptimized
@@ -1014,7 +1014,7 @@ export default function Home() {
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
-      <section className="relative min-h-screen w-full flex flex-col justify-end text-white font-sans overflow-x-hidden">
+      <section className="relative h-[100vh] h-[100dvh] min-h-[100vh] min-h-[100dvh] w-full flex flex-col justify-end text-white font-sans overflow-x-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
           <video

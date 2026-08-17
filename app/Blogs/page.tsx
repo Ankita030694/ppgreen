@@ -68,11 +68,13 @@ export default function BlogsPage() {
         {/* Left Faint Background Sketch */}
         <div className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] opacity-[0.06] select-none pointer-events-none hidden lg:block">
           <Image
-            src="/back_sketch.svg"
-            alt="Architectural sketch outline background"
+            src="/back_Sketch.svg"
+            alt="Architectural Building Sketch"
             fill
             unoptimized
-            className="object-contain"
+            sizes="(max-width: 1024px) 100vw, 500px"
+            className="object-contain object-left-bottom"
+            priority
           />
         </div>
 

@@ -88,7 +88,7 @@ export default function AboutUsPage() {
         {/* Background Video & Overlay */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/15M +.png"
+            src="/15M_plus.png"
             alt="About us background"
             fill
             priority
@@ -134,7 +134,7 @@ export default function AboutUsPage() {
         {/* Background Sketch Image */}
         <div className="absolute left-[-5%] top-[5%] w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] opacity-[0.06] pointer-events-none select-none">
           <Image
-            src="/back_sketch.svg"
+            src="/back_Sketch.svg"
             alt="Architectural building sketch background"
             fill
             unoptimized
