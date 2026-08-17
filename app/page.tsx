@@ -1014,7 +1014,7 @@ export default function Home() {
   return (
     <main className="w-full bg-black">
       {/* Hero Section */}
-      <section className="relative h-[100vh] h-[100dvh] min-h-[100vh] min-h-[100dvh] w-full flex flex-col justify-end text-white font-sans overflow-x-hidden">
+      <section className="relative h-screen h-[100dvh] max-h-[100dvh] w-full flex flex-col justify-end text-white font-sans overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
           <video
@@ -1033,19 +1033,16 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pt-24 pb-8 sm:pb-12 md:pb-16 flex flex-col justify-end">
-          
-
+        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-6 sm:pb-12 md:pb-16 flex flex-col justify-end">
           {/* Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.1] mb-8 select-none">
-            Where Vision Meets  <br />
+          <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none">
+            Where Vision Meets <br />
             Reality
           </h1>
 
           {/* Description Text */}
-          <p className="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-sm sm:max-w-md">
+          <p className="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-sm sm:max-w-md">
             Discover thoughtfully planned properties in prime locations, backed by trusted expertise and a seamless buying experience.
-
           </p>
         </div>
       </section>
