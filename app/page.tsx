@@ -84,71 +84,76 @@ function AnimatedCounter({
 
 function About() {
   return (
-    <section id="about" className="relative w-full bg-white text-[#0C433C] pt-16 sm:pt-24 overflow-hidden">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <section id="about" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden">
+      {/* Background Architectural Sketch Illustration on Left Side */}
+      <div className="absolute left-0 top-0 bottom-0 w-full sm:w-[55%] lg:w-[42%] max-w-[650px] opacity-100 select-none pointer-events-none z-0">
+        <Image
+          src="/back_Sketch.svg"
+          alt="Architectural building sketch background"
+          fill
+          unoptimized
+          className="object-contain object-left"
+          priority
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        {/* Centered Header Block: Pill, Main Heading, Subheading */}
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          {/* Category Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5 mb-4">
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              About Us
+            </span>
+          </div>
           
-          {/* Left Column: Tagline & Sketch Image */}
-          <div className="lg:col-span-5 flex flex-col gap-2 w-full">
-            {/* Category Tagline */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm">
-                About Us
-              </span>
-            </div>
-            
-            {/* Left Subtitle */}
-            <p className="text-[#000000]/80 text-sm sm:text-base leading-relaxed max-w-xs">
-              PP Green City 2 is situated in the prime location of Sonipat, offering a harmonious blend of green surroundings and urban amenities.
-            </p>
-          </div>
+          {/* Section Headline */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-6 text-center">
+            Creating Value. Building Trust. Shaping the Future.
+          </h2>
+          
+          {/* Description Paragraph / Subheading */}
+          <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-3xl mb-4 text-center">
+            Driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, projects are thoughtfully planned, meticulously executed and designed to stand the test of time.
+          </p>
 
-          {/* Right Column: Title, Description, and Stats */}
-          <div className="lg:col-span-7 flex flex-col justify-center pt-2 lg:pt-10">
-            {/* Section Headline */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-6">
-              Creating Value. Building Trust. Shaping the Future.
-            </h2>
-            
-            {/* Description Paragraph */}
-            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed mb-12 max-w-2xl">
-             Driven by a commitment to excellence, continuous improvement and the creation of enduring value. With a strong focus on quality, innovation and customer-centricity, projects are thoughtfully planned, meticulously executed and designed to stand the test of time.            </p>
-            
-            {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-8 border-t border-zinc-200">
-              {/* Stat 1 */}
-              <div className="flex flex-col">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={15} suffix="M+" />
-                </span>
-                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Sq. Ft. of Spaces
-                </span>
-              </div>
-              
-              {/* Stat 2 */}
-              <div className="flex flex-col">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={200} suffix="+" />
-                </span>
-                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Delivered Projects
-                </span>
-              </div>
-              
-              {/* Stat 3 */}
-              <div className="flex flex-col">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-                  <AnimatedCounter value={15} suffix="k+" />
-                </span>
-                <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
-                  Happy Families
-                </span>
-              </div>
-            </div>
-          </div>
+          <p className="text-[#000000]/80 text-sm sm:text-base leading-relaxed max-w-xl text-center">
+            PP Green City 2 is situated in the prime location of Sonipat, offering a harmonious blend of green surroundings and urban amenities.
+          </p>
+        </div>
 
+        {/* Stats Row */}
+        <div className="reveal-on-scroll reveal-delay-150 grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-8 border-t border-zinc-200 max-w-4xl mx-auto text-center">
+          {/* Stat 1 */}
+          <div className="flex flex-col items-center">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
+              <AnimatedCounter value={15} suffix="M+" />
+            </span>
+            <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
+              Sq. Ft. of Spaces
+            </span>
+          </div>
+          
+          {/* Stat 2 */}
+          <div className="flex flex-col items-center">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
+              <AnimatedCounter value={200} suffix="+" />
+            </span>
+            <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
+              Delivered Projects
+            </span>
+          </div>
+          
+          {/* Stat 3 */}
+          <div className="flex flex-col items-center">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
+              <AnimatedCounter value={15} suffix="k+" />
+            </span>
+            <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
+              Happy Families
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -273,33 +278,31 @@ function Offers() {
   };
 
   return (
-    <section id="portfolio" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden">
+    <section id="portfolio" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="max-w-3xl flex flex-col gap-4">
-            {/* Tagline */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-[#0C433C] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm ">
-                What We Offer
-              </span>
-            </div>
-            
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
-              Building Tomorrow’s landmarks 
-            </h2>
-            
-            {/* Description */}
-            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
-              Creating residential and commercial developments that redefine modern living and investment opportunities.
-            </p>
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="text-[#0C433C] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              What We Offer
+            </span>
           </div>
+          
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
+            Building Tomorrow’s landmarks 
+          </h2>
+          
+          {/* Description */}
+          <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl text-center">
+            Creating residential and commercial developments that redefine modern living and investment opportunities.
+          </p>
 
-          {/* Slider controls (Desktop) */}
-          <div className="flex items-center gap-3 self-start md:self-auto">
+          {/* Slider controls */}
+          <div className="flex items-center justify-center gap-3 mt-2">
             <button
               onClick={scrollLeft}
               className="flex items-center justify-center w-12 h-12 bg-black hover:bg-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
@@ -328,7 +331,7 @@ function Offers() {
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={() => setIsHovered(true)}
           onTouchEnd={() => setIsHovered(false)}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8"
+          className="reveal-on-scroll reveal-delay-150 flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {displayList.map((item, index) => (
@@ -338,7 +341,7 @@ function Offers() {
               className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group block cursor-pointer"
             >
               {/* Card Image Container */}
-              <div className="relative aspect-[711/500] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-300">
+              <div className="relative aspect-[711/500] w-full overflow-hidden bg-zinc-100 shadow-sm border border-zinc-100 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_24px_48px_-12px_rgba(12,67,60,0.3)] group-hover:border-[#0C433C]/40">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -464,33 +467,31 @@ function Reels() {
   };
 
   return (
-    <section id="reels" className="relative w-full bg-[#0C433C] text-[#F9CC94] py-16 sm:py-24 overflow-hidden">
+    <section id="reels" className="relative w-full bg-[#0C433C] text-[#F9CC94] py-[50px] overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="max-w-3xl flex flex-col gap-4">
-            {/* Tagline */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-[#F9CC94] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#F9CC94] font-regular tracking-widest text-xs sm:text-sm uppercase">
-                Life at PP Green
-              </span>
-            </div>
-            
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight">
-              Watch Our Stories 
-            </h2>
-            
-            {/* Description */}
-            <p className="text-[#F9CC94] text-sm sm:text-base leading-relaxed max-w-2xl">
-              Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
-            </p>
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="text-[#F9CC94] font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#F9CC94] font-regular tracking-widest text-xs sm:text-sm uppercase">
+              Life at PP Green
+            </span>
           </div>
+          
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight text-center">
+            Watch Our Stories 
+          </h2>
+          
+          {/* Description */}
+          <p className="text-[#F9CC94] text-sm sm:text-base leading-relaxed max-w-2xl text-center">
+            Experience the vibrant community, customer stories, and behind-the-scenes moments at PP Green City.
+          </p>
 
           {/* Slider controls */}
-          <div className="flex items-center gap-3 self-start md:self-auto">
+          <div className="flex items-center justify-center gap-3 mt-2">
             <button
               onClick={scrollLeft}
               className="flex items-center justify-center w-12 h-12 bg-[#F9CC94] border-zinc-800 text-black transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
@@ -515,7 +516,7 @@ function Reels() {
         {/* Scrollable Container (Not Draggable, Manual Control Only, No Auto Animation) */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8 select-none"
+          className="reveal-on-scroll reveal-delay-150 flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide pl-4 sm:pl-6 lg:pl-8 pr-4 sm:pr-6 lg:pr-8 select-none"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {reelsList.map((item) => (
@@ -524,7 +525,7 @@ function Reels() {
               className="flex-shrink-0 w-[260px] sm:w-[300px] lg:w-[320px] snap-start group"
             >
               {/* Card Container in 9:16 Aspect Ratio */}
-              <div className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-900 shadow-lg rounded-none transition-all duration-300">
+              <div className="relative aspect-[9/16] w-full overflow-hidden bg-zinc-900 shadow-lg rounded-none transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[0_18px_40px_-8px_rgba(12,67,60,0.45)] group-hover:ring-1 group-hover:ring-[#0C433C]/60">
                 <video
                   id={`reel-video-${item.id}`}
                   src={item.video}
@@ -618,29 +619,27 @@ function Expertise() {
   const [activeId, setActiveId] = useState<number>(1);
 
   return (
-    <section id="expertise" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="expertise" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden border-t border-zinc-100">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Header Block */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div className="max-w-3xl flex flex-col gap-4">
-            {/* Tagline */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
-                Our Expertise
-              </span>
-            </div>
-            
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
-              Building Excellence Across Every Sector
-            </h2>
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              Our Expertise
+            </span>
           </div>
+          
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
+            Building Excellence Across Every Sector
+          </h2>
         </div>
 
         {/* Desktop View: Hover Accordion */}
-        <div className="hidden lg:flex w-full gap-6 h-[500px]">
+        <div className="reveal-on-scroll reveal-delay-150 hidden lg:flex w-full gap-6 h-[500px]">
           {expertiseList.map((item) => {
             const isActive = activeId === item.id;
             return (
@@ -742,44 +741,57 @@ function Expertise() {
 
 function WhyChoose() {
   return (
-    <section id="why-choose-us" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden border-t border-zinc-100">
+    <section id="why-choose-us" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden border-t border-zinc-100">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         
         {/* Top Header Block */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start mb-12 sm:mb-16">
-          {/* Left Side Tagline */}
-          <div className="lg:col-span-4 flex items-center gap-2.5">
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12 sm:mb-16">
+          {/* Left Side Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
             <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
               Why choose us
             </span>
           </div>
 
-          {/* Right Side Headline & Description */}
-          <div className="lg:col-span-8 flex flex-col gap-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight max-w-3xl">
-              Building Exceptional Spaces Across India
-            </h2>
-            <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl">
-              We develop premium residential and commercial properties with quality, innovation, and lasting value.
-            </p>
-          </div>
+          {/* Headline */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
+            Building Exceptional Spaces Across India
+          </h2>
+          
+          {/* Description */}
+          <p className="text-[#000000]/60 text-sm sm:text-base leading-relaxed max-w-2xl text-center">
+            We develop premium residential and commercial properties with quality, innovation, and lasting value.
+          </p>
         </div>
 
         {/* Desktop View: Bento Grid */}
-        <div className="hidden md:grid grid-cols-3 gap-6 mb-16 sm:mb-20">
+        <div className="reveal-on-scroll reveal-delay-150 hidden md:grid grid-cols-3 gap-6 mb-16 sm:mb-20">
           {/* Card 1 */}
-          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
+            {/* Blurred Background Layer */}
             <Image
               src="/500_cr.png"
-              alt="Value Delivered"
+              alt=""
               fill
               unoptimized
-              sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/500_cr.png"
+                  alt="Value Delivered"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-20 pointer-events-none">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 text-white">
                 100+ Projects
               </span>
@@ -792,18 +804,30 @@ function WhyChoose() {
           {/* Column 2: Card 2 & 3 */}
           <div className="flex flex-col gap-6 h-[480px]">
             {/* Card 2 */}
-            <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
-              <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
-                <Image
-                  src="/200_plus.png"
-                  alt=""
-                  fill
-                  unoptimized
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover object-right"
-                />
+            <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
+              {/* Blurred Background Layer */}
+              <Image
+                src="/200_plus.png"
+                alt=""
+                fill
+                unoptimized
+                className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+              />
+              {/* Contained Foreground Layer */}
+              <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/200_plus.png"
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
+                  />
+                </div>
               </div>
-              <div className="relative z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+              <div className="relative z-20 pointer-events-none">
                 <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
                   200+
                 </span>
@@ -814,18 +838,30 @@ function WhyChoose() {
             </div>
 
             {/* Card 3 */}
-            <div className="flex-1 relative overflow-hidden bg-zinc-900 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800">
-              <div className="absolute inset-0 w-full h-full select-none pointer-events-none transition-transform duration-700 ease-out group-hover:scale-105">
-                <Image
-                  src="/15M_plus.png"
-                  alt=""
-                  fill
-                  unoptimized
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover object-right"
-                />
+            <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
+              {/* Blurred Background Layer */}
+              <Image
+                src="/15M_plus.png"
+                alt=""
+                fill
+                unoptimized
+                className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+              />
+              {/* Contained Foreground Layer */}
+              <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/15M_plus.png"
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
+                  />
+                </div>
               </div>
-              <div className="relative z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+              <div className="relative z-20 pointer-events-none">
                 <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
                   15M+ sq. ft.
                 </span>
@@ -837,17 +873,30 @@ function WhyChoose() {
           </div>
 
           {/* Card 4 */}
-          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-900 group shadow-sm border border-zinc-100">
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
+            {/* Blurred Background Layer */}
             <Image
               src="/15000_plus.jpg"
-              alt="Happy Homeowners"
+              alt=""
               fill
               unoptimized
-              sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/15000_plus.jpg"
+                  alt="Happy Homeowners"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-20 pointer-events-none">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
                 15,000+
               </span>
@@ -864,17 +913,30 @@ function WhyChoose() {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {/* Card 1 */}
-          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
+            {/* Blurred Background Layer */}
             <Image
               src="/500_cr.png"
-              alt="Value Delivered"
+              alt=""
               fill
               unoptimized
-              sizes="(max-width: 640px) 85vw, 50vw"
-              className="object-cover select-none pointer-events-none"
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/500_cr.png"
+                  alt="Value Delivered"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 85vw, 50vw"
+                  className="object-contain select-none"
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-20 pointer-events-none">
               <span className="text-2xl font-bold tracking-tight mb-1.5">
                 100+ Projects
               </span>
@@ -885,18 +947,30 @@ function WhyChoose() {
           </div>
 
           {/* Card 2 */}
-          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
-            <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
-              <Image
-                src="/200_plus.png"
-                alt=""
-                fill
-                unoptimized
-                sizes="(max-width: 640px) 85vw, 50vw"
-                className="object-cover object-right"
-              />
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
+            {/* Blurred Background Layer */}
+            <Image
+              src="/200_plus.png"
+              alt=""
+              fill
+              unoptimized
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+            />
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/200_plus.png"
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 85vw, 50vw"
+                  className="object-contain select-none"
+                />
+              </div>
             </div>
-            <div className="relative z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="relative z-20 pointer-events-none">
               <span className="text-2xl font-bold tracking-tight mb-1.5 block text-white">
                 200+
               </span>
@@ -907,18 +981,30 @@ function WhyChoose() {
           </div>
 
           {/* Card 3 */}
-          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
-            <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
-              <Image
-                src="/15M_plus.png"
-                alt=""
-                fill
-                unoptimized
-                sizes="(max-width: 640px) 85vw, 50vw"
-                className="object-cover object-right"
-              />
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
+            {/* Blurred Background Layer */}
+            <Image
+              src="/15M_plus.png"
+              alt=""
+              fill
+              unoptimized
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+            />
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/15M_plus.png"
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 85vw, 50vw"
+                  className="object-contain select-none"
+                />
+              </div>
             </div>
-            <div className="relative z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="relative z-20 pointer-events-none">
               <span className="text-2xl font-bold tracking-tight mb-1.5 block text-white">
                 15M+ sq. ft.
               </span>
@@ -929,17 +1015,30 @@ function WhyChoose() {
           </div>
 
           {/* Card 4 */}
-          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-900 shadow-sm border border-zinc-100">
+          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
+            {/* Blurred Background Layer */}
             <Image
               src="/15000_plus.jpg"
-              alt="Happy Homeowners"
+              alt=""
               fill
               unoptimized
-              sizes="(max-width: 640px) 85vw, 50vw"
-              className="object-cover select-none pointer-events-none"
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/15000_plus.jpg"
+                  alt="Happy Homeowners"
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 85vw, 50vw"
+                  className="object-contain select-none"
+                />
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-20 pointer-events-none">
               <span className="text-2xl font-bold tracking-tight mb-1.5 text-white">
                 15,000+
               </span>
@@ -951,19 +1050,16 @@ function WhyChoose() {
         </div>
 
         {/* Built on Trust Sub-section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pt-16 sm:pt-20">
-          {/* Left Column: Heading */}
-          <div className="lg:col-span-4">
-            <h3 className="text-3xl sm:text-4xl font-semibold text-[#0C433C] leading-[1.2] tracking-tight">
-              Built on Trust <br />
-              & Excellence
-            </h3>
-          </div>
+        <div className="reveal-on-scroll reveal-delay-150 flex flex-col items-center pt-16 sm:pt-20">
+          {/* Heading */}
+          <h3 className="text-3xl sm:text-4xl font-semibold text-[#0C433C] leading-[1.2] tracking-tight text-center mb-10 sm:mb-12">
+            Built on Trust & Excellence
+          </h3>
 
           {/* Right Column: Two Features */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 max-w-4xl w-full">
             {/* Feature 1 */}
-            <div className="flex flex-col items-start gap-4 group">
+            <div className="flex flex-col items-start gap-4 group p-6 sm:p-8 rounded-2xl bg-zinc-50/50 border border-zinc-100 transition-all duration-300 hover:bg-white hover:border-[#0C433C]/30 hover:shadow-[0_16px_34px_-8px_rgba(12,67,60,0.16)] hover:-translate-y-1">
               <div className="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/Built_Trust/1.svg"
@@ -982,7 +1078,7 @@ function WhyChoose() {
             </div>
 
             {/* Feature 2 */}
-            <div className="flex flex-col items-start gap-4 group">
+            <div className="flex flex-col items-start gap-4 group p-6 sm:p-8 rounded-2xl bg-zinc-50/50 border border-zinc-100 transition-all duration-300 hover:bg-white hover:border-[#0C433C]/30 hover:shadow-[0_16px_34px_-8px_rgba(12,67,60,0.16)] hover:-translate-y-1">
               <div className="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src="/Built_Trust/2.svg"
@@ -1033,14 +1129,14 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-11 sm:pb-12 md:pb-16 flex flex-col justify-end">
+        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-11 sm:pb-12 md:pb-16 flex flex-col items-center text-center justify-end">
           {/* Headline */}
-          <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none">
+          <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none text-center">
             Where Vision Meets Reality
           </h1>
 
           {/* Description Text */}
-          <p className="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-sm sm:max-w-md">
+          <p className="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-xl text-center">
             Discover thoughtfully planned properties in prime locations, backed by trusted expertise and a seamless buying experience.
           </p>
         </div>

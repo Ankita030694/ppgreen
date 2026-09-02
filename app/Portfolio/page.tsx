@@ -70,7 +70,7 @@ export default function Portfolio() {
       */}
 
       {/* Hero / Header Section */}
-      <section className="relative w-full pt-20 sm:pt-28 pb-16 sm:pb-20 bg-white overflow-hidden">
+      <section className="relative w-full pt-24 sm:pt-28 pb-[50px] bg-white overflow-hidden">
         {/* Faint Architectural Building Sketch Background */}
         <div className="absolute left-0 top-0 bottom-0 w-full sm:w-[50%] lg:w-[40%] opacity-100 select-none pointer-events-none z-0">
           <Image
@@ -106,20 +106,20 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Grid Section */}
-      <section className="relative w-full bg-white pb-24 sm:pb-32">
+      <section className="relative w-full bg-white pb-[50px]">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-16">
             {projectsList.slice(0, visibleCount).map((project) => (
               <Link key={project.id} href={`/Project_Overview?title=${encodeURIComponent(project.title)}`} className="flex flex-col group cursor-pointer">
                 {/* Project Image Container */}
-                <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
+                <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs rounded-xl sm:rounded-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_24px_48px_-12px_rgba(12,67,60,0.25)] group-hover:border-[#0C433C]/40">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     unoptimized
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-102 select-none"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none"
                   />
                 </div>
 
@@ -130,10 +130,10 @@ export default function Portfolio() {
 
                 {/* Tags Row */}
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none transition-colors duration-300 group-hover:border-[#0C433C]/40">
                     {project.category}
                   </span>
-                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none">
+                  <span className="border border-orange-500/20 text-[#0C433C] px-4 py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase select-none transition-colors duration-300 group-hover:border-[#0C433C]/40">
                     {project.location}
                   </span>
                 </div>

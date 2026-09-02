@@ -80,14 +80,14 @@ export default function TermsOfService() {
         </Link>
 
         {/* Header Block matching screenshot design */}
-        <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest text-[#0C433C] uppercase mb-2 block">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
+          <span className="text-xs font-bold tracking-widest text-[#0C433C] uppercase mb-2 block text-center">
             LEGAL & COMPLIANCE
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0C433C] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0C433C] tracking-tight text-center">
             Terms of Service
           </h1>
-          <p className="text-[#0C433C]/60 text-sm sm:text-base mt-3">
+          <p className="text-[#0C433C]/60 text-sm sm:text-base mt-3 text-center">
             Last Updated: March 2026 | Effective for all users and visitors of PP Green City.
           </p>
         </div>

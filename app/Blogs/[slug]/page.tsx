@@ -160,7 +160,7 @@ export default function BlogSlugPage() {
       </section>
 
       {/* Blog Article Section */}
-      <section className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24">
+      <section className="relative w-full bg-white text-[#0C433C] py-[50px]">
         {/* Back sketch background */}
         <div className="absolute right-[-5%] top-[10%] w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] opacity-[0.04] pointer-events-none select-none">
           <Image

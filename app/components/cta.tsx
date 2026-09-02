@@ -6,29 +6,34 @@ import Link from 'next/link';
 export default function CTA() {
 
   return (
-    <section id="cta" className="relative w-full bg-white text-[#0C433C] pt-2 sm:pt-2 pb-12 md:pb-0 overflow-hidden">
+    <section id="cta" className="relative w-full bg-white text-[#0C433C] pt-[50px] pb-0 overflow-hidden">
       
       {/* Header Block inside Container */}
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-4">
-          {/* Tagline */}
-          <div className="flex items-center gap-2.5">
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
             <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm">
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
               Reach out
             </span>
           </div>
           
           {/* Title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
             Ready to build? <br />
             Contact us today
           </h2>
+
+          {/* Subheading */}
+          <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xl text-center">
+            Connect with our expert team to explore our projects and discuss your property requirements.
+          </p>
         </div>
       </div>
 
       {/* Content Wrapper (Edge to Edge) */}
-      <div className="relative w-full mt-12 md:mt-24">
+      <div className="reveal-on-scroll reveal-delay-150 relative w-full mt-12 md:mt-24">
         
         {/* Image Container (Full screen width) */}
         <div className="relative w-full aspect-[16/10] md:aspect-[21/9] min-h-[300px] md:min-h-[450px] overflow-hidden">

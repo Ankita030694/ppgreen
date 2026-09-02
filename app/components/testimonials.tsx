@@ -40,78 +40,77 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="relative w-full bg-white text-[#0C433C] py-16 sm:py-24 overflow-hidden">
+    <section id="testimonials" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+        {/* Centered Header Block: Pill, Main Heading, Subheading */}
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12 sm:mb-16">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              Testimonials
+            </span>
+          </div>
           
-          {/* Left Column: Heading, Subheading & Controls */}
-          <div className="md:col-span-4 flex flex-col gap-6 md:gap-8 h-full justify-between">
-            <div className="flex flex-col gap-4">
-              {/* Tagline */}
-              <div className="flex items-center gap-2.5">
-                <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-                <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm ">
-                  Testimonials
-                </span>
+          {/* Main Heading */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
+            What Our Clients Say
+          </h2>
+
+          {/* Subheading */}
+          <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xl text-center">
+            Here’s what clients say about our work. True impressions, built from real projects, real partnerships, and results.
+          </p>
+        </div>
+
+        {/* Testimonials Slider Area */}
+        <div className="reveal-on-scroll reveal-delay-150 flex flex-col items-center max-w-4xl mx-auto text-center">
+          {/* Slanted Quotes Icon */}
+          <div className="text-zinc-300 select-none pointer-events-none mb-6">
+            <svg className="w-16 h-12" viewBox="0 0 40 32" fill="currentColor">
+              <path d="M12.4 2L8.2 30H0l4.2-28h8.2zm17.6 0L25.8 30H17.6l4.2-28h8.2z" />
+            </svg>
+          </div>
+
+          {/* Review Cards Slider */}
+          <div
+            ref={sliderRef}
+            className="flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide text-center"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {testimonialsList.map((item) => (
+              <div
+                key={item.id}
+                className="w-full flex-shrink-0 snap-start px-4 flex justify-center"
+              >
+                <blockquote className="text-xl sm:text-2xl md:text-3xl font-medium text-[#0C433C] leading-relaxed max-w-3xl text-center">
+                  &ldquo;{item.text}&rdquo;
+                </blockquote>
               </div>
-              
-              {/* Description */}
-              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-sm">
-                Here’s what clients say about our work. True impressions, built from real projects, real partnerships, and results.
-              </p>
-            </div>
-
-            {/* Navigation Controls */}
-            <div className="flex items-center gap-3 mt-4 md:mt-12">
-              <button
-                onClick={scrollLeft}
-                className="flex items-center justify-center w-12 h-12 bg-black hover:bg-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
-                aria-label="Previous testimonial"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={scrollRight}
-                className="flex items-center justify-center w-12 h-12 bg-black hover:bg-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
-                aria-label="Next testimonial"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+            ))}
           </div>
 
-          {/* Right Column: Quotes Icon & Review Slider */}
-          <div className="md:col-span-8 flex flex-col pt-4 md:pt-8 w-full overflow-hidden">
-            {/* Slanted Quotes Icon */}
-            <div className="text-zinc-400 select-none pointer-events-none mb-6">
-              <svg className="w-16 h-12" viewBox="0 0 40 32" fill="currentColor">
-                <path d="M12.4 2L8.2 30H0l4.2-28h8.2zm17.6 0L25.8 30H17.6l4.2-28h8.2z" />
-              </svg>
-            </div>
-
-            {/* Review Cards Slider */}
-            <div
-              ref={sliderRef}
-              className="flex w-full overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-center gap-3 mt-8">
+            <button
+              onClick={scrollLeft}
+              className="flex items-center justify-center w-12 h-12 bg-black hover:bg-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              aria-label="Previous testimonial"
             >
-              {testimonialsList.map((item) => (
-                <div
-                  key={item.id}
-                  className="w-full flex-shrink-0 snap-start pr-4"
-                >
-                  <blockquote className="text-2xl sm:text-3xl md:text-2xl font-medium text-[#0C433C] leading-relaxed max-w-4xl">
-                    {item.text}
-                  </blockquote>
-                </div>
-              ))}
-            </div>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={scrollRight}
+              className="flex items-center justify-center w-12 h-12 bg-black hover:bg-zinc-800 text-white transition-colors duration-300 shadow-md active:scale-95 focus:outline-none cursor-pointer"
+              aria-label="Next testimonial"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-
         </div>
       </div>
     </section>

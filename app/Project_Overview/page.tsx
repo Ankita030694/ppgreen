@@ -265,9 +265,9 @@ function ProjectOverviewContent() {
         </div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 lg:pb-10 flex flex-col items-start">
+        <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 lg:pb-10 flex flex-col items-center text-center">
           {/* Tags Row */}
-          <div className="flex flex-wrap items-center gap-3 mb-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
             <span className="border border-white/40 text-white bg-white/15 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               {currentProject.category}
             </span>
@@ -277,14 +277,14 @@ function ProjectOverviewContent() {
           </div>
 
           {/* Title */}
-          <h1 className="text-[#F9CC94] font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight">
+          <h1 className="text-[#F9CC94] font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight text-center">
             {currentProject.title}
           </h1>
         </div>
       </section>
 
       {/* Project Details & Overview Content Section */}
-      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24">
+      <section className="relative w-full bg-white py-[50px]">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex flex-col gap-12 sm:gap-14">
           
           {/* Details Block */}
@@ -846,7 +846,7 @@ function ProjectOverviewContent() {
       </section>
 
       {/* More Projects Section */}
-      <section className="relative w-full bg-white pb-24 sm:pb-32 border-t border-zinc-100 pt-16 sm:pt-12 md:pt-12">
+      <section className="relative w-full bg-white py-[50px] border-t border-zinc-100">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 overflow-hidden">
           {/* Centered Heading */}
           <h2 className="text-[#0C433C] font-semibold text-3xl sm:text-4xl md:text-5xl text-center mb-16 select-none">

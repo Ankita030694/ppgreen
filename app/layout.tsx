@@ -3,6 +3,7 @@ import { Onest } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import WhatsAppWidget from "./components/whatsapp-widget";
+import ScrollRevealProvider from "./components/ScrollRevealProvider";
 
 const onest = Onest({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${onest.className} min-h-full flex flex-col`}>
+        <ScrollRevealProvider />
         <Navbar />
         {children}
         <WhatsAppWidget />

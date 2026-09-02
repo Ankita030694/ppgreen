@@ -48,65 +48,66 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-white text-[#0C433C] pt-[88px] pb-4 sm:pb-6 overflow-hidden ">
+    <section id="faq" className="relative w-full bg-white text-[#0C433C] py-[50px] overflow-hidden">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+        {/* Centered Header Block: Pill, Main Heading, Subheading */}
+        <div className="reveal-on-scroll flex flex-col items-center text-center max-w-3xl mx-auto gap-4 mb-12 sm:mb-16">
+          {/* Tagline / Pill */}
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+            <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
+              FAQ
+            </span>
+          </div>
           
-          {/* Left Column: Heading */}
-          <div className="md:col-span-5 flex flex-col gap-4">
-            {/* Tagline */}
-            <div className="flex items-center gap-2.5">
-              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-              <span className="text-[#0C433C]/60 font-regular tracking-widest text-xs sm:text-sm uppercase">
-                FAQ
-              </span>
-            </div>
-            
-            {/* Title */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight max-w-md">
-              Frequently asked questions
-            </h2>
-          </div>
+          {/* Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight text-center">
+            Frequently Asked Questions
+          </h2>
 
-          {/* Right Column: Accordion list */}
-          <div className="md:col-span-7 flex flex-col w-full">
-            {faqList.map((item, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div
-                  key={item.id}
-                  className="border-b border-orange-500/60 last:border-b-0 py-6 first:pt-0"
+          {/* Subheading */}
+          <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xl text-center">
+            Find answers to common questions about our developments, buying process, and investment opportunities.
+          </p>
+        </div>
+
+        {/* Accordion list */}
+        <div className="reveal-on-scroll reveal-delay-150 flex flex-col w-full max-w-4xl mx-auto">
+          {faqList.map((item, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={item.id}
+                className="border-b border-orange-500/60 last:border-b-0 py-6 first:pt-0"
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                  aria-expanded={isOpen}
                 >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full flex items-center justify-between text-left focus:outline-none group cursor-pointer"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-lg sm:text-xl font-semibold text-[#0C433C]  transition-colors duration-300 pr-8">
-                      {item.question}
-                    </span>
-                    <span className="text-4xl font-light text-[#0C433C] flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
-                      {isOpen ? '−' : '+'}
-                    </span>
-                  </button>
+                  <span className="text-lg sm:text-xl font-semibold text-[#0C433C]  transition-colors duration-300 pr-8">
+                    {item.question}
+                  </span>
+                  <span className="text-4xl font-light text-[#0C433C] flex-shrink-0 w-6 h-6 flex items-center justify-center select-none">
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
 
-                  <div
-                    className="overflow-hidden transition-all duration-300 ease-in-out"
-                    style={{
-                      maxHeight: isOpen ? '200px' : '0px',
-                      opacity: isOpen ? 1 : 0,
-                      marginTop: isOpen ? '16px' : '0px',
-                    }}
-                  >
-                    <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
-                      {item.answer}
-                    </p>
-                  </div>
+                <div
+                  className="overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{
+                    maxHeight: isOpen ? '200px' : '0px',
+                    opacity: isOpen ? 1 : 0,
+                    marginTop: isOpen ? '16px' : '0px',
+                  }}
+                >
+                  <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed">
+                    {item.answer}
+                  </p>
                 </div>
-              );
-            })}
-          </div>
-
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

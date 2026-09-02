@@ -140,28 +140,41 @@ export default function ContactUs() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/45 z-0" />
 
         {/* Hero Title */}
-        <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
-          <h1 className="text-[#F9CC94] font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[120px] leading-none tracking-tight">
+        <div className="relative z-10 w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24 flex justify-center text-center">
+          <h1 className="text-[#F9CC94] font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[120px] leading-none tracking-tight text-center">
             Get In Touch
           </h1>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="relative w-full bg-white py-16 sm:py-24 overflow-hidden">
+      <section className="relative w-full bg-white py-[50px] overflow-hidden">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+          {/* Centered Header Block: Pill, Main Heading, Subheading */}
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+            {/* Tagline / Pill */}
+            <div className="flex items-center justify-center gap-1 mb-4">
+              <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
+              <span className="text-[#0C433C]/60 font-semibold tracking-widest text-xs sm:text-sm uppercase">
+                {"Let's Talk"}
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-4 text-center">
+              Connect with our real estate experts to find your perfect property.
+            </h2>
+            
+            {/* Subtitle */}
+            <p className="text-[#0C433C]/60 text-sm sm:text-base leading-relaxed max-w-2xl text-center">
+              {"Whether you're buying, selling, investing, or looking for your dream home, our team is here to provide expert guidance and personalized support every step of the way."}
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             {/* Left Column: Let's Talk & Sketch */}
             <div className="lg:col-span-5 flex flex-col gap-6 w-full lg:sticky lg:top-2">
-              {/* Tagline */}
-              <div className="flex items-center gap-1">
-                <span className="text-orange-500 font-bold text-lg sm:text-xl tracking-wider select-none">{"//"}</span>
-                <span className="text-[#0C433C]/60 font-semibold tracking-widest text-xs sm:text-sm">
-                  {"Let's Talk"}
-                </span>
-              </div>
-              
               {/* Left Subtitle */}
               <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xs">
                 Have a property in mind? Let us know how we can help you find the right opportunity.
@@ -180,18 +193,8 @@ export default function ContactUs() {
               </div>
             </div>
 
-            {/* Right Column: Heading & Form Container */}
+            {/* Right Column: Form Container */}
             <div className="lg:col-span-7 flex flex-col pt-2 lg:pt-0">
-              {/* Heading */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#0C433C] leading-[1.15] tracking-tight mb-4">
-                Connect with our real estate experts to find your perfect property.
-              </h2>
-              
-              {/* Subtitle */}
-              <p className="text-[#0C433C]/60 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl">
-                {"Whether you're buying, selling, investing, or looking for your dream home, our team is here to provide expert guidance and personalized support every step of the way."}
-              </p>
-
               {/* Form Box */}
               <div className="bg-[#F2F7F6] p-6 sm:p-10 shadow-xs">
                 {isSubmitted ? (
@@ -268,7 +271,7 @@ export default function ContactUs() {
                           Lead Type
                         </h4>
                         <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
-                          3. Client Type:
+                          Client Type:
                         </label>
                         <div className="flex flex-col sm:flex-row gap-3">
                           <button
@@ -342,7 +345,7 @@ export default function ContactUs() {
                           <div className="space-y-4">
                             <div className="space-y-1.5">
                               <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
-                                4. Broker Name:
+                                Broker Name:
                               </label>
                               <input
                                 type="text"
@@ -356,7 +359,7 @@ export default function ContactUs() {
                             </div>
                             <div className="space-y-1.5">
                               <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
-                                5. Broker Contact Number:
+                                Broker Contact Number:
                               </label>
                               <input
                                 type="tel"
@@ -379,7 +382,7 @@ export default function ContactUs() {
                         </h4>
                         <div className="space-y-1.5">
                           <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
-                            6. Salesperson Name:
+                            Salesperson Name:
                           </label>
                           <input
                             type="text"
@@ -399,7 +402,7 @@ export default function ContactUs() {
                             If Direct Client
                           </h4>
                           <label className="block text-[#0C433C] font-semibold text-sm sm:text-base">
-                            7. Lead Source:
+                            Lead Source:
                           </label>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {leadSources.map((source) => {

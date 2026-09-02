@@ -64,7 +64,7 @@ export default function BlogsPage() {
       */}
 
       {/* Header Section */}
-      <section className="relative w-full py-16 sm:py-24 md:py-28 overflow-hidden bg-white">
+      <section className="relative w-full pt-24 sm:pt-28 pb-[50px] overflow-hidden bg-white">
         {/* Left Faint Background Sketch */}
         <div className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] md:w-[600px] md:h-[600px] opacity-[0.06] select-none pointer-events-none hidden lg:block">
           <Image
@@ -100,7 +100,7 @@ export default function BlogsPage() {
       </section>
 
       {/* Blogs Grid Section */}
-      <section className="relative w-full bg-white pb-24 sm:pb-32">
+      <section className="relative w-full bg-white pb-[50px]">
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-16">
             {loading ? (
