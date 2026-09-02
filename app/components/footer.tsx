@@ -123,22 +123,6 @@ export default function Footer() {
                 />
               </a>
 
-              {/* X (formerly Twitter) */}
-              <a
-                href="https://x.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-5 h-5 relative transition-transform duration-300 hover:scale-110 active:scale-95"
-                aria-label="X"
-              >
-                <Image
-                  src="/Socials/X.svg"
-                  alt="X"
-                  width={20}
-                  height={20}
-                  className="object-contain select-none pointer-events-none brightness-0 invert"
-                />
-              </a>
             </div>
 
             {/* Copyright */}
