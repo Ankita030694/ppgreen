@@ -138,7 +138,7 @@ function About() {
           {/* Stat 2 */}
           <div className="flex flex-col items-center">
             <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-500 tracking-tight">
-              <AnimatedCounter value={200} suffix="+" />
+              <AnimatedCounter value={100} suffix="+" />
             </span>
             <span className="text-[#000000] font-semibold text-xs sm:text-sm mt-2 leading-tight">
               Delivered Projects
@@ -829,7 +829,7 @@ function WhyChoose() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
               <div className="relative z-20 pointer-events-none">
                 <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
-                  200+
+                  100+
                 </span>
                 <p className="text-sm text-zinc-300 leading-relaxed max-w-[240px] text-zinc-300">
                   Projects Delivered Across India
@@ -972,7 +972,7 @@ function WhyChoose() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
             <div className="relative z-20 pointer-events-none">
               <span className="text-2xl font-bold tracking-tight mb-1.5 block text-white">
-                200+
+                100+
               </span>
               <p className="text-xs text-zinc-300 leading-relaxed text-zinc-300">
                 Projects Delivered Across India
@@ -1129,14 +1129,14 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-11 sm:pb-12 md:pb-16 flex flex-col items-center text-center justify-end">
+        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-11 sm:pb-12 md:pb-16 flex flex-col justify-end">
           {/* Headline */}
-          <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none text-center">
+          <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none">
             Where Vision Meets Reality
           </h1>
 
           {/* Description Text */}
-          <p className="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-xl text-center">
+          <p className="text-zinc-300 text-xs sm:text-base leading-relaxed max-w-sm sm:max-w-md">
             Discover thoughtfully planned properties in prime locations, backed by trusted expertise and a seamless buying experience.
           </p>
         </div>

@@ -413,10 +413,10 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            {/* Stat 2: 200+ Projects Delivered */}
+            {/* Stat 2: 100+ Projects Delivered */}
             <div className="flex items-center gap-4 sm:gap-6 justify-center md:justify-center">
               <span className="text-[#0C433C] font-sans font-semibold text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight">
-                <AnimatedCounter value={200} suffix="+" />
+                <AnimatedCounter value={100} suffix="+" />
               </span>
               <div className="flex flex-col text-left text-white leading-tight">
                 <span className="text-sm sm:text-base lg:text-lg font-light tracking-wider uppercase">Projects</span>
