@@ -480,7 +480,7 @@ function Reels() {
             
             {/* Title */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#F9CC94] leading-[1.15] tracking-tight">
-              Watch Our Stories & Reels
+              Watch Our Stories 
             </h2>
             
             {/* Description */}
@@ -781,7 +781,7 @@ function WhyChoose() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
               <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 text-white">
-                ₹500 Cr+
+                100+ Projects
               </span>
               <p className="text-sm text-zinc-300 leading-relaxed max-w-xs text-zinc-300">
                 Value Delivered Across Residential & Commercial Projects
@@ -876,7 +876,7 @@ function WhyChoose() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-10">
               <span className="text-2xl font-bold tracking-tight mb-1.5">
-                ₹500 Cr+
+                100+ Projects
               </span>
               <p className="text-xs text-zinc-300 leading-relaxed">
                 Value Delivered Across Residential & Commercial Projects
@@ -1033,11 +1033,10 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-6 sm:pb-12 md:pb-16 flex flex-col justify-end">
+        <div className="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-8 pb-11 sm:pb-12 md:pb-16 flex flex-col justify-end">
           {/* Headline */}
           <h1 className="text-3xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-[#F9CC94] max-w-4xl leading-[1.15] mb-3 sm:mb-8 select-none">
-            Where Vision Meets <br />
-            Reality
+            Where Vision Meets Reality
           </h1>
 
           {/* Description Text */}

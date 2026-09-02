@@ -107,14 +107,14 @@ export default function AboutUsPage() {
           {/* Grid Layout for Hero Text Content */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end w-full">
             {/* Left Column: Big Title */}
-            <div className="lg:col-span-7 order-2 lg:order-1">
-              <h1 className="text-[#F9CC94] font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-[8rem] xl:text-[8.5rem] leading-[0.9] tracking-tight">
+            <div className="lg:col-span-8 order-2 lg:order-1">
+              <h1 className="text-[#F9CC94] font-semibold text-[43px] sm:text-[65px] md:text-[86px] lg:text-[6.8rem] xl:text-[7.65rem] leading-[0.9] tracking-tight whitespace-nowrap">
                 About PP Green
               </h1>
             </div>
 
             {/* Right Column: Mini-description Block */}
-            <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start max-w-md lg:ml-auto lg:pb-8">
+            <div className="lg:col-span-4 order-1 lg:order-2 flex flex-col items-start max-w-md lg:ml-auto lg:pb-8">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-3 h-3 rounded-full bg-[#FFFFFF] shrink-0" />
                 <h2 className="text-white font-semibold text-base sm:text-lg tracking-wide">
