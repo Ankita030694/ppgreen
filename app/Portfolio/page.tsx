@@ -57,6 +57,20 @@ const projectsList: ProjectItem[] = [
     location: 'Sonipat, Haryana',
     image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
   },
+  {
+    id: 7,
+    title: 'Golf Island',
+    category: 'Residential',
+    location: 'Sector 19B, Dwarka, Delhi',
+    image: '/GolfCity/2.png',
+  },
+  {
+    id: 8,
+    title: 'Vegas Mall',
+    category: 'Commercial',
+    location: 'Sector 19, Dwarka, Delhi',
+    image: '/VegasMall/157656810720191217.jpg',
+  },
 ];
 
 export default function Portfolio() {

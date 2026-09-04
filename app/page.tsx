@@ -206,6 +206,18 @@ const offersList: OfferItem[] = [
     category: 'Residential',
     title: 'PP Green City',
   },
+  {
+    id: 7,
+    image: '/GolfCity/2.png',
+    category: 'Residential',
+    title: 'Golf Island',
+  },
+  {
+    id: 8,
+    image: '/VegasMall/157656810720191217.jpg',
+    category: 'Commercial',
+    title: 'Vegas Mall',
+  },
 ];
 
 function Offers() {

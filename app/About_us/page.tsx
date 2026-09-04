@@ -333,15 +333,15 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            {/* Card 2: Rooted in Legacy */}
+            {/* Card 2: Co-founder's Note */}
             <div className="reveal-on-scroll reveal-delay-200 bg-white border border-zinc-200/80 shadow-xs p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,67,60,0.22)] hover:border-[#0C433C]/40 group">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 {/* Left side: Photo */}
                 <div className="lg:col-span-5 w-full">
                   <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
                     <Image
-                      src="/director.jpg"
-                      alt="Mehul Chawla - Executive Director"
+                      src="/kawal.png"
+                      alt="Mr Kawal Kumar - Co-founder"
                       fill
                       unoptimized
                       className="object-cover object-top select-none transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -353,18 +353,22 @@ export default function AboutUsPage() {
                 <div className="lg:col-span-7 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
                     <h3 className="font-semibold text-2xl sm:text-3xl text-[#0C433C]">
-                      Rooted in Legacy
+                      Co-Founders Note
                     </h3>
                     <span className="h-[2px] w-12 sm:w-16 bg-[#0C433C]/30" />
                   </div>
 
+                  <p className="text-[#000000]/65 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-3 font-light">
+                    For over three decades, my journey in real estate has been guided by one simple belief: <strong className="font-semibold text-[#000000]/85">to create spaces that deliver lasting value and enrich the lives of those they serve.</strong>
+                  </p>
+
                   <p className="text-[#000000]/65 text-xs sm:text-sm md:text-[15px] leading-relaxed mb-4 font-light">
-                    My father built this company with a simple belief that success comes from earning trust, not just selling properties. Growing up, I watched him build lasting relationships with customers and learned that our real product has always been reliability, service, and commitment.
+                    Over the years, this vision has grown across diverse sectors, from construction and residential developments to retail, hospitality, education and commercial spaces.
                   </p>
 
                   <div className="border-l-2 border-[#0C433C] pl-4 sm:pl-5 py-1.5 my-3 sm:my-4 bg-[#F2F7F6]/60 rounded-r-lg">
                     <p className="text-[#0C433C]/90 text-xs sm:text-sm md:text-[14px] leading-relaxed">
-                      As the second generation leading this journey forward, my focus is on preserving those values while embracing the future. With advancements in modern urban planning, smart infrastructure, and green spaces, we continue to innovate so our clients can invest with confidence. This company was built on trust and my commitment is to keep strengthening that trust for generations to come.
+                      Through every milestone, <strong className="font-semibold text-[#0C433C]">quality, trust and customer satisfaction</strong> have remained at the heart of my philosophy. As we move forward, my vision is to continue creating landmark developments that set new benchmarks and stand the test of time.
                     </p>
                   </div>
 
@@ -372,10 +376,10 @@ export default function AboutUsPage() {
 
                   <div>
                     <h4 className="font-semibold text-xl sm:text-2xl text-[#0C433C] tracking-tight">
-                      Mehul Chawla
+                      Mr Kawal Kumar
                     </h4>
                     <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] text-orange-500 uppercase mt-1 block">
-                      EXECUTIVE DIRECTOR
+                      CO-FOUNDER
                     </span>
                   </div>
                 </div>

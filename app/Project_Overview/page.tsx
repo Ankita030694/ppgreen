@@ -182,6 +182,59 @@ export const projectsList: ProjectDetail[] = [
       'Well-connected to central Sonipat.',
       'Growing public transport and commercial activity in the vicinity.'
     ]
+  },
+  {
+    id: 7,
+    title: 'Golf Island',
+    category: 'Residential',
+    status: 'Under-Construction',
+    type: 'Residential',
+    location: 'Sector 19B, Dwarka, Delhi',
+    builtUpArea: '15,434 Sq. Meters',
+    image: '/GolfCity/2.png',
+    overview: [
+      'Located in Sector 19B, Dwarka, Delhi, Golf Island brings together refined living, expansive views and the convenience of a well-connected urban address.',
+      'Designed for those who value space, comfort and an elevated lifestyle, Golf Island offers spacious 4 BHK + Servant residences overlooking the golf course. Every aspect of the project is envisioned to create a sophisticated living experience, from thoughtfully planned residences to a host of lifestyle amenities.',
+      'Set in one of Dwarka’s sought-after locations, Golf Island offers the advantage of seamless connectivity while giving residents a sense of openness and tranquillity. Whether it is the expansive golf course views, generous living spaces or carefully considered amenities, every detail is designed around modern urban living.',
+      'Golf Island is more than a residence. It is an address designed for a life well lived.'
+    ],
+    featuresTitle: 'Golf Island Features & Amenities',
+    features: [
+      'Swimming Pool',
+      'Yoga Studio / Aerobics / Pilates / Meditation Zone / Gymnasium',
+      'Salon / Spa',
+      'Banquet Hall',
+      'Cafeteria Cum Library',
+      'Multi Cuisine Restaurant',
+      'Skywalk / Selfie Point / Star Gazing Area / Telescope Zone',
+      'Business Centre / Co-working / Study Area'
+    ]
+  },
+  {
+    id: 8,
+    title: 'Vegas Mall',
+    category: 'Commercial',
+    status: 'Delivered',
+    type: 'Commercial',
+    location: 'Sector 19, Dwarka, Delhi',
+    builtUpArea: '2 million sq. ft.',
+    image: '/VegasMall/157656810720191217.jpg',
+    overview: [
+      'Located in Sector 19, Dwarka, Vegas is an iconic mixed-use development spanning 28,000+ sq. metres with approximately 2 million sq. ft. of prime development.',
+      'Designed by Bentel Associates International, Johannesburg, Vegas brings together high-street retail, international brands, entertainment, hospitality, offices, dining and leisure under one landmark destination.',
+      'With a 1.3-acre Piazza, dedicated pedestrian plaza and four levels of basement parking, Vegas is designed to redefine the way Delhi shops, works, stays and experiences.'
+    ],
+    featuresTitle: 'Vegas Mall Features & Offerings',
+    features: [
+      'HIGHSTREET',
+      'INTERNATIONAL RETAIL BRANDS',
+      'SUPERPLEX',
+      'LUXURY HOTEL / BUSINESS HOTEL',
+      'SERVICED SUITES',
+      'LAVISH OFFICES',
+      'ENTERTAINMENT CENTRE',
+      'MULTI-CUISINE'
+    ]
   }
 ];
 
@@ -195,7 +248,9 @@ function ProjectOverviewContent() {
       p.title.toLowerCase() === titleParam?.toLowerCase() ||
       (titleParam && p.title.toLowerCase().replace(/\s+/g, '') === titleParam.toLowerCase().replace(/\s+/g, '')) ||
       (titleParam?.toLowerCase().startsWith('pp green city') && p.title.toLowerCase().startsWith('pp green city')) ||
-      (titleParam?.toLowerCase().startsWith('west end') && p.title.toLowerCase().startsWith('west end'))
+      (titleParam?.toLowerCase().startsWith('west end') && p.title.toLowerCase().startsWith('west end')) ||
+      (titleParam?.toLowerCase().startsWith('golf') && p.title.toLowerCase().startsWith('golf')) ||
+      (titleParam?.toLowerCase().startsWith('vegas') && p.title.toLowerCase().startsWith('vegas'))
   ) || projectsList[0];
 
   const otherProjects = projectsList.filter((p) => p.id !== currentProject.id);
@@ -837,6 +892,147 @@ function ProjectOverviewContent() {
                       </div>
                     );
                   })}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Golf Island: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'golf island' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Views"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    { src: '/GolfCity/2.png', label: 'Grand Entrance & Gatehouse' },
+                    { src: '/GolfCity/1.png', label: 'Tower Elevation & Facade' },
+                    { src: '/GolfCity/5.png', label: 'Spacious Balcony Overlooking Golf Course' },
+                    { src: '/GolfCity/7.jpg', label: 'Infinity Swimming Pool & Sun Deck' },
+                    { src: '/GolfCity/3.jpg', label: 'Aerial Masterplan & Skywalk' },
+                    { src: '/GolfCity/6.jpeg', label: 'Championship Golf Course Fairway Views' },
+                    { src: '/GolfCity/4.jpg', label: 'Architectural Scale Model' },
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                        <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                          {item.label}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Vegas Mall: Gallery Carousel */}
+          {currentProject.title.toLowerCase() === 'vegas mall' && (
+            <div className="flex flex-col gap-16 border-t border-zinc-100 pt-12">
+              <div className="flex flex-col">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-[#0C433C] font-semibold text-2xl sm:text-3xl">
+                    {"Project Gallery & Views"}
+                  </h2>
+                  {/* Slider Controls */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Previous image"
+                    >
+                      ←
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (gallerySliderRef.current) {
+                          gallerySliderRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+                        }
+                      }}
+                      className="flex items-center justify-center w-10 h-10 border border-zinc-200 hover:bg-[#F2F7F6] text-zinc-700 transition-colors duration-300 rounded-full cursor-pointer focus:outline-none"
+                      aria-label="Next image"
+                    >
+                      →
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  ref={gallerySliderRef}
+                  className="flex gap-6 overflow-x-auto scrollbar-none pb-4 select-none snap-x snap-mandatory"
+                  style={{ scrollBehavior: 'smooth' }}
+                >
+                  {[
+                    { src: '/VegasMall/157656810720191217.jpg', label: 'Iconic Exterior Facade & Spire' },
+                    { src: '/VegasMall/aboutus-banner3.jpg', label: 'Aerial View with 1.3-Acre Central Piazza' },
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="flex-none w-[80vw] sm:w-[480px] lg:w-[560px] aspect-[16/10] relative bg-zinc-50 snap-start border border-zinc-200 rounded-lg overflow-hidden shadow-sm group"
+                    >
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        fill
+                        unoptimized
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
+                      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col justify-end z-10">
+                        <span className="text-white font-semibold text-sm sm:text-base tracking-wide">
+                          {item.label}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
