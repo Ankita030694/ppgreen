@@ -127,7 +127,7 @@ export default function ContactUs() {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/15M_plus.png"
+            src="/15M_plus.webp"
             alt="Get In Touch"
             fill
             sizes="100vw"

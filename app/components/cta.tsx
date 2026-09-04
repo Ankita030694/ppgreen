@@ -38,7 +38,7 @@ export default function CTA() {
         {/* Image Container (Full screen width) */}
         <div className="relative w-full aspect-[16/10] md:aspect-[21/9] min-h-[300px] md:min-h-[450px] overflow-hidden">
           <Image
-            src="/15M_plus.png"
+            src="/15M_plus.webp"
             alt="Ready to build?"
             fill
             sizes="100vw"

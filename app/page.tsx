@@ -172,49 +172,49 @@ interface OfferItem {
 const offersList: OfferItem[] = [
   {
     id: 1,
-    image: '/PP City Centre/pic-3.jpg',
+    image: '/PP City Centre/pic-3.webp',
     category: 'Commercial',
     title: 'PP City Centre',
   },
   {
     id: 2,
-    image: '/West End Convention Mall/west3-1.jpg',
+    image: '/West End Convention Mall/west3-1.webp',
     category: 'Commercial',
     title: 'West End Convention Mall',
   },
   {
     id: 3,
-    image: '/PP Trade Centre/pp_trade_centre.jpg',
+    image: '/PP Trade Centre/pp_trade_centre.webp',
     category: 'Commercial',
     title: 'PP Trade Centre',
   },
   {
     id: 4,
-    image: '/33-scaled.jpg',
+    image: '/33-scaled.webp',
     category: 'Commercial',
     title: 'Mohali Walk',
   },
   {
     id: 5,
-    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.webp',
     category: 'Residential',
     title: 'AP Wonder',
   },
   {
     id: 6,
-    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
+    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.webp',
     category: 'Residential',
     title: 'PP Green City',
   },
   {
     id: 7,
-    image: '/GolfCity/2.png',
+    image: '/GolfCity/2.webp',
     category: 'Residential',
     title: 'Golf Island',
   },
   {
     id: 8,
-    image: '/VegasMall/157656810720191217.jpg',
+    image: '/VegasMall/157656810720191217.webp',
     category: 'Commercial',
     title: 'Vegas Mall',
   },
@@ -606,14 +606,14 @@ interface ExpertiseItem {
 const expertiseList: ExpertiseItem[] = [
   {
     id: 1,
-    image: '/1.jpeg',
+    image: '/1.webp',
     category: 'Residential',
     title: 'Residential Communities',
     description: 'We build elegant residential towers, luxury apartments, and master-planned villa communities offering premium lifestyles, rich green spaces, and a strong sense of community.',
   },
   {
     id: 2,
-    image: '/33-scaled.jpg',
+    image: '/33-scaled.webp',
     category: 'Commercial',
     title: 'Commercial Properties',
     description: 'We design premium commercial centers, retail malls, and corporate offices in high-traffic zones, combining architectural innovation with commercial viability to attract leading brands.',
@@ -783,7 +783,7 @@ function WhyChoose() {
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
             {/* Blurred Background Layer */}
             <Image
-              src="/500_cr.png"
+              src="/500_cr.webp"
               alt=""
               fill
               unoptimized
@@ -793,7 +793,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/500_cr.png"
+                  src="/500_cr.webp"
                   alt="Value Delivered"
                   fill
                   unoptimized
@@ -819,7 +819,7 @@ function WhyChoose() {
             <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
               {/* Blurred Background Layer */}
               <Image
-                src="/200_plus.png"
+                src="/200_plus.webp"
                 alt=""
                 fill
                 unoptimized
@@ -829,7 +829,7 @@ function WhyChoose() {
               <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/200_plus.png"
+                    src="/200_plus.webp"
                     alt=""
                     fill
                     unoptimized
@@ -853,7 +853,7 @@ function WhyChoose() {
             <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
               {/* Blurred Background Layer */}
               <Image
-                src="/15M_plus.png"
+                src="/15M_plus.webp"
                 alt=""
                 fill
                 unoptimized
@@ -863,7 +863,7 @@ function WhyChoose() {
               <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/15M_plus.png"
+                    src="/15M_plus.webp"
                     alt=""
                     fill
                     unoptimized
@@ -888,7 +888,7 @@ function WhyChoose() {
           <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
             {/* Blurred Background Layer */}
             <Image
-              src="/15000_plus.jpg"
+              src="/15000_plus.webp"
               alt=""
               fill
               unoptimized
@@ -898,7 +898,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/15000_plus.jpg"
+                  src="/15000_plus.webp"
                   alt="Happy Homeowners"
                   fill
                   unoptimized
@@ -928,7 +928,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
             {/* Blurred Background Layer */}
             <Image
-              src="/500_cr.png"
+              src="/500_cr.webp"
               alt=""
               fill
               unoptimized
@@ -938,7 +938,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/500_cr.png"
+                  src="/500_cr.webp"
                   alt="Value Delivered"
                   fill
                   unoptimized
@@ -962,7 +962,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             {/* Blurred Background Layer */}
             <Image
-              src="/200_plus.png"
+              src="/200_plus.webp"
               alt=""
               fill
               unoptimized
@@ -972,7 +972,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/200_plus.png"
+                  src="/200_plus.webp"
                   alt=""
                   fill
                   unoptimized
@@ -996,7 +996,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             {/* Blurred Background Layer */}
             <Image
-              src="/15M_plus.png"
+              src="/15M_plus.webp"
               alt=""
               fill
               unoptimized
@@ -1006,7 +1006,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/15M_plus.png"
+                  src="/15M_plus.webp"
                   alt=""
                   fill
                   unoptimized
@@ -1030,7 +1030,7 @@ function WhyChoose() {
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
             {/* Blurred Background Layer */}
             <Image
-              src="/15000_plus.jpg"
+              src="/15000_plus.webp"
               alt=""
               fill
               unoptimized
@@ -1040,7 +1040,7 @@ function WhyChoose() {
             <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/15000_plus.jpg"
+                  src="/15000_plus.webp"
                   alt="Happy Homeowners"
                   fill
                   unoptimized

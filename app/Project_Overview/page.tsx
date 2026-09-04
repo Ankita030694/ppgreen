@@ -33,7 +33,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Commercial',
     location: 'Pitampura, Delhi',
     builtUpArea: '118,854 Sq. Ft.',
-    image: '/PP City Centre/pic-3.jpg',
+    image: '/PP City Centre/pic-3.webp',
     overview: [
       'An inventive design, interactive setting, distinctive interiors, high visibility and flawless construction amalgamate so well that what emerges is an extraordinary example of edificial splendor. The intimate interaction of the inside and the outside spaces has synthesised into a sophisticated stylish setting. Unhindered movement of visitors and effective space management are the unique features of the project.'
     ],
@@ -57,7 +57,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Commercial',
     location: 'Janakpuri, Delhi',
     builtUpArea: '197,892 Sq. Ft.',
-    image: '/West End Convention Mall/west3-1.jpg',
+    image: '/West End Convention Mall/west3-1.webp',
     overview: [
       'The First and Second Floor provide banquet and conference facilities. There were strong reasons behind opting for banquet services. In the midst of a glowing commercial on all sides, quality banquet services are still too few and far between.',
       'Making sure of the locational advantage, we designed the banquet halls in compassionate, relaxing and soothing style in the back drop of joyous colors. They also provide an array of deluxe facilities and supports, covering virtually any occasion from a marriage Party to a Corporate Meeting.',
@@ -87,7 +87,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Commercial',
     location: 'Netaji Subhash Place',
     builtUpArea: '241,920 Sq. Ft.',
-    image: '/PP Trade Centre/pp_trade_centre.jpg',
+    image: '/PP Trade Centre/pp_trade_centre.webp',
     overview: [
       'The ground and First Floors of the PP Trade Centre offer an open and vibrant retail arena with large floor plates for bigger showrooms, connected by wide corridors and elevators. Arranged around a beautifully landscaped courtyard, each showroom has excellent visibility from the courtyard or from exterior. This fully integrated shopping centre will include every modern facility and would make your every trip to it fully enjoyable. Adequate signages, wide corridors, sufficient car parking bays, it is just our way to ensure that shopping spree of customers is truly stress and hassle free.'
     ],
@@ -115,7 +115,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Commercial',
     location: 'Mohali, Punjab',
     builtUpArea: '296,991 Sq. Ft.',
-    image: '/mohali Walk/33-scaled.jpg',
+    image: '/mohali Walk/33-scaled.webp',
     overview: [
       'Welcome to Mohali Walk, your destination for the ultimate shopping and entertainment experience in Mohali. We are thrilled to be your #1 Biggest Anchor Mall, proudly presented by PP Buildwell—a name synonymous with excellence in retail and commercial development, and has completed its 15 years of magnificent performance. During these glorious years, the group has been associated with some of the most prestigious residential and commercial real estate development projects in the NCR. The group has pioneered the development of high rise residential projects in Delhi, with Delhi\'s first 20 storeyed group housing in Rohini.',
       'Mohali Walk, designed by the acclaimed Bentel Associates and expertly managed by PPZ, represents a new era in shopping and leisure. Our vision is clear: to redefine shopping as an exciting and immersive experience. At Mohali Walk, we bring brands to life, making every visit memorable.',
@@ -141,7 +141,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Residential',
     location: 'Rithala, Rohini',
     builtUpArea: '256,905 Sq. Ft.',
-    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
+    image: '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.webp',
     overview: [
       'For the able, qualified and learned, at the end of hectic day, they would prefer the wonder of sacrosanct and tranquil home. Far from the noise, traffic and swirl of the metropolis. AP-Wonders is like an exotic ecosystem with charmed surroundings and re-assuring tenderness of a sanctuary placed in a scene-stealing backdrop.',
       'AP Wonders is at once a marvel of home along with lush expanse of enchanting green coupled with the presence of all cosmopolitan visages. It is architecturally distinct amidst the spectacular colors of nature’s bounty.'
@@ -166,7 +166,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Residential',
     location: 'Sonipat, Haryana',
     builtUpArea: '12 acre',
-    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
+    image: '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.webp',
     overview: [
       'PP Green City is a thoughtfully planned residential township in Sector 27, Sonipat, offering residential plots for those looking to create customised homes in a well-planned environment. Strategically connected to NH-44 (GT Road), the development benefits from growing infrastructure and increasing interest in the Sonipat region. With spacious layouts, internal roads, green spaces and a peaceful residential setting, PP Green City presents an attractive opportunity for both end users and long-term investors seeking a well-connected address within the Delhi-NCR region.',
       'The success of PP Green City led to the vision for PP Green City 2, built around a simple yet meaningful idea: giving people the opportunity to own land and create a space that is truly their own. This vision took shape as a premium residential plotted development, offering the freedom to build, personalise and shape a home for the future.'
@@ -191,7 +191,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Residential',
     location: 'Sector 19B, Dwarka, Delhi',
     builtUpArea: '15,434 Sq. Meters',
-    image: '/GolfCity/2.png',
+    image: '/GolfCity/2.webp',
     overview: [
       'Located in Sector 19B, Dwarka, Delhi, Golf Island brings together refined living, expansive views and the convenience of a well-connected urban address.',
       'Designed for those who value space, comfort and an elevated lifestyle, Golf Island offers spacious 4 BHK + Servant residences overlooking the golf course. Every aspect of the project is envisioned to create a sophisticated living experience, from thoughtfully planned residences to a host of lifestyle amenities.',
@@ -218,7 +218,7 @@ export const projectsList: ProjectDetail[] = [
     type: 'Commercial',
     location: 'Sector 19, Dwarka, Delhi',
     builtUpArea: '2 million sq. ft.',
-    image: '/VegasMall/157656810720191217.jpg',
+    image: '/VegasMall/157656810720191217.webp',
     overview: [
       'Located in Sector 19, Dwarka, Vegas is an iconic mixed-use development spanning 28,000+ sq. metres with approximately 2 million sq. ft. of prime development.',
       'Designed by Bentel Associates International, Johannesburg, Vegas brings together high-street retail, international brands, entertainment, hospitality, offices, dining and leisure under one landmark destination.',
@@ -451,12 +451,12 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/PP Green City main/Copy of ChatGPT Image Mar 9, 2026 at 10_58_05 PM.png',
-                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_25_29 AM.png',
-                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_27_13 AM.png',
-                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.png',
-                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_42_49 AM.png',
-                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_44_00 AM.png'
+                    '/PP Green City main/Copy of ChatGPT Image Mar 9, 2026 at 10_58_05 PM.webp',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_25_29 AM.webp',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_27_13 AM.webp',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_30_21 AM.webp',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_42_49 AM.webp',
+                    '/PP Green City main/Copy of ChatGPT Image Mar 10, 2026 at 01_44_00 AM.webp'
                   ].map((imgSrc, idx) => {
                     const label = `Project Render ${idx + 1}`;
 
@@ -527,12 +527,12 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/Pp green city/pic-3.jpg',
-                    '/Pp green city/pic-9.jpg',
-                    '/Pp green city/pic-13.jpg',
-                    '/Pp green city/pic-14.jpg',
-                    '/Pp green city/pic-16.jpg',
-                    '/Pp green city/pic-17.jpg'
+                    '/Pp green city/pic-3.webp',
+                    '/Pp green city/pic-9.webp',
+                    '/Pp green city/pic-13.webp',
+                    '/Pp green city/pic-14.webp',
+                    '/Pp green city/pic-16.webp',
+                    '/Pp green city/pic-17.webp'
                   ].map((imgSrc, idx) => {
                     const label = `Gallery Image ${idx + 1}`;
 
@@ -603,11 +603,11 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/West End Convention Mall/west3-1.jpg',
-                    '/West End Convention Mall/ground_floor.jpg',
-                    '/West End Convention Mall/first_second_floor_plan.jpg',
-                    '/West End Convention Mall/third_floor.jpg',
-                    '/West End Convention Mall/third_floor_plan.jpg'
+                    '/West End Convention Mall/west3-1.webp',
+                    '/West End Convention Mall/ground_floor.webp',
+                    '/West End Convention Mall/first_second_floor_plan.webp',
+                    '/West End Convention Mall/third_floor.webp',
+                    '/West End Convention Mall/third_floor_plan.webp'
                   ].map((imgSrc, idx) => {
                     const filename = imgSrc.split('/').pop() || '';
                     let label = 'Gallery Image';
@@ -684,16 +684,16 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/mohali Walk/33-scaled.jpg',
-                    '/mohali Walk/21.jpg',
-                    '/mohali Walk/22-scaled.jpg',
-                    '/mohali Walk/27-scaled.jpg',
-                    '/mohali Walk/30-scaled.jpg',
-                    '/mohali Walk/32-scaled.jpg',
-                    '/mohali Walk/Food-Court--scaled.jpg',
-                    '/mohali Walk/ground_floor.jpg',
-                    '/mohali Walk/first_second_floor_plan.jpg',
-                    '/mohali Walk/third_floor_plan.jpg'
+                    '/mohali Walk/33-scaled.webp',
+                    '/mohali Walk/21.webp',
+                    '/mohali Walk/22-scaled.webp',
+                    '/mohali Walk/27-scaled.webp',
+                    '/mohali Walk/30-scaled.webp',
+                    '/mohali Walk/32-scaled.webp',
+                    '/mohali Walk/Food-Court--scaled.webp',
+                    '/mohali Walk/ground_floor.webp',
+                    '/mohali Walk/first_second_floor_plan.webp',
+                    '/mohali Walk/third_floor_plan.webp'
                   ].map((imgSrc, idx) => {
                     const filename = imgSrc.split('/').pop() || '';
                     let label = 'Gallery Image';
@@ -773,14 +773,14 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/PP City Centre/pic-3.jpg',
-                    '/PP City Centre/pic-9.jpg',
-                    '/PP City Centre/pic-13.jpg',
-                    '/PP City Centre/pic-14.jpg',
-                    '/PP City Centre/pic-16.jpg',
-                    '/PP City Centre/pic-17.jpg',
-                    '/PP City Centre/location-big.jpg',
-                    '/PP City Centre/floor_big-1.jpg'
+                    '/PP City Centre/pic-3.webp',
+                    '/PP City Centre/pic-9.webp',
+                    '/PP City Centre/pic-13.webp',
+                    '/PP City Centre/pic-14.webp',
+                    '/PP City Centre/pic-16.webp',
+                    '/PP City Centre/pic-17.webp',
+                    '/PP City Centre/location-big.webp',
+                    '/PP City Centre/floor_big-1.webp'
                   ].map((imgSrc, idx) => {
                     const filename = imgSrc.split('/').pop() || '';
                     let label = 'Gallery Image';
@@ -855,12 +855,12 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.png',
-                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_31_40 AM.png',
-                    '/AP Wonders/Copy of not use ChatGPT Image Mar 10, 2026 at 01_35_33 AM.png',
-                    '/AP Wonders/ap_wonderbig.jpg',
-                    '/AP Wonders/ap_wonderbig1.jpg',
-                    '/AP Wonders/ap_wonderbig4-1.jpg'
+                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_33_20 AM.webp',
+                    '/AP Wonders/Copy of ChatGPT Image Mar 10, 2026 at 01_31_40 AM.webp',
+                    '/AP Wonders/Copy of not use ChatGPT Image Mar 10, 2026 at 01_35_33 AM.webp',
+                    '/AP Wonders/ap_wonderbig.webp',
+                    '/AP Wonders/ap_wonderbig1.webp',
+                    '/AP Wonders/ap_wonderbig4-1.webp'
                   ].map((imgSrc, idx) => {
                     const filename = imgSrc.split('/').pop() || '';
                     let label = 'Gallery Image';
@@ -938,13 +938,13 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    { src: '/GolfCity/2.png', label: 'Grand Entrance & Gatehouse' },
-                    { src: '/GolfCity/1.png', label: 'Tower Elevation & Facade' },
-                    { src: '/GolfCity/5.png', label: 'Spacious Balcony Overlooking Golf Course' },
-                    { src: '/GolfCity/7.jpg', label: 'Infinity Swimming Pool & Sun Deck' },
-                    { src: '/GolfCity/3.jpg', label: 'Aerial Masterplan & Skywalk' },
-                    { src: '/GolfCity/6.jpeg', label: 'Championship Golf Course Fairway Views' },
-                    { src: '/GolfCity/4.jpg', label: 'Architectural Scale Model' },
+                    { src: '/GolfCity/2.webp', label: 'Grand Entrance & Gatehouse' },
+                    { src: '/GolfCity/1.webp', label: 'Tower Elevation & Facade' },
+                    { src: '/GolfCity/5.webp', label: 'Spacious Balcony Overlooking Golf Course' },
+                    { src: '/GolfCity/7.webp', label: 'Infinity Swimming Pool & Sun Deck' },
+                    { src: '/GolfCity/3.webp', label: 'Aerial Masterplan & Skywalk' },
+                    { src: '/GolfCity/6.webp', label: 'Championship Golf Course Fairway Views' },
+                    { src: '/GolfCity/4.webp', label: 'Architectural Scale Model' },
                   ].map((item, idx) => (
                     <div
                       key={idx}
@@ -1011,8 +1011,8 @@ function ProjectOverviewContent() {
                   style={{ scrollBehavior: 'smooth' }}
                 >
                   {[
-                    { src: '/VegasMall/157656810720191217.jpg', label: 'Iconic Exterior Facade & Spire' },
-                    { src: '/VegasMall/aboutus-banner3.jpg', label: 'Aerial View with 1.3-Acre Central Piazza' },
+                    { src: '/VegasMall/157656810720191217.webp', label: 'Iconic Exterior Facade & Spire' },
+                    { src: '/VegasMall/aboutus-banner3.webp', label: 'Aerial View with 1.3-Acre Central Piazza' },
                   ].map((item, idx) => (
                     <div
                       key={idx}

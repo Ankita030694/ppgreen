@@ -88,7 +88,7 @@ export default function AboutUsPage() {
         {/* Background Video & Overlay */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/15M_plus.png"
+            src="/15M_plus.webp"
             alt="About us background"
             fill
             priority
@@ -290,7 +290,7 @@ export default function AboutUsPage() {
                 <div className="lg:col-span-5 w-full">
                   <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full  overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
                     <Image
-                      src="/founder.jpg"
+                      src="/founder.webp"
                       alt="Avinash Puri - Founder, Puri Group"
                       fill
                       unoptimized
@@ -340,7 +340,7 @@ export default function AboutUsPage() {
                 <div className="lg:col-span-5 w-full">
                   <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
                     <Image
-                      src="/kawal.png"
+                      src="/kawal.webp"
                       alt="Mr Kawal Kumar - Co-founder"
                       fill
                       unoptimized
