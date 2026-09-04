@@ -91,7 +91,6 @@ function About() {
           src="/back_Sketch.svg"
           alt="Architectural building sketch background"
           fill
-          unoptimized
           className="object-contain object-left"
           priority
         />
@@ -358,7 +357,6 @@ function Offers() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 select-none pointer-events-none"
                   priority={index < 3}
@@ -665,7 +663,6 @@ function Expertise() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover transition-transform duration-700 ease-out select-none pointer-events-none"
                   priority={item.id === 1}
@@ -717,7 +714,6 @@ function Expertise() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-cover select-none pointer-events-none"
                 />
@@ -786,7 +782,6 @@ function WhyChoose() {
               src="/500_cr.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -796,7 +791,6 @@ function WhyChoose() {
                   src="/500_cr.webp"
                   alt="Value Delivered"
                   fill
-                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
                 />
@@ -822,7 +816,6 @@ function WhyChoose() {
                 src="/200_plus.webp"
                 alt=""
                 fill
-                unoptimized
                 className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
               />
               {/* Contained Foreground Layer */}
@@ -832,7 +825,6 @@ function WhyChoose() {
                     src="/200_plus.webp"
                     alt=""
                     fill
-                    unoptimized
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
                   />
@@ -856,7 +848,6 @@ function WhyChoose() {
                 src="/15M_plus.webp"
                 alt=""
                 fill
-                unoptimized
                 className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
               />
               {/* Contained Foreground Layer */}
@@ -866,7 +857,6 @@ function WhyChoose() {
                     src="/15M_plus.webp"
                     alt=""
                     fill
-                    unoptimized
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
                   />
@@ -891,7 +881,6 @@ function WhyChoose() {
               src="/15000_plus.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -901,7 +890,6 @@ function WhyChoose() {
                   src="/15000_plus.webp"
                   alt="Happy Homeowners"
                   fill
-                  unoptimized
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
                 />
@@ -931,7 +919,6 @@ function WhyChoose() {
               src="/500_cr.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -941,7 +928,6 @@ function WhyChoose() {
                   src="/500_cr.webp"
                   alt="Value Delivered"
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-contain select-none"
                 />
@@ -965,7 +951,6 @@ function WhyChoose() {
               src="/200_plus.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -975,7 +960,6 @@ function WhyChoose() {
                   src="/200_plus.webp"
                   alt=""
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-contain select-none"
                 />
@@ -999,7 +983,6 @@ function WhyChoose() {
               src="/15M_plus.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -1009,7 +992,6 @@ function WhyChoose() {
                   src="/15M_plus.webp"
                   alt=""
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-contain select-none"
                 />
@@ -1033,7 +1015,6 @@ function WhyChoose() {
               src="/15000_plus.webp"
               alt=""
               fill
-              unoptimized
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
             />
             {/* Contained Foreground Layer */}
@@ -1043,7 +1024,6 @@ function WhyChoose() {
                   src="/15000_plus.webp"
                   alt="Happy Homeowners"
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 85vw, 50vw"
                   className="object-contain select-none"
                 />

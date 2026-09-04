@@ -137,7 +137,6 @@ export default function AboutUsPage() {
             src="/back_Sketch.svg"
             alt="Architectural building sketch background"
             fill
-            unoptimized
             className="object-contain"
           />
         </div>
@@ -293,7 +292,6 @@ export default function AboutUsPage() {
                       src="/founder.webp"
                       alt="Avinash Puri - Founder, Puri Group"
                       fill
-                      unoptimized
                       className="object-cover object-top select-none transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                       priority
                     />
@@ -343,7 +341,6 @@ export default function AboutUsPage() {
                       src="/kawal.webp"
                       alt="Mr Kawal Kumar - Co-founder"
                       fill
-                      unoptimized
                       className="object-cover object-top select-none transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                     />
                   </div>
@@ -397,7 +394,6 @@ export default function AboutUsPage() {
             src="/About_Us/2.svg"
             alt="City buildings and skyscrapers background"
             fill
-            unoptimized
             className="object-cover select-none pointer-events-none opacity-40"
           />
           <div className="absolute inset-0" />

@@ -310,7 +310,6 @@ function ProjectOverviewContent() {
             src={currentProject.image}
             alt={currentProject.title}
             fill
-            unoptimized
             sizes="100vw"
             className="object-cover select-none pointer-events-none"
             priority
@@ -469,7 +468,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -545,7 +543,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -626,7 +623,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -715,7 +711,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -797,7 +792,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -880,7 +874,6 @@ function ProjectOverviewContent() {
                           src={imgSrc}
                           alt={label}
                           fill
-                          unoptimized
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -954,7 +947,6 @@ function ProjectOverviewContent() {
                         src={item.src}
                         alt={item.label}
                         fill
-                        unoptimized
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -1022,7 +1014,6 @@ function ProjectOverviewContent() {
                         src={item.src}
                         alt={item.label}
                         fill
-                        unoptimized
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -1072,7 +1063,6 @@ function ProjectOverviewContent() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  unoptimized
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 

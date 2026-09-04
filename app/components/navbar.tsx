@@ -140,7 +140,6 @@ export default function Navbar() {
                   width={150}
                   height={25}
                   className="h-6 w-auto object-contain"
-                  unoptimized
                 />
               </Link>
               <button
