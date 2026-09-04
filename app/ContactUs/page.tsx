@@ -174,20 +174,20 @@ export default function ContactUs() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             {/* Left Column: Let's Talk & Sketch */}
-            <div className="lg:col-span-5 flex flex-col gap-6 w-full lg:sticky lg:top-2">
+            <div className="lg:col-span-5 flex flex-col gap-6 w-full lg:sticky lg:top-8">
               {/* Left Subtitle */}
-              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-xs">
+              <p className="text-[#0C433C]/80 text-sm sm:text-base leading-relaxed max-w-sm">
                 Have a property in mind? Let us know how we can help you find the right opportunity.
               </p>
               
               {/* Sketch Building Image */}
-              <div className="relative hidden lg:block w-full aspect-[4/3] max-w-md mx-auto lg:mx-0 mt-4 md:mt-8">
+              <div className="relative hidden lg:block w-full aspect-[1.35/1] max-w-lg xl:max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 mt-2 md:mt-4">
                 <Image
                   src="/back_Sketch.svg"
                   alt="Architectural Building Sketch"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 400px"
-                  className="object-contain opacity-70 select-none pointer-events-none transition-transform duration-700 hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 550px, 700px"
+                  className="object-contain opacity-80 select-none pointer-events-none transition-transform duration-700 hover:scale-105"
                   priority={false}
                 />
               </div>

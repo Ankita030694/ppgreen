@@ -284,11 +284,11 @@ export default function AboutUsPage() {
           {/* Cards Stack */}
           <div className="flex flex-col gap-10 sm:gap-12 max-w-6xl mx-auto">
             {/* Card 1: Founder's Note */}
-            <div className="reveal-on-scroll reveal-delay-100 bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/80 shadow-xs p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,67,60,0.22)] hover:border-[#0C433C]/40 group">
+            <div className="reveal-on-scroll reveal-delay-100 bg-white border border-zinc-200/80 shadow-xs p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,67,60,0.22)] hover:border-[#0C433C]/40 group">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 {/* Left side: Photo */}
                 <div className="lg:col-span-5 w-full">
-                  <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
+                  <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full  overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
                     <Image
                       src="/founder.jpg"
                       alt="Avinash Puri - Founder, Puri Group"
@@ -334,11 +334,11 @@ export default function AboutUsPage() {
             </div>
 
             {/* Card 2: Rooted in Legacy */}
-            <div className="reveal-on-scroll reveal-delay-200 bg-white rounded-2xl sm:rounded-3xl border border-zinc-200/80 shadow-xs p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,67,60,0.22)] hover:border-[#0C433C]/40 group">
+            <div className="reveal-on-scroll reveal-delay-200 bg-white border border-zinc-200/80 shadow-xs p-6 sm:p-8 md:p-10 lg:p-12 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_50px_-12px_rgba(12,67,60,0.22)] hover:border-[#0C433C]/40 group">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 {/* Left side: Photo */}
                 <div className="lg:col-span-5 w-full">
-                  <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
+                  <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/5] min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] w-full overflow-hidden bg-zinc-100 shadow-xs border border-zinc-100">
                     <Image
                       src="/director.jpg"
                       alt="Mehul Chawla - Executive Director"
