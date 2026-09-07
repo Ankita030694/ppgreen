@@ -773,13 +773,13 @@ function WhyChoose() {
           </p>
         </div>
 
-        {/* Desktop View: Bento Grid */}
+        {/* Desktop View: 3 Cards Grid */}
         <div className="reveal-on-scroll reveal-delay-150 hidden md:grid grid-cols-3 gap-6 mb-16 sm:mb-20">
-          {/* Card 1 */}
-          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
+          {/* Card 1: 100+ Projects Delivered */}
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
             {/* Blurred Background Layer */}
             <Image
-              src="/500_cr.webp"
+              src="/200_plus.webp"
               alt=""
               fill
               className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
@@ -788,8 +788,8 @@ function WhyChoose() {
             <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
               <div className="relative w-full h-full">
                 <Image
-                  src="/500_cr.webp"
-                  alt="Value Delivered"
+                  src="/200_plus.webp"
+                  alt="Projects Delivered Across India"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
@@ -798,84 +798,49 @@ function WhyChoose() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
             <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-20 pointer-events-none">
-              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 text-white">
-                100+ Projects
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
+                100+
               </span>
-              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs text-zinc-300">
-                Value Delivered Across Residential & Commercial Projects
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
+                Projects Delivered Across India
               </p>
             </div>
           </div>
 
-          {/* Column 2: Card 2 & 3 */}
-          <div className="flex flex-col gap-6 h-[480px]">
-            {/* Card 2 */}
-            <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
-              {/* Blurred Background Layer */}
-              <Image
-                src="/200_plus.webp"
-                alt=""
-                fill
-                className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
-              />
-              {/* Contained Foreground Layer */}
-              <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/200_plus.webp"
-                    alt=""
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
-                  />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
-              <div className="relative z-20 pointer-events-none">
-                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
-                  100+
-                </span>
-                <p className="text-sm text-zinc-300 leading-relaxed max-w-[240px] text-zinc-300">
-                  Projects Delivered Across India
-                </p>
+          {/* Card 2: 15M+ sq. ft. */}
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
+            {/* Blurred Background Layer */}
+            <Image
+              src="/15M_plus.webp"
+              alt=""
+              fill
+              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
+            />
+            {/* Contained Foreground Layer */}
+            <div className="absolute inset-0 p-4 sm:p-6 flex items-center justify-center pointer-events-none">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/15M_plus.webp"
+                  alt="Sq. Ft. of Spaces"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
+                />
               </div>
             </div>
-
-            {/* Card 3 */}
-            <div className="flex-1 relative overflow-hidden bg-zinc-950 p-8 text-white flex flex-col justify-end group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(12,67,60,0.4)] hover:border-[#0C433C]/70">
-              {/* Blurred Background Layer */}
-              <Image
-                src="/15M_plus.webp"
-                alt=""
-                fill
-                className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
-              />
-              {/* Contained Foreground Layer */}
-              <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center pointer-events-none">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/15M_plus.webp"
-                    alt=""
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105 select-none"
-                  />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
-              <div className="relative z-20 pointer-events-none">
-                <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
-                  15M+ sq. ft.
-                </span>
-                <p className="text-sm text-zinc-300 leading-relaxed max-w-[240px] text-zinc-300">
-                  Sq. Ft. of Spaces
-                </p>
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-20 pointer-events-none">
+              <span className="text-3xl sm:text-4xl font-bold tracking-tight mb-2 block text-white">
+                15M+ sq. ft.
+              </span>
+              <p className="text-sm text-zinc-300 leading-relaxed max-w-xs">
+                Sq. Ft. of Spaces
+              </p>
             </div>
           </div>
 
-          {/* Card 4 */}
-          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-100 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
+          {/* Card 3: 15,000+ Happy Customers */}
+          <div className="relative h-[480px] w-full overflow-hidden bg-zinc-950 group shadow-sm border border-zinc-800 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-10px_rgba(12,67,60,0.45)] hover:border-[#0C433C]/70">
             {/* Blurred Background Layer */}
             <Image
               src="/15000_plus.webp"
@@ -913,38 +878,6 @@ function WhyChoose() {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {/* Card 1 */}
-          <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
-            {/* Blurred Background Layer */}
-            <Image
-              src="/500_cr.webp"
-              alt=""
-              fill
-              className="object-cover blur-md scale-110 opacity-40 select-none pointer-events-none"
-            />
-            {/* Contained Foreground Layer */}
-            <div className="absolute inset-0 p-3 flex items-center justify-center pointer-events-none">
-              <div className="relative w-full h-full">
-                <Image
-                  src="/500_cr.webp"
-                  alt="Value Delivered"
-                  fill
-                  sizes="(max-width: 640px) 85vw, 50vw"
-                  className="object-contain select-none"
-                />
-              </div>
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10" />
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white z-20 pointer-events-none">
-              <span className="text-2xl font-bold tracking-tight mb-1.5">
-                100+ Projects
-              </span>
-              <p className="text-xs text-zinc-300 leading-relaxed">
-                Value Delivered Across Residential & Commercial Projects
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             {/* Blurred Background Layer */}
             <Image
@@ -976,7 +909,7 @@ function WhyChoose() {
             </div>
           </div>
 
-          {/* Card 3 */}
+          {/* Card 2 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 p-6 text-white flex flex-col justify-end shadow-sm border border-zinc-800">
             {/* Blurred Background Layer */}
             <Image
@@ -1008,7 +941,7 @@ function WhyChoose() {
             </div>
           </div>
 
-          {/* Card 4 */}
+          {/* Card 3 */}
           <div className="flex-shrink-0 w-[85%] sm:w-[calc(50%-12px)] snap-start relative aspect-[4/3] overflow-hidden bg-zinc-950 shadow-sm border border-zinc-100">
             {/* Blurred Background Layer */}
             <Image

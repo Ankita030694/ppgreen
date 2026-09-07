@@ -19,6 +19,7 @@ export interface ProjectDetail {
   client?: string;
   completed?: string;
   contributors?: string;
+  isCoDeveloper?: boolean;
   overview: string[];
   featuresTitle?: string;
   features?: string[];
@@ -192,6 +193,7 @@ export const projectsList: ProjectDetail[] = [
     location: 'Sector 19B, Dwarka, Delhi',
     builtUpArea: '15,434 Sq. Meters',
     image: '/GolfCity/2.webp',
+    isCoDeveloper: true,
     overview: [
       'Located in Sector 19B, Dwarka, Delhi, Golf Island brings together refined living, expansive views and the convenience of a well-connected urban address.',
       'Designed for those who value space, comfort and an elevated lifestyle, Golf Island offers spacious 4 BHK + Servant residences overlooking the golf course. Every aspect of the project is envisioned to create a sophisticated living experience, from thoughtfully planned residences to a host of lifestyle amenities.',
@@ -219,6 +221,7 @@ export const projectsList: ProjectDetail[] = [
     location: 'Sector 19, Dwarka, Delhi',
     builtUpArea: '2 million sq. ft.',
     image: '/VegasMall/157656810720191217.webp',
+    isCoDeveloper: true,
     overview: [
       'Located in Sector 19, Dwarka, Vegas is an iconic mixed-use development spanning 28,000+ sq. metres with approximately 2 million sq. ft. of prime development.',
       'Designed by Bentel Associates International, Johannesburg, Vegas brings together high-street retail, international brands, entertainment, hospitality, offices, dining and leisure under one landmark destination.',
@@ -328,6 +331,11 @@ function ProjectOverviewContent() {
             <span className="border border-white/40 text-white bg-white/15 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
               {currentProject.location}
             </span>
+            {currentProject.isCoDeveloper && (
+              <span className="border border-white/40 text-white bg-white/15 backdrop-blur-xs px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide uppercase select-none">
+                Co-Developer
+              </span>
+            )}
           </div>
 
           {/* Title */}
