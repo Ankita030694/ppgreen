@@ -428,7 +428,7 @@ const reelsList: ReelItem[] = [
   },
   {
     id: 6,
-    title: 'Behind the Scenes - Our Staff',
+    title: 'Your Trust, Our Motivation',
     video: '/Reels/PP Green Staff Reel (1)_1.mp4',
   },
 ];
@@ -618,7 +618,7 @@ const expertiseList: ExpertiseItem[] = [
   },
   {
     id: 3,
-    image: '/hover_effect/3.svg',
+    image: '/Industrial.jpg.jpeg',
     category: 'Industrial',
     title: 'Industrial Developments',
     description: 'We develop efficient industrial spaces built for productivity, scalability, and long term operational success. Our projects prioritize functionality, strategic locations, and modern infrastructure to support growing businesses.',
@@ -649,7 +649,7 @@ function Expertise() {
         </div>
 
         {/* Desktop View: Hover Accordion */}
-        <div className="reveal-on-scroll reveal-delay-150 hidden lg:flex w-full gap-6 h-[500px]">
+        <div className="reveal-on-scroll reveal-delay-150 hidden lg:flex w-full gap-6 h-[580px]">
           {expertiseList.map((item) => {
             const isActive = activeId === item.id;
             return (
