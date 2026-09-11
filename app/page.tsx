@@ -349,6 +349,7 @@ function Offers() {
             <Link
               key={`${item.id}-${index}`}
               href={`/Project_Overview?title=${encodeURIComponent(item.title)}`}
+              prefetch={true}
               className="flex-shrink-0 w-[85vw] sm:w-[540px] lg:w-[711px] max-w-[711px] snap-start group block cursor-pointer"
             >
               {/* Card Image Container */}

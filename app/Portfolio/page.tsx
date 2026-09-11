@@ -124,7 +124,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-16">
             {projectsList.slice(0, visibleCount).map((project) => (
-              <Link key={project.id} href={`/Project_Overview?title=${encodeURIComponent(project.title)}`} className="flex flex-col group cursor-pointer">
+              <Link key={project.id} href={`/Project_Overview?title=${encodeURIComponent(project.title)}`} prefetch={true} className="flex flex-col group cursor-pointer">
                 {/* Project Image Container */}
                 <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs rounded-xl sm:rounded-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_24px_48px_-12px_rgba(12,67,60,0.25)] group-hover:border-[#0C433C]/40">
                   <Image

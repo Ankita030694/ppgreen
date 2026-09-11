@@ -175,7 +175,8 @@ export default function AboutUsPage() {
               {/* Get in Touch Button below Mission */}
               <Link
                 href="/ContactUs"
-                className="inline-flex items-center justify-center bg-[#0C433C] hover:bg-[#09332d] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
+                prefetch={true}
+                className="inline-flex items-center justify-center bg-[#0C433C] hover:bg-[#09332d] text-white font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98] cursor-pointer"
               >
                 Get in Touch
               </Link>
@@ -254,7 +255,8 @@ export default function AboutUsPage() {
             <div className="shrink-0 z-10">
               <Link
                 href="/Portfolio"
-                className="inline-flex items-center justify-center bg-white hover:bg-zinc-100 text-[#0C433C] font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98]"
+                prefetch={true}
+                className="inline-flex items-center justify-center bg-white hover:bg-zinc-100 text-[#0C433C] font-medium text-xs sm:text-sm tracking-wider uppercase px-8 py-4 transition-all duration-300 w-fit active:scale-[0.98] cursor-pointer"
               >
                 Explore Projects
               </Link>

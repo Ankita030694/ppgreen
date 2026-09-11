@@ -32,25 +32,29 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
               <Link
                 href="/"
-                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
+                prefetch={true}
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300 hover:text-white"
               >
                 Home
               </Link>
               <Link
                 href="/About_us"
-                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
+                prefetch={true}
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300 hover:text-white"
               >
                 About Us
               </Link>
               <Link
                 href="/Blogs"
-                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
+                prefetch={true}
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300 hover:text-white"
               >
                 Blogs
               </Link>
               <Link
                 href="/Portfolio"
-                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300"
+                prefetch={true}
+                className="text-sm sm:text-base font-medium text-zinc-300 transition-colors duration-300 hover:text-white"
               >
                 Portfolio
               </Link>
@@ -60,20 +64,23 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-zinc-400 text-sm sm:text-base">
               <Link
                 href="/ContactUs"
-                className=" transition-colors duration-300"
+                prefetch={true}
+                className="transition-colors duration-300 hover:text-white"
               >
                 Get In Touch
               </Link>
               <Link
                 href="/Terms"
-                className=" transition-colors duration-300"
+                prefetch={true}
+                className="transition-colors duration-300 hover:text-white"
               >
                 Terms of Service
               </Link>
 
               <Link
                 href="/Privacy"
-                className=" transition-colors duration-300"
+                prefetch={true}
+                className="transition-colors duration-300 hover:text-white"
               >
                 Privacy Policies
               </Link>

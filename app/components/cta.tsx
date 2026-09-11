@@ -54,6 +54,7 @@ export default function CTA() {
               {/* Orange Link Header */}
               <Link
                 href="/ContactUs"
+                prefetch={true}
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-base sm:text-lg px-8 py-5 flex items-center justify-between transition-colors duration-300 active:scale-[0.99] cursor-pointer border-none focus:outline-none"
               >
                 <span>Get in Touch</span>
@@ -119,6 +120,7 @@ export default function CTA() {
           {/* Orange Link Header */}
           <Link
             href="/ContactUs"
+            prefetch={true}
             className="w-full bg-[#0C433C] hover:bg-[#09332d] text-white font-semibold text-sm px-4 py-4 flex items-center justify-between transition-colors duration-300 active:scale-[0.99] cursor-pointer border-none focus:outline-none"
           >
             <span>{"Get in Touch"}</span>

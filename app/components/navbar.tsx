@@ -27,7 +27,7 @@ export default function Navbar() {
         <nav className="w-full grid grid-cols-2 md:grid-cols-3 items-center px-6 py-3 border border-orange-500 bg-[#0C433C]/65 backdrop-blur-md shadow-lg transition-all duration-300 font-sans text-sm font-semibold tracking-wider">
           {/* Left Side: Logo */}
           <div className="flex items-center justify-start">
-            <Link href="/" className="flex items-center">
+            <Link href="/" prefetch={true} className="flex items-center">
               <Image
                 src="/New LOGO.svg"
                 alt="PP Green City 2 Logo"
@@ -45,6 +45,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
+                prefetch={true}
                 className="relative py-2 text-xs font-light tracking-widest text-zinc-300 transition-colors duration-300 group hover:text-white"
               >
                 {link.label}
@@ -58,7 +59,8 @@ export default function Navbar() {
             {/* Desktop Book Appointment Button */}
             <Link
               href="/ContactUs"
-              className="hidden md:flex items-center justify-center px-6 py-3 bg-[#FFFFFF]  active:scale-[0.98] transition-all duration-300 text-[#0C433C] text-xs font-medium tracking-widest"
+              prefetch={true}
+              className="hidden md:flex items-center justify-center px-6 py-3 bg-[#FFFFFF] active:scale-[0.98] transition-all duration-300 text-[#0C433C] text-xs font-medium tracking-widest cursor-pointer"
             >
               BOOK APPOINTMENT
             </Link>
@@ -66,7 +68,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex md:hidden items-center justify-center p-1.5 text-white focus:outline-none transition-transform active:scale-95"
+              className="flex md:hidden items-center justify-center p-1.5 text-white focus:outline-none transition-transform active:scale-95 cursor-pointer"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -133,7 +135,7 @@ export default function Navbar() {
           <div className="fixed inset-x-4 top-6 z-[100] md:hidden bg-[#0C433C]/65 backdrop-blur-md border border-orange-500 p-6 sm:p-8 flex flex-col shadow-2xl animate-in fade-in zoom-in-95 duration-200">
             {/* Top Row: Logo & Close Button */}
             <div className="flex items-center justify-between mb-8">
-              <Link href="/" onClick={() => setIsOpen(false)}>
+              <Link href="/" prefetch={true} onClick={() => setIsOpen(false)}>
                 <Image
                   src="/New LOGO.svg"
                   alt="PP Green City 2 Logo"
@@ -144,7 +146,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center p-1 text-white hover:text-zinc-300 transition-colors focus:outline-none"
+                className="flex items-center justify-center p-1 text-white hover:text-zinc-300 transition-colors focus:outline-none cursor-pointer"
                 aria-label="Close menu"
               >
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
@@ -159,6 +161,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
+                  prefetch={true}
                   onClick={() => setIsOpen(false)}
                   className="text-xl sm:text-2xl font-light tracking-widest text-white transition-colors duration-300 uppercase"
                 >
@@ -167,8 +170,9 @@ export default function Navbar() {
               ))}
               <Link
                 href="/ContactUs"
+                prefetch={true}
                 onClick={() => setIsOpen(false)}
-                className="text-xl sm:text-2xl font-medium tracking-widest text-white transition-colors duration-300 uppercase"
+                className="text-xl sm:text-2xl font-medium tracking-widest text-white transition-colors duration-300 uppercase cursor-pointer"
               >
                 {"BOOK APPOINTMENT"}
               </Link>

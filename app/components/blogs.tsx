@@ -99,7 +99,7 @@ export default function Blogs() {
         <div className="reveal-on-scroll reveal-delay-150 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Column (Article 1) */}
-          <Link href={blog1.href} className="flex flex-col w-full group cursor-pointer">
+          <Link href={blog1.href} prefetch={true} className="flex flex-col w-full group cursor-pointer">
             {/* Image Container (Square) */}
             <div className="relative aspect-square w-full overflow-hidden bg-zinc-100 mb-6 shadow-sm border border-zinc-100 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_22px_45px_-10px_rgba(12,67,60,0.28)] group-hover:border-[#0C433C]/40">
               <Image
@@ -122,7 +122,7 @@ export default function Blogs() {
 
           {/* Right Column (Article 2 & CTA) */}
           <div className="flex flex-col w-full h-full justify-between">
-            <Link href={blog2.href} className="flex flex-col w-full group cursor-pointer">
+            <Link href={blog2.href} prefetch={true} className="flex flex-col w-full group cursor-pointer">
               {/* Image Container (Landscape) */}
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100 mb-6 shadow-sm border border-zinc-100 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_22px_45px_-10px_rgba(12,67,60,0.28)] group-hover:border-[#0C433C]/40">
                 <Image
@@ -145,7 +145,7 @@ export default function Blogs() {
 
             {/* CTA Button */}
             <div className="flex justify-end mt-8 sm:mt-12 md:mt-16">
-              <Link href="/Blogs">
+              <Link href="/Blogs" prefetch={true}>
                 <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold text-xs sm:text-sm px-8 py-4 uppercase tracking-wider transition-all duration-300 active:scale-95 focus:outline-none cursor-pointer">
                   Explore More
                 </button>

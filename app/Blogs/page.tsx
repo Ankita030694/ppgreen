@@ -113,7 +113,7 @@ export default function BlogsPage() {
               </div>
             ) : (
               blogsList.map((blog) => (
-                <Link key={blog.id} href={`/Blogs/${blog.slug}`} className="flex flex-col group cursor-pointer">
+                <Link key={blog.id} href={`/Blogs/${blog.slug}`} prefetch={true} className="flex flex-col group cursor-pointer">
                 {/* Image Container */}
                 <div className="relative aspect-square w-full mb-6 overflow-hidden bg-zinc-50 border border-zinc-100 shadow-xs">
                   <Image
