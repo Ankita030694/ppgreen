@@ -24,6 +24,14 @@ export default function ContactUs() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    if (name === 'contactNumber' || name === 'brokerContactNumber') {
+      const numericValue = value.replace(/\D/g, '');
+      setFormData((prev) => ({
+        ...prev,
+        [name]: numericValue,
+      }));
+      return;
+    }
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -260,6 +268,8 @@ export default function ContactUs() {
                           placeholder="Enter Contact Number"
                           value={formData.contactNumber}
                           onChange={handleChange}
+                          inputMode="numeric"
+                          pattern="[0-9]*"
                           className={inputClasses}
                           required
                         />
@@ -367,6 +377,8 @@ export default function ContactUs() {
                                 placeholder="Enter Broker Contact Number"
                                 value={formData.brokerContactNumber}
                                 onChange={handleChange}
+                                inputMode="numeric"
+                                pattern="[0-9]*"
                                 className={inputClasses}
                                 required
                               />
