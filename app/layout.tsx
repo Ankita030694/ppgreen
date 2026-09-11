@@ -11,8 +11,8 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-  title: "PP Green City 2 | Luxury Real Estate Sonipat",
-  description: "Discover luxury living at PP Green City 2, Sonipat.",
+  title: "PP Green City | Luxury Real Estate Sonipat",
+  description: "Discover luxury living at PP Green City, Sonipat.",
   icons: {
     icon: "/favicoo.png",
     shortcut: "/favicoo.png",
