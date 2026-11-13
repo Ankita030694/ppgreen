@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     shortcut: "/favicoo.png",
     apple: "/favicoo.png",
   },
+  verification: {
+    other: {
+      "facebook-domain-verification": "2ypggx16a91uh1dfkc1o2i1z0o1bq2",
+    },
+  },
 };
 
 export default function RootLayout({
